@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-assignment</title>
+</head>
+<body> 
+    <!-- this is university admission form  -->
+    <div style="text-align: center;">
+    <img src="./ku.jpeg" alt="logo" width="100">
+    </div>
+    <h1>Admission Form</h1>
+    <form method="get">
+        <label for="Name">
+           <strong>Full Name:</strong>  
+            <input type="text" placeholder="write your name" size="25" maxlength="25" id="Name" required>
+        </label>
+        <br><br>
+        <label for="FatherName">
+           <strong>Father Name:</strong>
+            <input type="text" placeholder="write your Father name" size="25" maxlength="25" id="FatherName">
+        </label>
+        <br><br>
+        <label for="Emailaddress">
+            <strong>Email address:</strong>
+            <input type="email" name="Email address" size="25" id="Emailaddress" placeholder="enter your email" required>
+        </label>
+        <br><br>
+        <label for="password">
+           <strong>Password:</strong>
+            <input type="password" placeholder="enter your password" size="25" maxlength="20" id="password">
+        </label>
+        <br><br>
+        <label for="age">
+            <strong>Age:</strong>
+            <input type="number" name="age" id="age" min="18" max="50" placeholder="select">
+        </label>
+        <br><br>
+        <strong>Gender:</strong>
+        <label for="male">
+            <input type="radio" name="male" value="male" id="male">Male
+        </label>
+            <label for="Female">
+            <input type="radio" name="Female" value="Female" id="Female">Female
+        </label> <br><br>
+        <strong>Hobbies:</strong>
+        <label for="swimming">
+            <input type="checkbox" name="swimming" value="swimming" id="swimming">Swimming
+        </label>
+        <label for="Readingbooks">
+            <input type="checkbox" name="Reading books" value="Reading books" id="Readingbooks" checked>Reading books
+        </label>
+        <label for="Music">
+            <input type="checkbox" name="Music" value="Music" id="Music">Music
+        </label>
+        <label for="Debates">
+            <input type="checkbox" name="Debates" value="Debates" id="Debates">Debates
+        </label>
+        <label for="Sports">
+            <input type="checkbox" name="Sports" value="Sports" id="Sports">Sports
+        </label>
+        <label for="Travelling">
+            <input type="checkbox" name="Travelling" value="Travelling" id="Travelling">Travelling
+        </label>
+        <br><br>
+        <label for="DateofBirth">
+            <strong>Date of Birth and Time:</strong>
+            <input type="datetime-local" name="DateofBirth" value="DateofBirth" id="DateofBirth">
+        </label>
+        <br><br>
+        <label for="City">
+        <strong>City:</strong>
+        <select name="City" id="City" required>
+            <option value="" selected disabled></option>
+            <option value="Karachi">Karachi</option>
+            <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Quetta">Quetta</option>
+            <option value="Peshawar">Peshawar</option>
+        </select>
+        </label>
+        <br><br>
+        <label for="Address">
+            <strong>Address:</strong>
+            <textarea name="Address" id="Address" placeholder="type here..." cols="30" rows="3"></textarea>
+        </label>
+        <br><br>
+        <label for="Submit">
+            <button>Submit</button>
+        </label>
+    </form>
+</body>
+</html>
