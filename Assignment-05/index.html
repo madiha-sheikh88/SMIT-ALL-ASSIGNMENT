@@ -13,13 +13,14 @@
     <h1>Admission Form</h1>
     <form method="get">
         <label for="Name">
+            <!-- required attribute is used for name and email -->
            <strong>Full Name:</strong>  
-            <input type="text" placeholder="write your name" size="25" maxlength="25" id="Name" required>
+            <input type="text" name="Name" placeholder="write your name" size="25" maxlength="25" id="Name" required>
         </label>
         <br><br>
         <label for="FatherName">
            <strong>Father Name:</strong>
-            <input type="text" placeholder="write your Father name" size="25" maxlength="25" id="FatherName">
+            <input type="text" name="Father Name" placeholder="write your Father name" size="25" maxlength="25" id="FatherName">
         </label>
         <br><br>
         <label for="Emailaddress">
@@ -32,24 +33,30 @@
             <input type="password" placeholder="enter your password" size="25" maxlength="20" id="password">
         </label>
         <br><br>
+        <label for="register">
+            <!-- input submit -->
+            <input type="submit" value="Register your email">
+        </label>
+        <br><br>
         <label for="age">
             <strong>Age:</strong>
-            <input type="number" name="age" id="age" min="18" max="50" placeholder="select">
+            <input type="number" name="age" id="age" min="18" max="50" placeholder="select" value="age">
         </label>
         <br><br>
         <strong>Gender:</strong>
         <label for="male">
-            <input type="radio" name="male" value="male" id="male">Male
+            <input type="radio" name="Gender" value="male" id="male">Male
         </label>
             <label for="Female">
-            <input type="radio" name="Female" value="Female" id="Female">Female
+            <input type="radio" name="Gender" value="Female" id="Female">Female
         </label> <br><br>
         <strong>Hobbies:</strong>
         <label for="swimming">
             <input type="checkbox" name="swimming" value="swimming" id="swimming">Swimming
         </label>
+        <!-- I used checked and disabled attributes here in readingbooks as student must select reading books option -->
         <label for="Readingbooks">
-            <input type="checkbox" name="Reading books" value="Reading books" id="Readingbooks" checked>Reading books
+            <input type="checkbox" name="Reading books" value="Reading books" id="Readingbooks" checked disabled>Reading books
         </label>
         <label for="Music">
             <input type="checkbox" name="Music" value="Music" id="Music">Music
@@ -65,13 +72,19 @@
         </label>
         <br><br>
         <label for="DateofBirth">
-            <strong>Date of Birth and Time:</strong>
-            <input type="datetime-local" name="DateofBirth" value="DateofBirth" id="DateofBirth">
+            <strong>Date of Birth:</strong>
+            <input type="date" name="DateofBirth" value="DateofBirth" id="DateofBirth">
+        </label>
+        <br><br>
+        <label for="time">
+            <strong>Time:</strong>
+            <input type="time" name="time" id="time">
         </label>
         <br><br>
         <label for="City">
         <strong>City:</strong>
         <select name="City" id="City" required>
+            <!-- i used selected and disabled attribtes in first option as i want first option to be blank and customer can not select this blank option -->
             <option value="" selected disabled></option>
             <option value="Karachi">Karachi</option>
             <option value="Lahore">Lahore</option>
@@ -83,11 +96,12 @@
         <br><br>
         <label for="Address">
             <strong>Address:</strong>
-            <textarea name="Address" id="Address" placeholder="type here..." cols="30" rows="3"></textarea>
+            <textarea name="Address" id="Address" placeholder="type here..." cols="50" rows="3"></textarea>
         </label>
         <br><br>
+        <!-- button submit  -->
         <label for="Submit">
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </label>
     </form>
 </body>
