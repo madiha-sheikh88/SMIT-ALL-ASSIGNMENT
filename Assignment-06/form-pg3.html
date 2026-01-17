@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review form-page3</title>
+  </head>
+  <body>
+    <img src="./company-logo-transparent-png-19.png" alt="logo" height="150" width="250">
+    <form action="#" method="post">
+    <fieldset>
+      <legend><strong>Review Section</strong></legend>
+      <label>Ratings:</label>
+      <select name="Ratings" id="Ratings">
+        <option value="" name="Ratings" selected disabled>
+          Select an option
+        </option>
+        <option value="Excellent" name="Ratings">Excellent</option>
+        <option value="Good" name="Ratings">Good</option>
+        <option value="Average" name="Ratings">Average</option>
+        <option value="Poor" name="Ratings">Poor</option>
+      </select>
+      <br><br>
+      Would you recommend us?
+      <label for="yes">
+      <input type="radio" name="recommendation" id="yes" value="yes">Yes
+      </label>
+      <label for="no">
+      <input type="radio" name="recommendation" id="no">No
+      </label>
+      <br><br>
+      What part of the course was more helpful?
+      <label for="teaching">
+        <input type="checkbox" name="coursepart" id="teaching" value="teaching">Teaching
+      </label>
+      <label for="tasks">
+        <input type="checkbox" name="coursepart" id="tasks" value="tasks">Tasks
+      </label>
+      <label for="assignment">
+        <input type="checkbox" name="coursepart" id="assignment" value="assignment">Assignment
+      </label>
+      <br><br>
+      <label for="teachingrating">
+        How you rate our teaching methodology?
+      <input type="range" id="teachingrating" min="1" max="5">
+      </label>
+      <br><br>
+      <label for="feedback">
+        Feedback:
+        <textarea name="feedback" id="feedback" required placeholder="Provide your feedback here..." cols="25" rows="4"></textarea>
+      </label>
+    </fieldset>
+    <br><br>
+    <a href="./form-pg2.html">Preview</a>&nbsp;
+    <input type="reset" value="Reset"> &nbsp;
+    <input type="submit" name="submit" value="Submit Reviw">
+    </form>
+  </body>
+</html>
