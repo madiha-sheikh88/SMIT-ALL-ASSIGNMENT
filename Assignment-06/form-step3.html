@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review form-page3</title>
   </head>
-  <body>
-    <img src="./company-logo-transparent-png-19.png" alt="logo" height="150" width="250">
+  <body style="background-color: bisque;">
+     <!-- all labels, fieldset, legend, required, disabled, select are used as per the code requirements -->
     <form action="#" method="post">
+    <a href="./form-step1.html">Step 1: Account Details</a> &nbsp;&nbsp;
+    <a href="./form-step2.html">Step 2: Personal Details</a> &nbsp;&nbsp;
+    <a href="./form-step3.html">Step 3: Review Section</a> &nbsp;&nbsp;
+    <br><br>
     <fieldset>
-      <legend><strong>Review Section</strong></legend>
+      <legend style="color: rgb(3, 3, 109);"><strong>Review Section</strong></legend>
       <label>Ratings:</label>
       <select name="Ratings" id="Ratings">
         <option value="" name="Ratings" selected disabled>
@@ -22,6 +26,7 @@
       </select>
       <br><br>
       Would you recommend us?
+      <!-- radio button is additional in the form -->
       <label for="yes">
       <input type="radio" name="recommendation" id="yes" value="yes">Yes
       </label>
@@ -29,6 +34,7 @@
       <input type="radio" name="recommendation" id="no">No
       </label>
       <br><br>
+      <!-- checkboxes are included for additional practice -->
       What part of the course was more helpful?
       <label for="teaching">
         <input type="checkbox" name="coursepart" id="teaching" value="teaching">Teaching
@@ -37,11 +43,12 @@
         <input type="checkbox" name="coursepart" id="tasks" value="tasks">Tasks
       </label>
       <label for="assignment">
-        <input type="checkbox" name="coursepart" id="assignment" value="assignment">Assignment
+        <input type="checkbox" name="coursepart" id="assignment" value="assignment">Assignments
       </label>
       <br><br>
       <label for="teachingrating">
         How you rate our teaching methodology?
+        <!-- i used the range for practice as it was taught in the class -->
       <input type="range" id="teachingrating" min="1" max="5">
       </label>
       <br><br>
@@ -51,9 +58,8 @@
       </label>
     </fieldset>
     <br><br>
-    <a href="./form-pg2.html">Preview</a>&nbsp;
-    <input type="reset" value="Reset"> &nbsp;
-    <input type="submit" name="submit" value="Submit Reviw">
+    <a href="./form-step2.html"><img src="./back-return-button-png-18.png" alt="back button" width="100" height="40"></a>
+    <input type="image" name="submit" src="./25511-7-submit-button-picture-thumb.png" alt="submit button" height="80" width="100">
     </form>
   </body>
 </html>
