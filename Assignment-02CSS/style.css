@@ -32,6 +32,7 @@
     font-family: sans-serif;
     font-size: x-small;
     background-color:crimson;
+    font-weight:bold
 }
 
 .header img {
@@ -50,6 +51,9 @@ button {
     width: 250px;
     font-size: smaller;
 }
+.btn:active{
+    background-color: blue;
+}
 
 .pic {
     text-align: left;
@@ -67,6 +71,7 @@ h1 {
 
 h5 {
    line-height: 4;
+   color: blueviolet;
    padding-top: 10px;
    padding-bottom: o;
    text-transform:uppercase;
