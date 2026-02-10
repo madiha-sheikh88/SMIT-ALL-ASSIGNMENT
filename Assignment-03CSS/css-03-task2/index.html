@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css-03-task2</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>new pre-registeration</header>
+    <form action="php" method="post">
+      <div class="firstdiv">
+        <fieldset>
+          <legend class="legend">
+            registeration
+          </legend>
+       <span>Type</span>
+        <label for="Public"><input type="radio" name="Type" value="Public" id="Public" />Public</label>
+        <label for="Private"><input type="radio" name="Type" value="Private" id="Private" />Private
+        </label>
+         <span class="text">Billing Branch</span>
+        <select name="branch" id="branch" class="control">
+            <option value="none" required selected ></option>
+            <option name="branch" value="Nazimabad">Nazimabad</option>
+            <option name="branch" value="Bahadurabad">Bahadurabad</option>
+            <option name="branch" value="Gulshan">Gulshan</option>
+        </select>
+        <span class="text">Solution type</span>
+         <select name="solution-type" id="branch" class="control">
+            <option value="none" required selected ></option>
+            <option name="solution-type" value="1">1</option>
+            <option name="solution-type" value="2">2</option>
+            <option name="solution-type" value="3">3</option>
+        </select>
+        <span class="text">Date</span>
+        <input type="date" name="date" id="date" class="control">
+      </fieldset>
+      </div>
+      <fieldset>
+        <legend class="legend">
+          course information
+        </legend>
+        <label for=""></label>
+       <span class="text2">Course Name</span>
+        <select name="Course" id="Course" class="control">
+            <option value="none" required selected ></option>
+            <option name="Course" value="HTML">HTML</option>
+            <option name="Course" value="CSS">CSS</option>
+            <option name="Course" value="Javascript">Javascript</option>
+        </select>
+        <button class="btn">Add Course</button>
+         <label for="assessment">
+       <span class="text">Assessment</span>
+        <label for="YES"><input type="radio" name="assessment" value="YES" id="YES" />YES</label>
+        <label for="NO"><input type="radio" name="assessment" value="NO" id="NO" />NO
+        </label>
+         </fieldset>
+         <fieldset>
+          <legend class="legend">
+            personal information
+          </legend>
+          <div class="fs-div1">
+          <div class="field">
+            <label>Client Requested Course Name</label>
+            <input type="text" name="coursename">
+          </div>
+        <div class="field">
+          <label>Course Name Arabic</label>
+          <input type="text" name="coursenamearabic">
+        </div>
+        <div class="field">
+          <label>Program / Path</label>
+          <input type="text" name="programpath">
+        </div>
+        </div>
+        <div class="fs-div2">
+        <div class="field">
+          <label>Course Division</label>
+          <select name="Course-Division">
+            <option value="none" required selected></option>
+            <option value="Lower Division">Lower Division</option>
+            <option value="Higher Division">Higher Division</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Material Language</label>
+          <select name="Material-Language">
+            <option value="none" required selected></option>
+            <option value="Arabic">Arabic</option>
+            <option value="English">English</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Language of Delivery</label>
+          <select name="Language">
+            <option value="none" required selected></option>
+            <option value="Verbal Language">Verbal Language</option>
+            <option value="Non Verbal Language">Non Verbal Language</option>
+          </select>
+        </div>
+        </div>
+        <div class="fs-div3">
+         <div class="field">
+          <label>Course Duration (Days)</label>
+          <input type="text" name="courseDuration">
+        </div>
+        <div class="field">
+          <label>Course Manual (USD)</label>
+          <input type="text" name="courseManual">
+        </div>
+        <div class="field">
+          <label>Course Lab (USD)</label>
+          <input type="text" name="courseLab">
+        </div>
+    </div>
+    </div>
+         </fieldset>
+    <fieldset>
+      <legend class="legend">course details</legend>
+      <div class="last">
+        <button class="last-btn">pdf outline</button>
+        <button class="last-btn">ppt outline</button>
+        <button class="last-btn">doc outline</button>
+        <span>Attachment:</span>
+        <input type="file" name="file" placeholder="choose file" id="">
+        <div>
+          <input type="checkbox" name="outlineshared" id="checkbox" value="outlineshared">Outline shared by client
+        </div> <br>
+        <div>
+          <label for="coursedescription">
+            <div>Course Descrpition</div>
+            <textarea name="coursedescription" placeholder="write Descrpition here..." id="coursedescription"></textarea>
+          </label>
+        </div>
+        <button class="reg-btn">Save Pre-Registeration</button>
+        <button class="del">Delete</button>
+        </div>
+    </fieldset>
+    
+    </form>
+  </body>
+</html>

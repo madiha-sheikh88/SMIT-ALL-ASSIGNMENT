@@ -1,0 +1,128 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+*{
+    font-family: "Lora", serif;
+    margin: 0%;
+    padding: 0%;
+    background-color: antiquewhite;
+}
+header{
+    text-transform: capitalize;
+    background-color: navy;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    padding: 20px;
+}
+fieldset{
+    border-radius: 5px;
+    border-color: navy;
+    display: flex;
+    flex-wrap: wrap;
+}
+.legend {
+    text-transform: uppercase;
+    border: 2px solid aqua;
+    padding: 2px;
+    color: white;
+    background-color: rgb(109, 201, 170);
+}
+.control{
+    height: 30px;     
+    padding: 10px 20px;
+    box-sizing: border-box;
+    max-width: 200px;
+    border-radius: 5px;
+    border-color: gray;
+}
+.text{
+    margin-left: 100px;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(109, 201, 170);;
+    border-color: aqua;
+    text-shadow: aqua;
+    color: white;
+    margin-left: 700px;
+}
+.btn:hover{
+    background-color:navy;
+}
+input:focus{
+    background-color:lavender;
+}
+.fs-div1 {
+    display: flex;
+    height: 50px;
+}
+.fs-div2 {
+    display: flex;
+    height: 50px;     
+}
+.fs-div3 {
+    display: flex;
+    height: 50px;     
+}
+.fs-div1 input {
+    border: 2px solid gray;
+    margin-right: 150px;
+    width: 250px;
+    height: 20px;
+
+}
+.fs-div2 select {
+    border: 2px solid gray;
+    margin-right: 150px;
+    width: 250px;
+    height: 20px;
+}
+.fs-div3 input {
+    border: 2px solid gray;
+    margin-right: 150px;
+    width: 250px;
+    height: 20px;
+}
+.last {
+    height: 300px;
+}
+.last-btn{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(109, 201, 170);;
+    border-color: aqua;
+    text-shadow: aqua;
+    color: white;
+    margin-right: 50px;
+    text-transform:uppercase ;
+}
+.last-btn:hover{
+    background-color: navy;
+}
+ #coursedescription{
+    width: 1200px;
+    height: 100px;
+    overflow-x: scroll;
+    border: 2px solid gray;
+ }
+ .reg-btn{
+    color: white;
+    background-color: navy;
+    width: 200px;
+    height: 30px;
+    border-color: aqua;
+    text-shadow: aqua;
+    margin-top: 10px;
+ }
+ .reg-btn:hover{
+    background-color:aqua;
+ }
+ .del{
+    border: 2px solid gray;
+    margin-right: 0%;
+ }
+ .del:hover{
+    background-color:aqua;
+ }
