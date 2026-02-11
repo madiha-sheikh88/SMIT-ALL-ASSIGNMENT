@@ -120,8 +120,10 @@ input:focus{
     background-color:aqua;
  }
  .del{
-    border: 2px solid gray;
-    margin-right: 0%;
+    border: 2px solid navy;
+    margin-left: 800px;
+    width: 100px;
+    height: 30px;
  }
  .del:hover{
     background-color:aqua;
