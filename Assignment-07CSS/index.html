@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDN CSS page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <img
+            class="logo-pic"
+            src="./Assets/MDN_Web_Docs_logo.svg.png"
+            alt="logo"
+          />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./index.html">HTML</a></li>
+            <li><a href="./index.html">CSS</a></li>
+            <li><a href="./index.html">JavaScript</a></li>
+            <li><a href="./index.html">Web APIs</a></li>
+            <li><a href="./index.html">All</a></li>
+            <li><a href="./index.html">Learn</a></li>
+            <li><a href="./index.html">Tools</a></li>
+            <li><a href="./index.html">About</a></li>
+            <li><a href="./index.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="searchbar">
+          <div class="search">
+            <span class="lucide--search"></span>
+          </div>
+          <span class="fa7-solid--arrow-right-to-bracket"></span>
+        </div>
+      </div>
+      <nav>
+        <div>
+          <ul class="pages">
+            <li>Web</li>
+            <li>CSS</li>
+            <li>Reference</li>
+            <li>Properties</li>
+          </ul>
+        </div>
+        <div class="properties">
+          <span class="theme"
+            ><span class="proicons--dark-theme"></span>Theme</span
+          >
+
+          <div class="lang">
+            <span class="heroicons--language-20-solid"></span>
+            <select id="language" name="language">
+              <option value="en">English(US)</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+              <option value="de">German</option>
+              <option value="zh">Chinese</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="content">
+      <aside class="sidebarleft">
+        <p class="filterbox">
+          <span class="circum--filter"></span>
+          <input type="text" placeholder="Filter" />
+        </p>
+        <h2>CSS</h2>
+        <h2>Guides</h2>
+        <ul>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Anchor-positioning">Anchor positioning</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Animations">Animations</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Backgrounds-and-borders"
+              >Backgrounds and borders</a
+            >
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Box-alignment">Box alignment</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Box-model">Box model</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Box-sizing">Box sizing</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Cascade">Cascade</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Cascading-variables">Cascading variables</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Colors">Colors</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Columns">Columns</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Conditional-rules">Conditional rules</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Containment">Containment</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Counters">Counters</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#CSSOM-view">CSSOM view</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Custom-functions"
+              >Custom functions and mixins</a
+            >
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Display">Display</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Environment-variables"
+              >Environment variables</a
+            >
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Filter-effects">Filter effects</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Flexbox">Flexbox</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Fonts">Fonts</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Grid">Grid</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Images">Images</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Lists">Lists</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Logical-properties">Logical properties</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Masking">Masking</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Media-queries">Media queries</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Nesting">Nesting</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Overflow">Overflow</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Positioning">Positioning</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Properties">Properties and Values API</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Scroll-anchoring">Scroll anchoring</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Scroll-driven">Scroll-driven animations</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Scroll-snap">Scroll snap</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Selectors">Selectors</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Shapes">Shapes</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Syntax">Syntax</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Text">Text</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Text-decoration">Text decoration</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Transforms">Transforms</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Transitions">Transitions</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Valuesandunits">Values and units</a>
+          </li>
+          <li>
+            <span class="lsicon--right-filled"></span
+            ><a href="./index.html#Writing-modes">Writing modes</a>
+          </li>
+        </ul>
+      </aside>
+      <main class="main">
+        <h1>CSS properties</h1>
+        <p>
+          A CSS <strong> property</strong> is a parameter used in a CSS
+          declaration that lets you style certain aspects of selected elements.
+          For example, the opacity property is used to set the opacity of a
+          selected element, allowing you to control if content behind that
+          element is visible:
+        </p>
+        <div class="code">
+          <div class="outer1">CSS <button>Copy</button></div>
+          <div class="inner1">
+            /* Set 0.8 opacity on <img /> elements */ <br />
+            <span class="colorblue">img</span> { <br />
+            <span class="colorpink">opacity</span>: 0.8; <br />
+            }
+          </div>
+        </div>
+        <h2 id="Anchor-positioning">Anchor positioning</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Animations">Animations</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Backgrounds-and-borders">Backgrounds and borders</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Box-alignment">Box alignment</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Box-model">Box model</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Box-sizing">Box sizing</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Cascade">Cascade</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Cascading-variables">Cascading variables</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Colors">Colors</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Columns">Columns</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Conditional-rules">Conditional rules</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Containment">Containment</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Counters">Counters</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="CSSOM-view">CSSOM view</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Custom-functions">Custom functions and mixins</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Display">Display</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Environment-variables">Environment variables</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Filter-effects">Filter effects</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Flexbox">Flexbox</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Fonts">Fonts</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Grid">Grid</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Images">Images</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Lists">Lists</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Logical-properties">Logical properties</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Masking">Masking</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Media-queries">Media queries</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Nesting">Nesting</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Overflow">Overflow</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Positioning">Positioning</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Properties">Properties and Values API</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Scroll-anchoring">Scroll anchoring</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Scroll-driven">Scroll-driven animations</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Scroll-snap">Scroll snap</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Selectors">Selectors</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Shapes">Shapes</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Syntax">Syntax</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Text">Text</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Text-decoration">Text decoration</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Transforms">Transforms</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Transitions">Transitions</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Valuesandunits">Values and units</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Writing-modes">Writing modes</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+        <h2 id="Syntax">Syntax</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Alphabetical-index-of-properties">
+          Alphabetical index of properties
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="Specifications">Specifications</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+        <h2 id="See-also">See also</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+      </main>
+      <aside class="sidebarright">
+        <h2>In this article</h2>
+        <ul>
+          <li><a href="./index.html#Syntax">Syntax</a></li>
+          <li>
+            <a href="./index.html#Alphabetical-index-of-properties"
+              >Alphabetical index of properties</a
+            >
+          </li>
+          <li><a href="./index.html#Specifications">Specifications</a></li>
+          <li><a href="./index.html#See-also">See also</a></li>
+        </ul>
+      </aside>
+    </section>
+    <footer class="footer">
+      <div class="applyflex">
+        <div class="logo">
+          <img
+            class="logo-pic"
+            src="./Assets/MDN_Web_Docs_logo.svg.png"
+            alt="logo"
+          />
+        </div>
+        <ul class="uloffooter">
+          <li>Website Privacy Notice</li>
+          <li>Telemetry Settings</li>
+          <li>Legal</li>
+          <li>Community Participation Guidelines</li>
+        </ul>
+      </div>
+      <p>
+        Visit Mozilla Corporation’s not-for-profit parent, the Mozilla
+        Foundation. Portions of this content are ©1998–2026 by individual
+        mozilla.org contributors. Content available under a Creative Commons
+        license.
+      </p>
+    </footer>
+  </body>
+</html>
