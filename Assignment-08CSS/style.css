@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --borderRadius:10px
+}
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(#F103F7,#02D1D5);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.signupform{
+    width: 1000px;
+    height: 500px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--borderRadius);
+
+}
+.sidebar{
+    width: 330px;
+    height: 450px;
+    color: white;
+    background-color: #776CE6;
+    border-radius: var(--borderRadius);
+    padding-left: 20px;
+}
+.details{
+    width: 630px;
+    height: 450px;
+    background-color: whitesmoke;
+}
+h6{
+    padding: 20px;
+    text-transform:uppercase;
+}
+h3{
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    font-weight: lighter;
+}
+p{
+    padding: 20px;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.imgdiv{
+    background-color:#5042ec ;
+    width: 280px;
+    border-radius: var(--borderRadius);
+    padding: 10px;
+}
+.imgdiv p{
+    font-size:x-small;
+}
+.img{
+    border-radius: var(--borderRadius);
+    border: 2px solid white;
+    width: 60px;
+    height: 50px;
+}
+.pic{
+    display: flex;
+}
+img{
+    width: 100%;
+    border-radius: var(--borderRadius);
+}
+.name{
+    font-size: small;
+    padding: 10px;
+}
+.details h3{
+    padding-bottom: 2px;
+}
+.details p{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.radio{
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.radio-id{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 20px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+        width: 200px;
+}
+    .radio label:hover {
+        border-color:#776CE6;
+}
+.fontisto--email::after {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: -0.125em;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m16.484 11.976l6.151-5.344v10.627zm-7.926.905l2.16 1.875c.339.288.781.462 1.264.462h.017h-.001h.014c.484 0 .926-.175 1.269-.465l-.003.002l2.16-1.875l6.566 5.639H1.995zM1.986 5.365h20.03l-9.621 8.356a.6.6 0 0 1-.38.132h-.014h.001h-.014a.6.6 0 0 1-.381-.133l.001.001zm-.621 1.266l6.15 5.344l-6.15 5.28zm21.6-2.441c-.24-.12-.522-.19-.821-.19H1.859a1.9 1.9 0 0 0-.835.197l.011-.005A1.86 1.86 0 0 0 0 5.855v12.172a1.86 1.86 0 0 0 1.858 1.858h20.283a1.86 1.86 0 0 0 1.858-1.858V5.855c0-.727-.419-1.357-1.029-1.66l-.011-.005z'/%3E%3C/svg%3E");
+}
+input{
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 6px 0px;
+  color: rgb(96, 88, 88);
+  font-size: 17px;
+  border: 2px solid gray;
+  background-color: white;
+  outline: none;
+}
+.outer{
+    padding: 20px;
+    font-size: 10px;
+}
+.email{
+    position: relative;
+}
+.fontisto--email{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+.mdi--password-outline::after {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: -0.125em;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2m6 3V10H6v10zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 0 1 5-5a5 5 0 0 1 5 5v2zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3'/%3E%3C/svg%3E");
+}
+.password{
+    position: relative;
+}
+.mdi--password-outline{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+button{
+    width: 200px;
+    padding: 10px;
+    background-color: #776CE6;
+    border-radius: 5px;
+    border: 2px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+button:active{
+    background-color: #F103F7;
+}
