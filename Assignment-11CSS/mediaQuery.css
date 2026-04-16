@@ -40,6 +40,21 @@
 .offer-para3{
   font-size: 56px;
 }
+.radskin-heading {
+  font-size: 30px;
+}
+.radskin-para {
+  font-size: 22px;
+  padding: 20px 0px;
+  line-height: 100%;
+}
+.radiantskin {;
+  padding-top: 20px;
+}
+.blogpost {
+  font-size: 16px;
+  width: 200px;
+  height: 60px;
 }
 @media only screen and (max-width: 950px) {
   .list {
@@ -92,6 +107,26 @@
   width: 150px;
   height: 40px;
 }
+.text-radskin, .image-radskin{
+  width: 100%;
+}
+.radiant-skin{
+  flex-direction: column;
+  width: 100%;
+}
+.footer{
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  gap:30px;
+}
+.logo-white{
+  order: -2;
+}
+.notification{
+  order: -1;
+}
 }
 @media only screen and (max-width: 750px) {
   .list {
@@ -125,7 +160,6 @@
       .viewall{
     font-size: 20px;
   }
-
   .card{
     width: 100%;
   }
@@ -134,17 +168,33 @@
   min-width: 300px;
   min-height: 280px;
 }
+.blogpost {
+  font-size: 10px;
+  width: 150px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.inputbtn {
+  width: 180px;
+}
+footer{
+  padding: 20px;
+}
 }
 @media only screen and (max-width: 400px) {
-  .logo {
-    width: 150px;
-    height: 45px;
-  }
+ 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
+  }
+  .logo img{
+    width: 180px;
   }
   h1 {
     text-align: center;
+  }
+  .btnshop{
+      width: 180px;
+  height: 40px;
   }
   .why-heading {
     font-size: 20px;
@@ -158,9 +208,32 @@
   .addtocart{
     font-size: 10px;
   }
+   .prodheadg {
+    font-size: 15px;
+  }
+      .viewall{
+    font-size: 15px;
+  }
+  .prodname, .prodprice{
+    font-size: 10px;
+  }
+  .cardsvg{
+    width: 25px;
+    height: 25px;
+  }
     .test-01, .test-02, .test-03,
 .test-04, .test-05, .test-06{
   min-width: 250px;
   min-height: 220px;
+}
+footer{
+  padding: 5px;
+  font-size: 10px;
+}
+.logo-white img{
+  width: 150px;
+}
+.inputbtn input{
+  width: 150px;
 }
 }

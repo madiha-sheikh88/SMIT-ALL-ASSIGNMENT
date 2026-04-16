@@ -160,7 +160,9 @@ h1 {
   font-size: 30px;
   font-weight: lighter;
 }
-.btnexlpore, .shopthesale {
+.btnexlpore,
+.shopthesale,
+.blogpost {
   background-color: white;
   color: black;
   width: 250px;
@@ -327,7 +329,7 @@ ins {
 }
 /* section 5 limited time offer start */
 .offer {
-  background: linear-gradient(to right,#D1068C, #1310A6, #7E1B5C);
+  background: linear-gradient(to right, #d1068c, #1310a6, #7e1b5c);
   width: 100%;
   max-height: 600px;
   display: flex;
@@ -335,25 +337,103 @@ ins {
   justify-content: center;
   flex-direction: column;
 }
-.offer-text{
+.offer-text {
   padding: 40px 50px 0px 50px;
   text-align: center;
   color: white;
 }
-.offer-para1{
+.offer-para1 {
   font-size: 60px;
 }
-.offer-para2{
+.offer-para2 {
   font-size: 38px;
 }
-.offer-para3{
+.offer-para3 {
   font-size: 86px;
   padding: 50px 0;
 }
-.shopthesale{
+.shopthesale {
   font-size: 25px;
 }
 .shopthesale:hover {
   background-color: black;
   color: white;
+}
+/* section 5 limited time offer end */
+/* section 6 radiant skin start */
+.radiantskin {
+  background-color: #f0f0f0;
+  padding-top: 100px;
+  width: 100%;
+  min-height: 620px;
+}
+.radiant-skin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+.text-radskin {
+  width: 50%;
+  max-height: auto;
+}
+.image-radskin {
+  width: 50%;
+  min-height: auto;
+}
+.radskin-heading {
+  font-size: 50px;
+}
+.radskin-para {
+  font-size: 27px;
+  padding: 30px 0px;
+  line-height: 150%;
+}
+.blogpost {
+  font-size: 25px;
+  width: 300px;
+  height: 70px;
+}
+.blogpost:hover {
+  background-color: black;
+  color: white;
+}
+.image-radskin img {
+  width: 100%;
+  height: auto;
+}
+/* section 6 radiant skin end */
+/* footer start */
+footer {
+  background-color: black;
+  border-radius: 0px 0px 15px 15px;
+  padding: 30px 100px;
+  width: 100%;
+  min-height: 300px;
+  color: white;
+}
+.footer {
+  display: flex;
+  gap: 100px;
+}
+.quick-links {
+  width: 200px;
+}
+.notification-txt {
+  padding-bottom: 20px;
+}
+.inputbtn {
+  border-radius: 2px;
+  border: 2px solid white;
+}
+.email-submt {
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+}
+.hr {
+  padding: 40px 0px;
+}
+.footer-bottom {
+  text-align: center;
 }
