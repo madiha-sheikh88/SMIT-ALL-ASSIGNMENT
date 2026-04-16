@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xtragleam-skin care</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mediaQuery.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <!-- header start -->
+        <header>
+          <div class="navbar">
+            <div class="logo">
+              <img src="./asset/logo.png" alt="logo-xtragleam" />
+            </div>
+            <ul class="list">
+              <li>Home</li>
+              <li>Shop</li>
+              <li>Spa</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+            <div class="menu">
+              <svg
+                class="hamburger"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30px"
+                height="30px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  d="M2 18c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 14 4.46 14 6 14s2.31 0 2.876.347c.317.194.583.46.777.777C10 15.689 10 16.46 10 18s0 2.31-.347 2.877c-.194.316-.46.582-.777.776C8.311 22 7.54 22 6 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C2 20.31 2 19.54 2 18Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 14 16.46 14 18 14s2.31 0 2.877.347c.316.194.582.46.776.777C22 15.689 22 16.46 22 18s0 2.31-.347 2.877a2.36 2.36 0 0 1-.776.776C20.31 22 19.54 22 18 22s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.776C14 20.31 14 19.54 14 18ZM2 6c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C3.689 2 4.46 2 6 2s2.31 0 2.876.347c.317.194.583.46.777.777C10 3.689 10 4.46 10 6s0 2.31-.347 2.876c-.194.317-.46.583-.777.777C8.311 10 7.54 10 6 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C2 8.311 2 7.54 2 6Zm12 0c0-1.54 0-2.31.347-2.876c.194-.317.46-.583.777-.777C15.689 2 16.46 2 18 2s2.31 0 2.877.347c.316.194.582.46.776.777C22 3.689 22 4.46 22 6s0 2.31-.347 2.876c-.194.317-.46.583-.776.777C20.31 10 19.54 10 18 10s-2.31 0-2.876-.347a2.35 2.35 0 0 1-.777-.777C14 8.311 14 7.54 14 6Z"
+                />
+              </svg>
+            </div>
+            <div class="icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30px"
+                height="30px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#000"
+                  fill-rule="evenodd"
+                  d="M8.418 3.25c.28-.59.883-1 1.582-1h4c.698 0 1.301.41 1.582 1c.683.006 1.216.037 1.692.223a3.25 3.25 0 0 1 1.426 1.09c.367.493.539 1.127.776 1.998l.037.136l.59 2.167a3 3 0 0 1 1.01.828c.622.797.732 1.746.622 2.834c-.108 1.056-.44 2.386-.856 4.051l-.027.105c-.263 1.053-.477 1.908-.73 2.575c-.266.696-.602 1.266-1.157 1.699c-.554.433-1.189.62-1.928.71c-.709.084-1.59.084-2.675.084H9.638c-1.085 0-1.967 0-2.675-.085c-.74-.088-1.374-.276-1.929-.71c-.554-.432-.89-1.002-1.156-1.698c-.254-.667-.467-1.522-.73-2.575l-.027-.105c-.416-1.665-.749-2.995-.856-4.05c-.11-1.09 0-2.038.621-2.835c.283-.362.622-.63 1.01-.828l.59-2.167l.038-.136c.237-.871.409-1.505.776-1.999a3.25 3.25 0 0 1 1.426-1.089c.476-.186 1.008-.217 1.692-.222m.001 1.502c-.662.007-.927.032-1.147.118a1.75 1.75 0 0 0-.768.587c-.176.237-.28.568-.57 1.635L5.58 8.389c1.038-.139 2.378-.139 4.042-.139h4.755c1.665 0 3.005 0 4.042.139l-.353-1.297c-.291-1.067-.394-1.398-.57-1.635a1.75 1.75 0 0 0-.768-.587c-.22-.086-.486-.111-1.148-.118A1.75 1.75 0 0 1 14 5.75h-4a1.75 1.75 0 0 1-1.58-.998M10 3.75a.25.25 0 0 0 0 .5h4a.25.25 0 0 0 0-.5zM5.7 9.886c-.91.132-1.351.372-1.63.73c-.28.357-.405.842-.312 1.758c.095.936.4 2.16.834 3.9c.278 1.108.47 1.876.69 2.45c.21.554.417.847.677 1.05c.259.202.593.331 1.183.402c.61.073 1.4.074 2.544.074h4.63c1.143 0 1.935-.001 2.544-.074c.59-.07.924-.2 1.183-.402c.26-.203.466-.496.678-1.05c.218-.574.411-1.342.688-2.45c.435-1.74.74-2.964.834-3.9c.094-.916-.032-1.402-.311-1.759s-.72-.597-1.631-.729c-.93-.134-2.192-.136-3.985-.136h-4.63c-1.793 0-3.055.002-3.985.136"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30px"
+                height="30px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#000"
+                  d="m8.962 18.91l.464-.588zM12 5.5l-.54.52a.75.75 0 0 0 1.08 0zm3.038 13.41l.465.59zm-5.612-.588C7.91 17.127 6.253 15.96 4.938 14.48C3.65 13.028 2.75 11.335 2.75 9.137h-1.5c0 2.666 1.11 4.7 2.567 6.339c1.43 1.61 3.254 2.9 4.68 4.024zM2.75 9.137c0-2.15 1.215-3.954 2.874-4.713c1.612-.737 3.778-.541 5.836 1.597l1.08-1.04C10.1 2.444 7.264 2.025 5 3.06C2.786 4.073 1.25 6.425 1.25 9.137zM8.497 19.5c.513.404 1.063.834 1.62 1.16s1.193.59 1.883.59v-1.5c-.31 0-.674-.12-1.126-.385c-.453-.264-.922-.628-1.448-1.043zm7.006 0c1.426-1.125 3.25-2.413 4.68-4.024c1.457-1.64 2.567-3.673 2.567-6.339h-1.5c0 2.198-.9 3.891-2.188 5.343c-1.315 1.48-2.972 2.647-4.488 3.842zM22.75 9.137c0-2.712-1.535-5.064-3.75-6.077c-2.264-1.035-5.098-.616-7.54 1.92l1.08 1.04c2.058-2.137 4.224-2.333 5.836-1.596c1.659.759 2.874 2.562 2.874 4.713zm-8.176 9.185c-.526.415-.995.779-1.448 1.043s-.816.385-1.126.385v1.5c.69 0 1.326-.265 1.883-.59c.558-.326 1.107-.756 1.62-1.16z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30px"
+                height="30px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#000"
+                  fill-rule="evenodd"
+                  d="M12 1.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5M8.75 6a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0M12 12.25c-2.313 0-4.445.526-6.024 1.414C4.42 14.54 3.25 15.866 3.25 17.5v.102c-.001 1.162-.002 2.62 1.277 3.662c.629.512 1.51.877 2.7 1.117c1.192.242 2.747.369 4.773.369s3.58-.127 4.774-.369c1.19-.24 2.07-.605 2.7-1.117c1.279-1.042 1.277-2.5 1.276-3.662V17.5c0-1.634-1.17-2.96-2.725-3.836c-1.58-.888-3.711-1.414-6.025-1.414M4.75 17.5c0-.851.622-1.775 1.961-2.528c1.316-.74 3.184-1.222 5.29-1.222c2.104 0 3.972.482 5.288 1.222c1.34.753 1.961 1.677 1.961 2.528c0 1.308-.04 2.044-.724 2.6c-.37.302-.99.597-2.05.811c-1.057.214-2.502.339-4.476.339s-3.42-.125-4.476-.339c-1.06-.214-1.68-.509-2.05-.81c-.684-.557-.724-1.293-.724-2.601"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="bottombar">
+            <ul class="bottomlist">
+              <li>Women</li>
+              <li>Men</li>
+              <li>Kiddies</li>
+              <li>New</li>
+              <li>Popular</li>
+            </ul>
+            <div class="searchbtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30px"
+                height="30px"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+          </div>
+        </header>
+        <!-- header section ends -->
+        <!-- section1 image and h1 start -->
+        <section class="imgheading">
+          <div class="textsec1">
+            <h1 class="heading1">Glow Beyond</h1>
+            <img class="sendarrow" src="./asset/Send.png" alt="send arrow" />
+            <h1 class="expcet">Expectations</h1>
+            <p class="sec1text">
+              Clean, effective, and cruelty-free skincare made to deliver
+              visible results.
+            </p>
+            <div class="btnshop">
+              shop now
+              <span class="shopbtn"
+                ><img src="./asset/send-btn.png" alt="shop now button"
+              /></span>
+            </div>
+          </div>
+          <div class="imgsec1">
+            <img class="img1" src="./asset/img1.png" alt="" />
+            <img class="img2" src="./asset/img2.png" alt="" />
+            <img class="img3" src="./asset/img3.png" alt="" />
+          </div>
+        </section>
+        <!-- section1 image and h1 end -->
+        <!-- section 2 why xtragleam start -->
+        <section class="section2">
+          <div class="whygleam">
+            <h2 class="why-heading">Why Choose Xtragleam?</h2>
+            <div class="gleamtext-img">
+              <div class="imgacne">
+                <img src="./asset/image4.png" alt="acne" />
+              </div>
+              <div class="text-acne">
+                <h3 class="struggle-h">Struggling with acne issues?</h3>
+                <p class="sec2text">
+                  At Xtragleam Skincare, we understand how frustrating acne can
+                  be, and we’re here to help you regain confidence in your skin.
+                  Our carefully designed recovery process targets acne at its
+                  root while soothing and nourishing your skin for long-term
+                  health.
+                </p>
+                <div class="btnexlpore">
+                  explore our range
+                  <span class="enterbtn"
+                    ><img src="./asset/arrow-right.png" alt="explore range"
+                  /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section 2 why xtragleam end -->
+        <!-- section3 product cards start -->
+        <section class="prodcard-section">
+          <div class="prodtext">
+            <h2 class="prodheadg">Discover Our Best-Sellers</h2>
+            <div class="viewall">View all</div>
+          </div>
+          <div class="allcards">
+<!-- product card 1 -->
+            <div class="card card1">
+              <div class="upper">
+              <div class="upper-up">
+                <div class="bestseller">Best Seller</div>
+                <div class="staricons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg></div>
+                <div class="heartsvg"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 15 15"><g fill="none" stroke="#fff" stroke-width="1"><path d="m6.5 5.5l1 1l1-1a1.414 1.414 0 0 1 2 2l-3 3l-3-3a1.414 1.414 0 0 1 2-2Z"/><path d="M.5 7.5a7 7 0 1 0 14 0a7 7 0 0 0-14 0Z"/></g></svg></div>
+              </div>
+              <div class="product-img"><img src="./asset/prodcard-img1.png" alt="x5 xtreme body lotion"></div>
+              </div>
+              <div class="lower">
+                <div class="lwrcard-p">
+                <p class="prodname">X5 Extreme Body Lotion</p>
+                <p class="prodprice"><del>₦35,000</del><ins>₦30,000</ins></p>
+                </div>
+                <div class="addtocart">
+                  Add to Cart
+                  <span class="cardsvg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#fff" d="M16 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/><path fill="#fff" fill-rule="evenodd" d="M12 2.75A2.25 2.25 0 0 0 9.75 5v.254q.626-.005 1.355-.004h1.79q.73-.001 1.355.004V5A2.25 2.25 0 0 0 12 2.75m3.75 2.557V5a3.75 3.75 0 0 0-7.5 0v.307q-.202.014-.391.035c-.878.095-1.613.293-2.265.74a5 5 0 0 0-.63.516c-.566.552-.905 1.234-1.17 2.076c-.257.819-.465 1.859-.727 3.166l-.019.095c-.376 1.883-.673 3.367-.758 4.549c-.088 1.208.034 2.223.606 3.104q.288.442.664.81c.752.734 1.724 1.052 2.925 1.204c1.176.148 2.69.148 4.61.148h1.81c1.921 0 3.434 0 4.61-.148c1.201-.152 2.174-.47 2.925-1.204a4.8 4.8 0 0 0 .664-.81c.572-.88.694-1.896.607-3.104c-.086-1.182-.382-2.666-.76-4.549l-.018-.095c-.261-1.307-.47-2.347-.727-3.166c-.265-.842-.604-1.524-1.17-2.076a5 5 0 0 0-.63-.516c-.652-.447-1.387-.645-2.265-.74a11 11 0 0 0-.39-.035M8.02 6.833c-.747.08-1.208.233-1.578.486a3.3 3.3 0 0 0-.431.354c-.321.313-.56.735-.786 1.451c-.23.733-.424 1.693-.695 3.052c-.39 1.948-.667 3.34-.744 4.416c-.077 1.062.052 1.693.368 2.179q.196.302.454.554c.415.405 1.008.655 2.065.789c1.07.135 2.49.136 4.476.136h1.703c1.986 0 3.404-.001 4.475-.136c1.057-.134 1.65-.384 2.065-.789a3.3 3.3 0 0 0 .454-.554c.316-.486.445-1.117.369-2.18c-.078-1.076-.355-2.467-.744-4.415c-.272-1.359-.465-2.32-.696-3.052c-.225-.716-.465-1.138-.786-1.451a3 3 0 0 0-.43-.354c-.37-.253-.832-.405-1.579-.486c-.763-.082-1.743-.083-3.129-.083H11.15c-1.386 0-2.366.001-3.13.083" clip-rule="evenodd"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+<!-- product card 2 -->
+ <div class="card card2">
+              <div class="upper">
+              <div class="upper-up">
+                <div class="refined">refined</div>
+                <div class="staricons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg></div>
+                <div class="heartsvg2"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 15 15"><g fill="none" stroke="#fff" stroke-width="1"><path d="m6.5 5.5l1 1l1-1a1.414 1.414 0 0 1 2 2l-3 3l-3-3a1.414 1.414 0 0 1 2-2Z"/><path d="M.5 7.5a7 7 0 1 0 14 0a7 7 0 0 0-14 0Z"/></g></svg></div>
+              </div>
+              <div class="product-img"><img src="./asset/prodcard-img2.png" alt="AHA Face Toner"></div>
+              </div>
+              <div class="lower">
+                <div class="lwrcard-p">
+                <p class="prodname">AHA Face Toner</p>
+                <p class="prodprice"><del>₦75,000</del><ins>₦60,000</ins></p>
+                </div>
+                <div class="addtocart">
+                  Add to Cart
+                  <span class="cardsvg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#fff" d="M16 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/><path fill="#fff" fill-rule="evenodd" d="M12 2.75A2.25 2.25 0 0 0 9.75 5v.254q.626-.005 1.355-.004h1.79q.73-.001 1.355.004V5A2.25 2.25 0 0 0 12 2.75m3.75 2.557V5a3.75 3.75 0 0 0-7.5 0v.307q-.202.014-.391.035c-.878.095-1.613.293-2.265.74a5 5 0 0 0-.63.516c-.566.552-.905 1.234-1.17 2.076c-.257.819-.465 1.859-.727 3.166l-.019.095c-.376 1.883-.673 3.367-.758 4.549c-.088 1.208.034 2.223.606 3.104q.288.442.664.81c.752.734 1.724 1.052 2.925 1.204c1.176.148 2.69.148 4.61.148h1.81c1.921 0 3.434 0 4.61-.148c1.201-.152 2.174-.47 2.925-1.204a4.8 4.8 0 0 0 .664-.81c.572-.88.694-1.896.607-3.104c-.086-1.182-.382-2.666-.76-4.549l-.018-.095c-.261-1.307-.47-2.347-.727-3.166c-.265-.842-.604-1.524-1.17-2.076a5 5 0 0 0-.63-.516c-.652-.447-1.387-.645-2.265-.74a11 11 0 0 0-.39-.035M8.02 6.833c-.747.08-1.208.233-1.578.486a3.3 3.3 0 0 0-.431.354c-.321.313-.56.735-.786 1.451c-.23.733-.424 1.693-.695 3.052c-.39 1.948-.667 3.34-.744 4.416c-.077 1.062.052 1.693.368 2.179q.196.302.454.554c.415.405 1.008.655 2.065.789c1.07.135 2.49.136 4.476.136h1.703c1.986 0 3.404-.001 4.475-.136c1.057-.134 1.65-.384 2.065-.789a3.3 3.3 0 0 0 .454-.554c.316-.486.445-1.117.369-2.18c-.078-1.076-.355-2.467-.744-4.415c-.272-1.359-.465-2.32-.696-3.052c-.225-.716-.465-1.138-.786-1.451a3 3 0 0 0-.43-.354c-.37-.253-.832-.405-1.579-.486c-.763-.082-1.743-.083-3.129-.083H11.15c-1.386 0-2.366.001-3.13.083" clip-rule="evenodd"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+<!-- product card 3 -->
+ <div class="card card3">
+              <div class="upper">
+              <div class="upper-up">
+                <div class="top">Top</div>
+                <div class="staricons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg></div>
+                <div class="heartsvg3"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 15 15"><g fill="none" stroke="#fff" stroke-width="1"><path d="m6.5 5.5l1 1l1-1a1.414 1.414 0 0 1 2 2l-3 3l-3-3a1.414 1.414 0 0 1 2-2Z"/><path d="M.5 7.5a7 7 0 1 0 14 0a7 7 0 0 0-14 0Z"/></g></svg></div>
+              </div>
+              <div class="product-img"><img src="./asset/prodcard-img3.png" alt="Anti Strecthmark Oil"></div>
+              </div>
+              <div class="lower">
+                <div class="lwrcard-p">
+                <p class="prodname">Anti Strecthmark Oil</p>
+                <p class="prodprice"><del>₦75,000</del><ins>₦70,000</ins></p>
+                </div>
+                <div class="addtocart">
+                  Add to Cart
+                  <span class="cardsvg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#fff" d="M16 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/><path fill="#fff" fill-rule="evenodd" d="M12 2.75A2.25 2.25 0 0 0 9.75 5v.254q.626-.005 1.355-.004h1.79q.73-.001 1.355.004V5A2.25 2.25 0 0 0 12 2.75m3.75 2.557V5a3.75 3.75 0 0 0-7.5 0v.307q-.202.014-.391.035c-.878.095-1.613.293-2.265.74a5 5 0 0 0-.63.516c-.566.552-.905 1.234-1.17 2.076c-.257.819-.465 1.859-.727 3.166l-.019.095c-.376 1.883-.673 3.367-.758 4.549c-.088 1.208.034 2.223.606 3.104q.288.442.664.81c.752.734 1.724 1.052 2.925 1.204c1.176.148 2.69.148 4.61.148h1.81c1.921 0 3.434 0 4.61-.148c1.201-.152 2.174-.47 2.925-1.204a4.8 4.8 0 0 0 .664-.81c.572-.88.694-1.896.607-3.104c-.086-1.182-.382-2.666-.76-4.549l-.018-.095c-.261-1.307-.47-2.347-.727-3.166c-.265-.842-.604-1.524-1.17-2.076a5 5 0 0 0-.63-.516c-.652-.447-1.387-.645-2.265-.74a11 11 0 0 0-.39-.035M8.02 6.833c-.747.08-1.208.233-1.578.486a3.3 3.3 0 0 0-.431.354c-.321.313-.56.735-.786 1.451c-.23.733-.424 1.693-.695 3.052c-.39 1.948-.667 3.34-.744 4.416c-.077 1.062.052 1.693.368 2.179q.196.302.454.554c.415.405 1.008.655 2.065.789c1.07.135 2.49.136 4.476.136h1.703c1.986 0 3.404-.001 4.475-.136c1.057-.134 1.65-.384 2.065-.789a3.3 3.3 0 0 0 .454-.554c.316-.486.445-1.117.369-2.18c-.078-1.076-.355-2.467-.744-4.415c-.272-1.359-.465-2.32-.696-3.052c-.225-.716-.465-1.138-.786-1.451a3 3 0 0 0-.43-.354c-.37-.253-.832-.405-1.579-.486c-.763-.082-1.743-.083-3.129-.083H11.15c-1.386 0-2.366.001-3.13.083" clip-rule="evenodd"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+<!-- product card 4 -->
+<div class="card card4">
+              <div class="upper">
+              <div class="upper-up">
+                <div class="bestseller">Best Seller</div>
+                <div class="staricons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg></div>
+                <div class="heartsvg3"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 15 15"><g fill="none" stroke="#fff" stroke-width="1"><path d="m6.5 5.5l1 1l1-1a1.414 1.414 0 0 1 2 2l-3 3l-3-3a1.414 1.414 0 0 1 2-2Z"/><path d="M.5 7.5a7 7 0 1 0 14 0a7 7 0 0 0-14 0Z"/></g></svg></div>
+              </div>
+              <div class="product-img"><img src="./asset/prodcard-img4.png" alt="Acne Serum"></div>
+              </div>
+              <div class="lower">
+                <div class="lwrcard-p">
+                <p class="prodname">Acne Serum</p>
+                <p class="prodprice"><del>₦35,000</del><ins>₦30,000</ins></p>
+                </div>
+                <div class="addtocart">
+                  Add to Cart
+                  <span class="cardsvg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#fff" d="M16 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/><path fill="#fff" fill-rule="evenodd" d="M12 2.75A2.25 2.25 0 0 0 9.75 5v.254q.626-.005 1.355-.004h1.79q.73-.001 1.355.004V5A2.25 2.25 0 0 0 12 2.75m3.75 2.557V5a3.75 3.75 0 0 0-7.5 0v.307q-.202.014-.391.035c-.878.095-1.613.293-2.265.74a5 5 0 0 0-.63.516c-.566.552-.905 1.234-1.17 2.076c-.257.819-.465 1.859-.727 3.166l-.019.095c-.376 1.883-.673 3.367-.758 4.549c-.088 1.208.034 2.223.606 3.104q.288.442.664.81c.752.734 1.724 1.052 2.925 1.204c1.176.148 2.69.148 4.61.148h1.81c1.921 0 3.434 0 4.61-.148c1.201-.152 2.174-.47 2.925-1.204a4.8 4.8 0 0 0 .664-.81c.572-.88.694-1.896.607-3.104c-.086-1.182-.382-2.666-.76-4.549l-.018-.095c-.261-1.307-.47-2.347-.727-3.166c-.265-.842-.604-1.524-1.17-2.076a5 5 0 0 0-.63-.516c-.652-.447-1.387-.645-2.265-.74a11 11 0 0 0-.39-.035M8.02 6.833c-.747.08-1.208.233-1.578.486a3.3 3.3 0 0 0-.431.354c-.321.313-.56.735-.786 1.451c-.23.733-.424 1.693-.695 3.052c-.39 1.948-.667 3.34-.744 4.416c-.077 1.062.052 1.693.368 2.179q.196.302.454.554c.415.405 1.008.655 2.065.789c1.07.135 2.49.136 4.476.136h1.703c1.986 0 3.404-.001 4.475-.136c1.057-.134 1.65-.384 2.065-.789a3.3 3.3 0 0 0 .454-.554c.316-.486.445-1.117.369-2.18c-.078-1.076-.355-2.467-.744-4.415c-.272-1.359-.465-2.32-.696-3.052c-.225-.716-.465-1.138-.786-1.451a3 3 0 0 0-.43-.354c-.37-.253-.832-.405-1.579-.486c-.763-.082-1.743-.083-3.129-.083H11.15c-1.386 0-2.366.001-3.13.083" clip-rule="evenodd"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+<!-- product card 5 -->
+<div class="card card5">
+              <div class="upper">
+              <div class="upper-up">
+                <div class="bestseller">Best Seller</div>
+                <div class="staricons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg></div>
+                <div class="heartsvg3"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 15 15"><g fill="none" stroke="#fff" stroke-width="1"><path d="m6.5 5.5l1 1l1-1a1.414 1.414 0 0 1 2 2l-3 3l-3-3a1.414 1.414 0 0 1 2-2Z"/><path d="M.5 7.5a7 7 0 1 0 14 0a7 7 0 0 0-14 0Z"/></g></svg></div>
+              </div>
+              <div class="product-img"><img src="./asset/prodcard-img5.png" alt="Luminous Body Lotion"></div>
+              </div>
+              <div class="lower">
+                <div class="lwrcard-p">
+                <p class="prodname">Luminous Body Lotion/p>
+                <p class="prodprice"><del>₦35,000</del><ins>₦30,000</ins></p>
+                </div>
+                <div class="addtocart">
+                  Add to Cart
+                  <span class="cardsvg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#fff" d="M16 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/><path fill="#fff" fill-rule="evenodd" d="M12 2.75A2.25 2.25 0 0 0 9.75 5v.254q.626-.005 1.355-.004h1.79q.73-.001 1.355.004V5A2.25 2.25 0 0 0 12 2.75m3.75 2.557V5a3.75 3.75 0 0 0-7.5 0v.307q-.202.014-.391.035c-.878.095-1.613.293-2.265.74a5 5 0 0 0-.63.516c-.566.552-.905 1.234-1.17 2.076c-.257.819-.465 1.859-.727 3.166l-.019.095c-.376 1.883-.673 3.367-.758 4.549c-.088 1.208.034 2.223.606 3.104q.288.442.664.81c.752.734 1.724 1.052 2.925 1.204c1.176.148 2.69.148 4.61.148h1.81c1.921 0 3.434 0 4.61-.148c1.201-.152 2.174-.47 2.925-1.204a4.8 4.8 0 0 0 .664-.81c.572-.88.694-1.896.607-3.104c-.086-1.182-.382-2.666-.76-4.549l-.018-.095c-.261-1.307-.47-2.347-.727-3.166c-.265-.842-.604-1.524-1.17-2.076a5 5 0 0 0-.63-.516c-.652-.447-1.387-.645-2.265-.74a11 11 0 0 0-.39-.035M8.02 6.833c-.747.08-1.208.233-1.578.486a3.3 3.3 0 0 0-.431.354c-.321.313-.56.735-.786 1.451c-.23.733-.424 1.693-.695 3.052c-.39 1.948-.667 3.34-.744 4.416c-.077 1.062.052 1.693.368 2.179q.196.302.454.554c.415.405 1.008.655 2.065.789c1.07.135 2.49.136 4.476.136h1.703c1.986 0 3.404-.001 4.475-.136c1.057-.134 1.65-.384 2.065-.789a3.3 3.3 0 0 0 .454-.554c.316-.486.445-1.117.369-2.18c-.078-1.076-.355-2.467-.744-4.415c-.272-1.359-.465-2.32-.696-3.052c-.225-.716-.465-1.138-.786-1.451a3 3 0 0 0-.43-.354c-.37-.253-.832-.405-1.579-.486c-.763-.082-1.743-.083-3.129-.083H11.15c-1.386 0-2.366.001-3.13.083" clip-rule="evenodd"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+<!-- product card 6 -->
+<div class="card card5">
+              <div class="upper">
+              <div class="upper-up">
+                <div class="bestseller">Best Seller</div>
+                <div class="staricons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20"><path fill="#FAAA4C" d="m10 15l-5.878 3.09l1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955l6.572.955l-4.756 4.635l1.123 6.545z"/></svg></div>
+                <div class="heartsvg3"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 15 15"><g fill="none" stroke="#fff" stroke-width="1"><path d="m6.5 5.5l1 1l1-1a1.414 1.414 0 0 1 2 2l-3 3l-3-3a1.414 1.414 0 0 1 2-2Z"/><path d="M.5 7.5a7 7 0 1 0 14 0a7 7 0 0 0-14 0Z"/></g></svg></div>
+              </div>
+              <div class="product-img"><img src="./asset/prodcard-img6.png" alt="Skin Glow Moisturizing Lotion"></div>
+              </div>
+              <div class="lower">
+                <div class="lwrcard-p">
+                <p class="prodname">Skin Glow Moisturizing Lotion</p>
+                <p class="prodprice"><del>₦35,000</del><ins>₦30,000</ins></p>
+                </div>
+                <div class="addtocart">
+                  Add to Cart
+                  <span class="cardsvg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#fff" d="M16 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/><path fill="#fff" fill-rule="evenodd" d="M12 2.75A2.25 2.25 0 0 0 9.75 5v.254q.626-.005 1.355-.004h1.79q.73-.001 1.355.004V5A2.25 2.25 0 0 0 12 2.75m3.75 2.557V5a3.75 3.75 0 0 0-7.5 0v.307q-.202.014-.391.035c-.878.095-1.613.293-2.265.74a5 5 0 0 0-.63.516c-.566.552-.905 1.234-1.17 2.076c-.257.819-.465 1.859-.727 3.166l-.019.095c-.376 1.883-.673 3.367-.758 4.549c-.088 1.208.034 2.223.606 3.104q.288.442.664.81c.752.734 1.724 1.052 2.925 1.204c1.176.148 2.69.148 4.61.148h1.81c1.921 0 3.434 0 4.61-.148c1.201-.152 2.174-.47 2.925-1.204a4.8 4.8 0 0 0 .664-.81c.572-.88.694-1.896.607-3.104c-.086-1.182-.382-2.666-.76-4.549l-.018-.095c-.261-1.307-.47-2.347-.727-3.166c-.265-.842-.604-1.524-1.17-2.076a5 5 0 0 0-.63-.516c-.652-.447-1.387-.645-2.265-.74a11 11 0 0 0-.39-.035M8.02 6.833c-.747.08-1.208.233-1.578.486a3.3 3.3 0 0 0-.431.354c-.321.313-.56.735-.786 1.451c-.23.733-.424 1.693-.695 3.052c-.39 1.948-.667 3.34-.744 4.416c-.077 1.062.052 1.693.368 2.179q.196.302.454.554c.415.405 1.008.655 2.065.789c1.07.135 2.49.136 4.476.136h1.703c1.986 0 3.404-.001 4.475-.136c1.057-.134 1.65-.384 2.065-.789a3.3 3.3 0 0 0 .454-.554c.316-.486.445-1.117.369-2.18c-.078-1.076-.355-2.467-.744-4.415c-.272-1.359-.465-2.32-.696-3.052c-.225-.716-.465-1.138-.786-1.451a3 3 0 0 0-.43-.354c-.37-.253-.832-.405-1.579-.486c-.763-.082-1.743-.083-3.129-.083H11.15c-1.386 0-2.366.001-3.13.083" clip-rule="evenodd"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section3 product cards end -->
+         <!-- section4 testimonial start -->
+<section class="testimonial">
+<h2 class="heading-testimonial">Testimonial</h2>
+<div class="alltestimonials">
+   <!-- testimonial 1 start -->
+  <div class="test-01">
+    <div class="img-test"><img src="./asset/test-cust1.png" alt="product testimonial"></div>
+    <div class="text-test">
+    <h4 class="heading-test">2 weeks of using Glow Serum</h4>
+    <p class="para-test">After 2 weeks of using Xtragleam, my skin has never felt smoother. Thank you <b>!” – Lisa, Verified Buyer</b></p>
+    </div>
+  </div>
+ <!-- testimonial 1 end -->
+ <!-- testimonial 2 start -->
+  <div class="test-02">
+    <div class="img-test"><img src="./asset/test-cust2.png" alt="product testimonial"></div>
+    <div class="text-test">
+    <h4 class="heading-test">More Confident</h4>
+    <p class="para-test">I’ve struggled with acne for years, but Xtragleam changed everything! My skin is glowing, and I’ve never felt more confident.”<b>– Sarah A., Verified Buyer</b></p>
+    </div>
+  </div>
+ <!-- testimonial 2 end -->
+ <!-- testimonial 3 start -->
+  <div class="test-03">
+    <div class="img-test"><img src="./asset/test-cust3.png" alt="product testimonial"></div>
+    <div class="text-test">
+    <h4 class="heading-test">Game Changer</h4>
+    <p class="para-test">The Glow Serum is a game-changer. My dark spots faded within weeks, and my skin feels so hydrated!”<b>– Emma L., Verified Buyer</b></p>
+    </div>
+  </div>
+  <!-- testimonial 3 end -->
+ <!-- testimonial 4 start -->
+  <div class="test-04">
+    <div class="img-test"><img src="./asset/test-cust4.png" alt="product testimonial"></div>
+    <div class="text-test">
+    <h4 class="heading-test">Dermatologist Recommendation</h4>
+    <p class="para-test">As a dermatologist, I recommend Xtragleam to my clients for its effective, natural ingredients.” <b>– Dr. Jane O., Dermatologist</b></p>
+    </div>
+  </div>
+ <!-- testimonial 4 end -->
+ <!-- testimonial 5 start -->
+  <div class="test-05">
+    <div class="img-test"><img src="./asset/test-cust5.png" alt="product testimonial"></div>
+    <div class="text-test">
+    <h4 class="heading-test">More Confident</h4>
+    <p class="para-test">I’ve struggled with acne for years, but Xtragleam changed everything! My skin is glowing, and I’ve never felt more confident.”<b>– Sarah A., Verified Buyer</b></p>
+    </div>
+  </div>
+
+ <!-- testimonial 5 end -->
+  <!-- testimonial 6 start -->
+  <div class="test-06">
+    <div class="img-test"><img src="./asset/test-cust6.png" alt="product testimonial"></div>
+    <div class="text-test">
+    <h4 class="heading-test">Beauty Influencer</h4>
+    <p class="para-test">Xtragleam is my go-to for glowing skin before events!”<b>– SkincareGuru, Beauty Influencer</b></p>
+    </div>
+  </div>
+<!-- testimonial 6 end -->
+</div>
+</section>
+        <!-- section4 testimonial end -->
+           <!-- section 5 limited time offer start -->
+<section class="offer">
+<div class="offer-text">
+  <p class="offer-para1">Don’t Miss Out: Limited-Time Offer!</p>
+  <p class="offer-para2">Enjoy 20% off your first purchase with code GLOW20</p>
+  <p class="offer-para3">Hurry, offer ends in 12hrs 30mins 56secons</p>
+</div>
+<div class="shopthesale">
+   Shop the Sale
+   <span class="enterbtn"
+     ><img src="./asset/arrow-right.png" alt="Shop the Sale"
+  /></span>
+ </div>
+
+</section>
+ <!-- section 5 limited time offer end -->
+
+
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+@media only screen and (max-width: 1300px) {
+  .card {
+    width: 48%;
+  }
+  .prodheadg {
+    font-size: 40px;
+  }
+  .viewall{
+    font-size: 40px;
+  }
+  .alltestimonials{
+  columns: 2;
+}
+}
+@media only screen and (max-width: 1200px) {
+  .textsec1 {
+    width: 100%;
+  }
+  .img2 {
+    display: none;
+  }
+  .img3 {
+    display: none;
+  }
+  .struggle-h {
+    font-size: 25px;
+  }
+  .sec2text {
+    font-size: 20px;
+  }
+    .viewall{
+    font-size: 30px;
+  }
+  .offer-para1{
+  font-size: 50px;
+}
+.offer-para2{
+  font-size: 28px;
+}
+.offer-para3{
+  font-size: 56px;
+}
+}
+@media only screen and (max-width: 950px) {
+  .list {
+    gap: 20px;
+  }
+  .bottomlist {
+    gap: 30px;
+  }
+  .sendarrow {
+    display: none;
+  }
+  .gleamtext-img {
+    flex-direction: column;
+    width: 100%;
+  }
+  .text-acne,
+  .imgacne {
+    width: 100%;
+  }
+  .imgacne img {
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+  }
+  section {
+    padding-bottom: 50px;
+  }
+     .prodheadg {
+    font-size: 30px;
+  }
+    .viewall{
+    font-size: 25px;
+  }
+  .alltestimonials{
+  columns: 1;
+}
+.offer-para1{
+  font-size: 30px;
+}
+.offer-para2{
+  font-size: 18px;
+}
+.offer-para3{
+  font-size: 30px;
+  padding: 10px 0px;
+}
+.shopthesale{
+  font-size: 16px;
+  width: 150px;
+  height: 40px;
+}
+}
+@media only screen and (max-width: 750px) {
+  .list {
+    display: none;
+  }
+  .bottombar {
+    display: none;
+  }
+  .icons {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .imgsec1 {
+    display: none;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .btnexlpore {
+    width: 180px;
+    height: 40px;
+  }
+  .why-heading {
+    font-size: 30px;
+  }
+   .prodheadg {
+    font-size: 20px;
+  }
+      .viewall{
+    font-size: 20px;
+  }
+
+  .card{
+    width: 100%;
+  }
+  .test-01, .test-02, .test-03,
+.test-04, .test-05, .test-06{
+  min-width: 300px;
+  min-height: 280px;
+}
+}
+@media only screen and (max-width: 400px) {
+  .logo {
+    width: 150px;
+    height: 45px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .why-heading {
+    font-size: 20px;
+  }
+  .struggle-h {
+    font-size: 20px;
+  }
+  .sec2text {
+    font-size: 16px;
+  }
+  .addtocart{
+    font-size: 10px;
+  }
+    .test-01, .test-02, .test-03,
+.test-04, .test-05, .test-06{
+  min-width: 250px;
+  min-height: 220px;
+}
+}

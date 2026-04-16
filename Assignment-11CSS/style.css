@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(./asset/Roboto-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+  font-family: Miranda;
+  src: url(./asset/MirandaSans-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1950px;
+  font-family: "Roboto";
+  padding: 20px 40px;
+}
+.main {
+  max-width: 1300px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+/* navbar starts */
+.navbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul {
+  list-style-type: none;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  cursor: pointer;
+  font-weight: lighter;
+}
+.list li:hover {
+  border-bottom: 2px solid black;
+  font-weight: normal;
+}
+.hamburger {
+  display: none;
+}
+.bottomlist {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.bottombar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.bottomlist li {
+  background-color: #efefef;
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: lighter;
+}
+/* header section end */
+section {
+  padding-bottom: 100px;
+}
+.imgheading {
+  width: 100%;
+  min-height: 550;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff6fd;
+  padding: 50px 20px;
+  margin-top: 50px;
+}
+h1 {
+  font-family: Miranda;
+  font-size: 50px;
+  text-align: left !important;
+}
+.heading1 {
+  display: inline-block;
+}
+.expcet {
+  text-align: right !important;
+  padding-bottom: 40px;
+}
+.btnshop {
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.btnshop:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.imgsec1 {
+  position: relative;
+  width: 550px;
+  height: 550px;
+}
+.img1 {
+  position: absolute;
+  top: 80px;
+}
+.img2 {
+  position: absolute;
+  top: 90px;
+  right: 120px;
+}
+.img3 {
+  position: absolute;
+  top: 325px;
+  right: 45px;
+}
+/* section1 end here */
+/* section2 why xtragleam start */
+.whygleam {
+  background-color: #f0f0f0;
+  padding: 20px;
+  min-height: 550px;
+}
+.gleamtext-img {
+  display: flex;
+}
+.why-heading {
+  padding: 20px;
+  font-size: 45px;
+}
+.text-acne {
+  padding: 20px;
+  width: 50%;
+}
+.imgacne {
+  width: 50%;
+}
+.imgacne img {
+  width: 100%;
+}
+.struggle-h {
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.sec2text {
+  font-size: 30px;
+  font-weight: lighter;
+}
+.btnexlpore, .shopthesale {
+  background-color: white;
+  color: black;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.btnexlpore:hover {
+  background-color: black;
+  color: white;
+}
+/* section2 why xtragleam end */
+
+/* section3 product cards start */
+.prodcard-section {
+  width: 100%;
+  min-height: 10vh;
+}
+.prodtext {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prodheadg {
+  font-size: 45px;
+}
+.viewall {
+  font-size: 30px;
+  font-weight: lighter;
+  text-decoration: underline;
+}
+.allcards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+  overflow: hidden;
+}
+.upper {
+  background-color: #f0f0f0;
+  padding: 30px 20px;
+  border-radius: 10px 10px 0px 0px;
+  height: 75%;
+}
+.upper-up {
+  position: relative;
+}
+.staricons {
+  font-size: 16px;
+}
+.heartsvg {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+.product-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-img img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.lower {
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25%;
+}
+.prodname {
+  font-size: 16px;
+}
+.addtocart {
+  background-color: black;
+  color: white;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+ins {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* card 2 starts */
+.heartsvg2 {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+.refined {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+/* card 3 starts */
+
+.heartsvg3 {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+.top {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.testimonial {
+  background-color: #f0f0f0;
+  width: 100%;
+  min-height: 700px;
+  padding: 40px 20px;
+}
+.heading-testimonial {
+  font-size: 45px;
+  padding-bottom: 20px;
+}
+.alltestimonials {
+  columns: 3;
+}
+.test-01,
+.test-02,
+.test-03,
+.test-04,
+.test-05,
+.test-06 {
+  min-width: 400px;
+  min-height: 300px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  background-color: #ffffff;
+}
+.img-test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.text-test {
+  font-size: 24px;
+}
+.para-test {
+  padding-top: 10px;
+}
+/* section 5 limited time offer start */
+.offer {
+  background: linear-gradient(to right,#D1068C, #1310A6, #7E1B5C);
+  width: 100%;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.offer-text{
+  padding: 40px 50px 0px 50px;
+  text-align: center;
+  color: white;
+}
+.offer-para1{
+  font-size: 60px;
+}
+.offer-para2{
+  font-size: 38px;
+}
+.offer-para3{
+  font-size: 86px;
+  padding: 50px 0;
+}
+.shopthesale{
+  font-size: 25px;
+}
+.shopthesale:hover {
+  background-color: black;
+  color: white;
+}
