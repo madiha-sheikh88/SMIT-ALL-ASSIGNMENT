@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container-xxl p-4">
+    <div class="container-xl p-5 bg-danger">
       <header
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border ps-3 rounded-pill mb-5"
         style="background-color: #f5f5f5"
@@ -55,7 +55,7 @@
         class="row flex-lg-row-reverse align-items-center g-3 py-5 mt-2 rounded"
         style="background: linear-gradient(to right, #c1dee8, #fbd9b9)"
       >
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-10 col-sm-8 col-lg-6 ">
           <img
             src="./asset/hero-img.png"
             class="d-block mx-lg-auto img-fluid"
@@ -75,28 +75,17 @@
             Your will have everything nearby supermarket, buses , station, the
             carmen neighborhood, etc
           </p>
-          <div
-            class="d-grid gap-2 d-md-flex justify-content-md-start position-relative"
-          >
-            <input style="width: 400px;"
-              type="email"
-              placeholder="Enter your email"
-              class="rounded-pill p-2 border-light-subtle"
-            />
-            <button style="height: 43px;"
-              type="button"
-              class="btn btn-lg px-2 position-absolute top-0 start-50 text-center rounded-pill bg-black text-white align-self-center"
-            >
-              Get a Quote
-            </button>
-          </div>
+<div class="input-group mb-3">
+  <input type="email" class="form-control rounded-pill ps-3 position-relative z-1" placeholder="Enter your email" aria-label="Recipient’s username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary rounded-pill bg-black text-light position-absolute end-0 z-2" type="button" id="button-addon2">Get a Quote</button>
+</div>
         </div>
       </div>
       <!-- hero section ends -->
       <!-- feature section start -->
-      <div class="container px-5 py-5" id="featured-3">
+      <div class="container px-2 py-2" id="featured-3">
         <p class="text-center">Three steps. Three minutes.</p>
-        <h2 class="pb-2 text-center fs-1">Everything should be this easy.</h2>
+        <h2 class="pb-2 text-center fs-1 heading">Everything should be this easy.</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
           <div class="feature col">
             <div
@@ -104,7 +93,8 @@
             >
               <img src="./asset/messages.png" alt="Answer questions" />
             </div>
-            <h3 class="fs-2 text-body-emphasis">Answer questions</h3>
+            <h3 class="fs-2 text-body-emphasis heading3">
+            Answer questions</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
               perspiciatis id est mollitia aperiam facilis atque odit
@@ -117,7 +107,7 @@
             >
               <img src="./asset/sms-tracking.png" alt="sms tracking" />
             </div>
-            <h3 class="fs-2 text-body-emphasis">Select a quote</h3>
+            <h3 class="fs-2 text-body-emphasis heading3">Select a quote</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
               pariatur in esse, dolores ducimus impedit vero hic cupiditate
@@ -130,7 +120,7 @@
             >
               <img src="./asset/edit-2.png" alt="Get registered" />
             </div>
-            <h3 class="fs-2 text-body-emphasis">Get registered</h3>
+            <h3 class="fs-2 text-body-emphasis heading3">Get registered</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
               minima aliquid nam odit expedita velit hic repellat sunt sapiente
@@ -143,7 +133,7 @@
       <!-- card section start -->
       <div>
         <p>Best Project of the Years</p>
-        <h2>Our recent projects</h2>
+        <h2 class="heading fw-bold">Our recent projects</h2>
         <div class="card-group">
           <div class="card">
             <img src="./asset/house-1.png" class="card-img-top" alt="house1" />
@@ -537,7 +527,7 @@
       <!-- card section end -->
       <!-- fourth section start -->
        <div>
-        <h2 class="fw-bold mt-5 text-wrap text-center">We are a global, boutique real estate brokerage</h2>
+        <h2 class="fw-bold mt-5 text-wrap text-center heading">We are a global, boutique real estate brokerage</h2>
       <div class="row flex-lg-row-reverse g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img
@@ -550,7 +540,7 @@
           />
         </div>
         <div class="col-lg-6 p-5">
-          <h3 class="display-5 mb-3">
+          <h3 class="display-5 mb-3 heading3">
             The transfer of real estate
           </h3>
           <p class="lead">
@@ -564,10 +554,10 @@
               Read More
             </button>
           </div>
-          <div class="d-flex justify-content-md-between p-3">
-            <span><span class="fw-bold fs-1">12+ <br><span class="fw-normal fs-5">Customers</span></span></span>
-            <span><span class="fw-bold fs-1">14+ <br><span class="fw-normal fs-5">Offices</span></span></span>
-            <span><span class="fw-bold fs-1">10+ <br><span class="fw-normal fs-5">Students</span></span></span>
+          <div class="d-sm-flex d-none pb-1 justify-content-md-between justify-content-sm-between justify-content-md-between p-3">
+            <span><span class="fw-bold fs-sm-4 fs-1">12+ <br><span class="fw-normal counting fs-6">Customers</span></span></span>
+            <span><span class="fw-bold fs-sm-4 fs-1">14+ <br><span class="fw-normal counting fs-6">Offices</span></span></span>
+            <span><span class="fw-bold fs-sm-4 fs-1">10+ <br><span class="fw-normal counting fs-6">Students</span></span></span>
           </div>
         </div>
       </div>
@@ -589,33 +579,19 @@
           />
         </div>
         <div class="col-lg-6 p-5">
-          <h2 class="display-5 fw-bold text-body-emphasis mb-3">
+          <h2 class="display-5 fw-bold text-body-emphasis mb-3 heading">
           Subscribe Our Newsletter
           </h2>
           <p class="lead">
            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur sunt delectus ratione, maiores deleniti necessitatibus consectetur rem minus ab temporibus labore non eveniet provident corrupti ullam, aperiam ut cupiditate praesentium! Fugit cupiditate velit doloribus! Autem delectus explicabo odio nemo, consectetur eveniet repellendus. Nisi ducimus ab id rerum, magnam iusto earum.
           </p>
-          <div
-            class="d-grid gap-2 d-md-flex justify-content-md-start position-relative"
-          >
-            <input style="width: 400px;"
-              type="email"
-              placeholder="Enter your email"
-              class="rounded-pill p-2 border-light-subtle"
-            />
-            <button style="height: 43px;"
-              type="button"
-              class="btn btn-lg px-2 position-absolute top-0 start-50 text-center rounded-pill bg-black text-white align-self-center"
-            >
-              Get a Quote
-            </button>
-          </div>
+<div class="input-group mb-3">
+  <input type="email" class="form-control rounded-pill ps-3 position-relative z-1" placeholder="Enter your email" aria-label="Recipient’s username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary rounded-pill bg-black text-light position-absolute end-0 z-2" type="button" id="button-addon2">Get a Quote</button>
+</div>
           </div>
         </div>
       </div>
-
-
-
 
        <!-- last section end -->
     </div>
