@@ -13,22 +13,38 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container-xl p-5 bg-danger">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border ps-3 rounded-pill mb-5"
-        style="background-color: #f5f5f5"
-      >
-        <div class="col-md-3 mb-2 mb-md-0">
-          <img src="./asset/Logo.png" alt="logo" />
-        </div>
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">About Us</a></li>
-          <li><a href="#" class="nav-link px-2">Projects</a></li>
-          <li><a href="#" class="nav-link px-2">Agents</a></li>
-          <li><a href="#" class="nav-link px-2">Services</a></li>
-          <li><a href="#" class="nav-link px-2">Listings</a></li>
-        </ul>
-                  <div class="align-items-center"><svg
+    <div class="container-xl p-4">
+      <!-- header start -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./asset/Logo.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Agents</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Listing</a>
+                            </li>
+                        </ul>
+                <div class="align-items-center"><svg
             xmlns="http://www.w3.org/2000/svg"
             width="20px"
             height="20px"
@@ -39,7 +55,7 @@
               d="M31.204 33.325A15.94 15.94 0 0 1 21 37c-8.837 0-16-7.163-16-16S12.163 5 21 5s16 7.163 16 16c0 3.878-1.38 7.434-3.675 10.203l9.236 9.236a1.5 1.5 0 0 1-2.122 2.122zM34 21c0-7.18-5.82-13-13-13S8 13.82 8 21s5.82 13 13 13s13-5.82 13-13"
             />
           </svg></div>
-        <div class="col-md-3 text-end">
+      <div>
           <span> Other services</span>
           <button
             type="button"
@@ -48,14 +64,16 @@
             Contact us
           </button>
         </div>
-      </header>
+                    </div>
+                </div>
+            </nav>
       <!-- header end -->
       <!-- hero section start -->
       <div
         class="row flex-lg-row-reverse align-items-center g-3 py-5 mt-2 rounded"
         style="background: linear-gradient(to right, #c1dee8, #fbd9b9)"
       >
-        <div class="col-10 col-sm-8 col-lg-6 ">
+        <div class="col-md-12 col-lg-6 ">
           <img
             src="./asset/hero-img.png"
             class="d-block mx-lg-auto img-fluid"
@@ -65,7 +83,7 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6 p-5">
+        <div class="col-md-12 col-lg-6 p-5">
           <p>Welcome to Realestate</p>
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
             Manage Your <br />
@@ -75,7 +93,7 @@
             Your will have everything nearby supermarket, buses , station, the
             carmen neighborhood, etc
           </p>
-<div class="input-group mb-3">
+<div class="input-group quotebutton mb-3">
   <input type="email" class="form-control rounded-pill ps-3 position-relative z-1" placeholder="Enter your email" aria-label="Recipient’s username" aria-describedby="button-addon2">
   <button class="btn btn-outline-secondary rounded-pill bg-black text-light position-absolute end-0 z-2" type="button" id="button-addon2">Get a Quote</button>
 </div>
@@ -134,21 +152,22 @@
       <div>
         <p>Best Project of the Years</p>
         <h2 class="heading fw-bold">Our recent projects</h2>
-        <div class="card-group">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
           <div class="card">
             <img src="./asset/house-1.png" class="card-img-top" alt="house1" />
-            <div class="card-body">
+<div class="card-body">
               <h5 class="card-title">Sobha Hearland II Villas</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente cupiditate ratione aut ducimus itaque eaque ex
-                exercitationem sed explicabo voluptatibus
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Commodi possimus nostrum unde mollitia suscipit dolore
+                perferendis voluptatem quaerat reiciendis hic.
               </p>
               <div class="d-flex align-items-center">
                 <div><svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -173,8 +192,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -199,8 +218,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -225,8 +244,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -251,8 +270,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -260,10 +279,12 @@
                     d="M16.6 20.463a1.5 1.5 0 0 1-.7-.174l-3.666-1.927a.5.5 0 0 0-.464 0L8.1 20.289a1.5 1.5 0 0 1-2.177-1.581l.7-4.082a.5.5 0 0 0-.143-.442l-2.964-2.891a1.5 1.5 0 0 1 .832-2.559l4.1-.6a.5.5 0 0 0 .376-.273l1.833-3.714a1.5 1.5 0 0 1 2.69 0l1.833 3.714a.5.5 0 0 0 .376.274l4.1.6a1.5 1.5 0 0 1 .832 2.559l-2.965 2.891a.5.5 0 0 0-.144.442l.7 4.082a1.5 1.5 0 0 1-1.479 1.754m-3.9-2.986l3.664 1.923a.5.5 0 0 0 .725-.527l-.7-4.082a1.5 1.5 0 0 1 .432-1.328l2.965-2.89a.5.5 0 0 0-.277-.853l-4.1-.6a1.5 1.5 0 0 1-1.13-.821l-1.83-3.705a.516.516 0 0 0-.9 0l-1.83 3.714a1.5 1.5 0 0 1-1.13.82l-4.1.6a.5.5 0 0 0-.277.853l2.968 2.887a1.5 1.5 0 0 1 .431 1.332l-.7 4.082a.5.5 0 0 0 .726.527l3.663-1.932a1.5 1.5 0 0 1 1.4 0"
                   />
                 </svg></div>
-                <div class="fs-2 px-4">4.83</div>
+                <div class="fs-4 px-4">4.83</div>
               </div>
             </div>
           </div>
+          </div>
+          <div class="col">
           <div class="card">
             <img src="./asset/house-2.png" class="card-img-top" alt="house2" />
             <div class="card-body">
@@ -276,8 +297,8 @@
               <div class="d-flex align-items-center">
                 <div><svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -302,8 +323,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -328,8 +349,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -354,8 +375,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -380,8 +401,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -389,10 +410,12 @@
                     d="M16.6 20.463a1.5 1.5 0 0 1-.7-.174l-3.666-1.927a.5.5 0 0 0-.464 0L8.1 20.289a1.5 1.5 0 0 1-2.177-1.581l.7-4.082a.5.5 0 0 0-.143-.442l-2.964-2.891a1.5 1.5 0 0 1 .832-2.559l4.1-.6a.5.5 0 0 0 .376-.273l1.833-3.714a1.5 1.5 0 0 1 2.69 0l1.833 3.714a.5.5 0 0 0 .376.274l4.1.6a1.5 1.5 0 0 1 .832 2.559l-2.965 2.891a.5.5 0 0 0-.144.442l.7 4.082a1.5 1.5 0 0 1-1.479 1.754m-3.9-2.986l3.664 1.923a.5.5 0 0 0 .725-.527l-.7-4.082a1.5 1.5 0 0 1 .432-1.328l2.965-2.89a.5.5 0 0 0-.277-.853l-4.1-.6a1.5 1.5 0 0 1-1.13-.821l-1.83-3.705a.516.516 0 0 0-.9 0l-1.83 3.714a1.5 1.5 0 0 1-1.13.82l-4.1.6a.5.5 0 0 0-.277.853l2.968 2.887a1.5 1.5 0 0 1 .431 1.332l-.7 4.082a.5.5 0 0 0 .726.527l3.663-1.932a1.5 1.5 0 0 1 1.4 0"
                   />
                 </svg></div>
-                <div class="fs-2 px-4">4.83</div>
+                <div class="fs-4 px-4">4.83</div>
               </div>
             </div>
           </div>
+          </div>
+          <div class="col">
           <div class="card">
             <img src="./asset/house-3.png" class="card-img-top" alt="house3" />
             <div class="card-body">
@@ -405,8 +428,8 @@
                            <div class="d-flex align-items-center">
                 <div><svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -431,8 +454,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -457,8 +480,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -483,8 +506,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 32 32"
                 >
                   <g fill="none">
@@ -509,8 +532,8 @@
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="25"
+                  height="25"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -518,9 +541,10 @@
                     d="M16.6 20.463a1.5 1.5 0 0 1-.7-.174l-3.666-1.927a.5.5 0 0 0-.464 0L8.1 20.289a1.5 1.5 0 0 1-2.177-1.581l.7-4.082a.5.5 0 0 0-.143-.442l-2.964-2.891a1.5 1.5 0 0 1 .832-2.559l4.1-.6a.5.5 0 0 0 .376-.273l1.833-3.714a1.5 1.5 0 0 1 2.69 0l1.833 3.714a.5.5 0 0 0 .376.274l4.1.6a1.5 1.5 0 0 1 .832 2.559l-2.965 2.891a.5.5 0 0 0-.144.442l.7 4.082a1.5 1.5 0 0 1-1.479 1.754m-3.9-2.986l3.664 1.923a.5.5 0 0 0 .725-.527l-.7-4.082a1.5 1.5 0 0 1 .432-1.328l2.965-2.89a.5.5 0 0 0-.277-.853l-4.1-.6a1.5 1.5 0 0 1-1.13-.821l-1.83-3.705a.516.516 0 0 0-.9 0l-1.83 3.714a1.5 1.5 0 0 1-1.13.82l-4.1.6a.5.5 0 0 0-.277.853l2.968 2.887a1.5 1.5 0 0 1 .431 1.332l-.7 4.082a.5.5 0 0 0 .726.527l3.663-1.932a1.5 1.5 0 0 1 1.4 0"
                   />
                 </svg></div>
-                <div class="fs-2 px-4">4.83</div>
+                <div class="fs-4 px-4">4.83</div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -528,8 +552,8 @@
       <!-- fourth section start -->
        <div>
         <h2 class="fw-bold mt-5 text-wrap text-center heading">We are a global, boutique real estate brokerage</h2>
-      <div class="row flex-lg-row-reverse g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
+      <div class="row flex-lg-row-reverse g-5 py-1 py-lg-5">
+        <div class="col-12 col-md-12 col-lg-6">
           <img
             src="./asset/Group 20.png"
             class="d-block mx-lg-auto img-fluid"
@@ -539,7 +563,7 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6 p-5">
+        <div class="col-12 col-md-12 col-lg-6 p-3 p-lg-4">
           <h3 class="display-5 mb-3 heading3">
             The transfer of real estate
           </h3>
@@ -568,7 +592,7 @@
         class="row flex-lg-row-reverse align-items-center g-3 py-5 mt-2 rounded"
         style="background: linear-gradient(to right, #c1dee8, #fbd9b9)"
       >
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-md-12 col-lg-6">  
           <img
             src="./asset/home-4.png"
             class="d-block mx-lg-auto img-fluid"
@@ -578,14 +602,14 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6 p-5">
+        <div class="col-md-12 col-lg-6 py-1 p-md-4 p-lg-5">
           <h2 class="display-5 fw-bold text-body-emphasis mb-3 heading">
           Subscribe Our Newsletter
           </h2>
           <p class="lead">
            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur sunt delectus ratione, maiores deleniti necessitatibus consectetur rem minus ab temporibus labore non eveniet provident corrupti ullam, aperiam ut cupiditate praesentium! Fugit cupiditate velit doloribus! Autem delectus explicabo odio nemo, consectetur eveniet repellendus. Nisi ducimus ab id rerum, magnam iusto earum.
           </p>
-<div class="input-group mb-3">
+<div class="input-group quotebutton mb-3">
   <input type="email" class="form-control rounded-pill ps-3 position-relative z-1" placeholder="Enter your email" aria-label="Recipient’s username" aria-describedby="button-addon2">
   <button class="btn btn-outline-secondary rounded-pill bg-black text-light position-absolute end-0 z-2" type="button" id="button-addon2">Get a Quote</button>
 </div>
