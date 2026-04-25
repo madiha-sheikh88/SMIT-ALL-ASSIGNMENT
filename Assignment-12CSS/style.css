@@ -1,13 +1,17 @@
-@media only screen and (max-width: 650px)
-{
+@media only screen and (max-width: 990px){
+    img{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 650px){
 .lead{
-font-size: 12px;
+font-size: 12px !important;
 }
 .heading{
     font-size: 18px;
 }
 .heading3{
-    font-size: 16px;
+    font-size: 18px;
 }
 .counting span{
     font-size: 8px;
@@ -19,7 +23,16 @@ font-size: 12px;
 }
 .quotebutton button{
     width: 120px;
+    height: 38px;
     position: static !important;
+    border-radius: 2px !important;
+    font-size: 12px;
+}
+.emailbtn{
+    border-radius: 2px !important;
+    width: 100%;
+    font-size: 12px;
+    height: 38px;
 }
 .card-text{
     font-size: 12px;
@@ -27,9 +40,18 @@ font-size: 12px;
 .lead p{
     font-size: 12px !important;
 }
+.feature p{
+    font-size: 12px !important;
 }
-@media only screen and (max-width: 990px){
-    img{
-        width: 100%;
-    }
+.feature h3{
+    font-size: 18px !important;
+    font-weight: bold;
+}
+svg{
+    width: 20px;
+    height: 20px;
+}
+}
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
