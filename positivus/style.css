@@ -1,0 +1,67 @@
+:root{
+    --greenColor:#B9FF66;
+    --blackColor:#000000;
+    --greyColor: #F3F3F3;
+}
+@media only screen and (max-width: 990px){
+    .hero img{
+        width: 100%;
+    }
+    .hero2 img{
+        width: 100%;
+    }
+    .feature{
+        border: none !important;
+    }
+}
+@media only screen and (max-width: 445px){
+    .service , .case , .team , .contact  {
+        flex-direction: column;
+        justify-content: start;
+        width: auto;
+    }
+}
+.all-steps{
+    transition: all 1s ease-in-out 0s;
+}
+.minus , .hidden{
+    display: none;
+}
+.all-steps:hover .hidden{
+    display: block;
+}
+.all-steps:hover .minus {
+    display: block;
+}
+.all-steps:hover .plus {
+    display: none;
+}
+.all-steps:hover{
+    background-color: var(--greenColor) !important;
+}
+.whiteText a{
+    color: white !important;
+}
+/* dsmfjkdskfskl */
+/* dsmfjkdskfskl */
+/* dsmfjkdskfskl */
+/* dsmfjkdskfskl */
+.accordion-button .icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Default state (collapsed → show +, hide -) */
+.accordion-button .icon .minus {
+  display: none;
+}
+
+/* When accordion is OPEN */
+.accordion-button:not(.collapsed) .icon .plus {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) .icon .minus {
+  display: inline !important;
+}
