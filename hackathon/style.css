@@ -1,0 +1,22 @@
+.business{
+    width: 40% !important;
+}
+.card-1{
+    background-image: url(./Asset/image-card1.png);
+    background-size: cover;
+    background-position: center;
+}
+.card-1-text{
+    top: 20px !important;
+    left: 20px !important;
+}
+.card-2{
+    background-image: url(./Asset/card-2.png) !important;
+    background-size: cover;
+    background-position: center;
+}   
+.card-3{
+    background-image: url(./Asset/card-3.png);
+    background-size: cover;
+    background-position: center;
+} 
