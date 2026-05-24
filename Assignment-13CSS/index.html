@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Furniro Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container bg-light">
+     <header>
+    <!-- navbar starts here -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-2 fw-bold" href="#"><img src="./Asset/Logos-furniro.png"
+            alt="Logo furniro">Furniro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto gap-3 mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="d-flex justify-content-evenly gap-3 list-unstyled">
+            <li><img src="./Asset/svg-nav-login.svg" alt="login"></li>
+            <li><img src="./Asset/svg-nav-search.svg" alt="search"></li>
+            <li><img src="./Asset/svg-nav-heart.svg" alt="heart"></li>
+            <li><a href="./checkout.html"><img src="./Asset/svg-nav-cart.svg " alt="cart"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   </header>
+    <!-- navbar ends here -->
+     <main>
+    <!-- hero section starts here -->
+    <section>
+      <div class="parent-hero position-relative">
+        <div class="herosection ">
+          <img src="./Asset/hero-background.png" alt="Hero Background" class="h-auto w-100">
+        </div>
+        <div class="position-absolute hero-content p-5 w-50 h-auto rounded-2"
+          style="background-color: var(--lightPink); top: 110px; right: 30px;">
+          <h3>New Arrival</h3>
+          <h1 class="fw-bold" style="color: var(--yellowColor);">Discover Our <br> New Collection</h1>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+            ullamcorper mattis.</p>
+          <button class="btn text-uppercase py-2 px-5"
+            style="background-color: var(--yellowColor); color: var(--mainColor);">Buy Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- hero section ends here -->
+    <!-- section browse the range startrs -->
+    <section class="my-5">
+      <div class="text-center">
+        <h3>Browse The Range</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-4 g-4 d-flex justify-content-center">
+        <div class="col">
+          <div class="card h-100">
+            <img src="./Asset/range-sec-1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Dining</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./Asset/range-sec-2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Living</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./Asset/range-sec-3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Bedroom</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section browse the range ends -->
+    <!-- Product section starts here -->
+    <section>
+      <h3 class="text-center my-5">Our Products</h3>
+      <!-- card 1 -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <div class="col position-relative">
+          <a href="./single-product.html" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="./Asset/prod-img-1.png" class="card-img-top" alt="card-image">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-30%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Syltherine</h5>
+              <p class="card-text">Stylish cafe chair</p>
+              <p>Rp 2,500.00 <del>Rp 3,500.00</del></p>
+            </div>
+          </div>
+          </a> 
+        </div>
+        <!-- card 2 -->
+        <div class="col">
+          <a href="./single-product.html" class="text-decoration-none"></a>
+          <div class="card h-100">
+            <img class="w-100" src="./Asset/prod-img-2.png" alt="imgage">
+          </div>
+          </a>
+        </div>
+        <!-- card 3 -->
+        <div class="col">
+          <a href="./single-product.html" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="./Asset/prod-img-3.png" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Lolito</h5>
+              <p class="card-text">Luxury big sofa</p>
+              <p>Rp 7,000.00 <del>Rp 14,000.00</del></p>
+            </div>
+          </div>
+          </a>
+        </div>
+        <!-- card 4 -->
+        <div class="col">
+          <a href="./single-product.html" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="./Asset/prod-img-4.png" class="card-img-top" alt="bar table">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-success text-white py-3 px-2">New</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Respira</h5>
+              <p class="card-text">Outdoor bar table and stool</p>
+              <p>Rp 500.000</p>
+            </div>
+          </div>
+          </a>
+        </div>
+        <!-- card 5 -->
+        <div class="col">
+          <a href="./single-product.html" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="./Asset/prod-img-5.png" class="card-img-top" alt="Night lamp">
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Grifo</h5>
+              <p class="card-text">Night lamp</p>
+              <p>Rp 1,500.000</p>
+            </div>
+          </div>
+          </a>
+        </div>
+        <!-- card 6 -->
+        <div class="col">
+          <a href="./single-product.html" class="text-decoration-none">
+            <div class="card h-100">
+            <img src="./Asset/prod-img-6.png" class="card-img-top" alt="Small mug">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-success text-white py-3 px-2">New</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Muggo</h5>
+              <p class="card-text">Small mug</p>
+              <p>Rp 150.000</p>
+            </div>
+          </div>
+         </a>
+        </div>
+        <!-- card 7 -->
+        <div class="col">
+          <a href="./single-product.html" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="./Asset/prod-img-7.png" class="card-img-top" alt="bed set">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-30%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Pingky</h5>
+              <p class="card-text">Cute bed set</p>
+              <p>Rp 7,000.000 <del>Rp 14,000.000</del></p>
+            </div>
+          </div>
+          </a>
+        </div>
+        <!-- card 8 -->
+        <div class="col">
+          <a href="./single-product.html" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="./Asset/prod-img-8.png" class="card-img-top" alt="flower pot">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-success text-white py-3 px-2">New</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Potty</h5>
+              <p class="card-text">Minimalist flower pot</p>
+              <p>Rp 5,000.000</p>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-light my-3 px-5"
+          style="border: 2px solid var(--yellowColor); color: var(--yellowColor);">Show More</button>
+      </div>
+    </section>
+    <!-- Product section ends here -->
+    <!-- carousel section starts here -->
+    <section class="my-5">
+      <div class="row align-items-center py-5" style="background-color: var(--lightPink);">
+        <div class="col-lg-4 col-md-12 px-5 py-5">
+          <h3 class="fw-bold">50+ Beautiful rooms <br> inspiration</h3>
+          <p>Our designer already made a lot of beautiful prototipe of rooms that inspire you.</p>
+          <button class="btn py-2 px-5" style="background-color: var(--yellowColor); color: var(--mainColor);">Explore
+            More</button>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+          <img src="./Asset/carousel-pic1.png" alt="bedroom" class="h-auto w-100 carousel-img">
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide col-lg-4 col-md-12">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./Asset/carousel-pic2.png" class="d-block w-100" alt="chairs">
+            </div>
+            <div class="carousel-item">
+              <img src="./Asset/carousel-pic2.png" class="d-block w-100" alt="chairs">
+            </div>
+            <div class="carousel-item">
+              <img src="./Asset/carousel-pic2.png" class="d-block w-100" alt="chairs">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- carousel section ends here -->
+    <!-- grid columns picture section starts here -->
+    <section class="my-5 bg-light">
+      <div class="text-center">
+        <p>Share your setup with</p>
+        <h3 class="fw-bold">#FuniroFurniture</h3>
+      </div>
+      <div class="bento">
+        <div class="div1"><img class="img-grid" src="./Asset/grid-sec-1.png" alt=""></div>
+        <div class="div2"><img class="img-grid" src="./Asset/grid-sec-2.png" alt=""></div>
+        <div class="div3"><img class="img-grid" src="./Asset/grid-sec-3.png" alt=""></div>
+        <div class="div4"><img class="img-grid" src="./Asset/grid-sec-4.png" alt=""></div>
+        <div class="div5"><img class="img-grid" src="./Asset/grid-sec-5.png" alt=""></div>
+        <div class="div6"><img class="img-grid" src="./Asset/grid-sec-6.png" alt=""></div>
+        <div class="div7"><img class="img-grid" src="./Asset/grid-sec-7.png" alt=""></div>
+        <div class="div8"><img class="img-grid" src="./Asset/grid-sec-8.png" alt=""></div>
+        <div class="div9"><img class="img-grid" src="./Asset/grid-sec-9.png" alt=""></div>
+      </div>
+    </section>
+    <!-- grid columns picture section ends here -->
+     </main>
+    <!-- footer section starts here -->
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3"> <a href="./index.html"
+          class="fw-bold fs-4 d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+          aria-label="Bootstrap">Funrio.</a>
+        <p class="text-body-secondary">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+      </div>
+      <div class="col mb-3">
+        <h5>Links</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="./shop.html" class="nav-link p-0 text-body-secondary">Shop</a></li>
+          <li class="nav-item mb-2"><a href="./Blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+          <li class="nav-item mb-2"><a href="./contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col mb-3">
+        <h5>Help</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Payment Options</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policies</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1"
+              class="visually-hidden">Email address</label> <input id="newsletter1" type="email" class="form-control border-bottom border-none"
+              placeholder="Enter Your Email Address"> <button class="btn text-uppercase border-bottom" type="button">Subscribe</button> </div>
+        </form>
+      </div>
+
+  </div>
+  </footer>
+  <div class="text-center fw-bold mb-4" style="color: var(--yellowColor);">All rights reserved to MADIHA SHEIKH</div>
+  <!-- footer section ends here -->
+  <!-- website ends here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

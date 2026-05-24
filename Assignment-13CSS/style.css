@@ -1,0 +1,100 @@
+:root{
+    --mainColor: #FFFFFF;
+    --yellowColor: #B88E2F;
+    --lightPink: #FFF3E3;
+    --lightBackground: #F4F5F7;
+    
+}
+@media (max-width: 992px) {
+    .hero-content{
+        position: static !important;
+        width: 100% !important;
+    }
+    .hero-content h1{
+        font-size: 1.5rem !important;
+    }
+
+}
+@media (max-width: 540px) {
+    .hero-content h1{
+        font-size: 1.5rem !important;
+    }
+        .hero-content h3{
+        font-size: 1rem !important;
+    }
+        .hero-content p{
+        font-size: 0.75rem !important;
+    }
+    .carousel-img{
+        display: block !important;
+    }
+    .img-grid{
+        display: block !important;
+        width: 100% !important;
+    }
+    .prod-total{
+        font-size: small !important;
+    }
+    .breadcrumb{
+        font-size: small !important;
+    }
+}
+.bento {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(9, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+}
+
+.div1 { grid-area: 1 / 1 / 5 / 2; }
+.div2 { grid-area: 2 / 2 / 5 / 6; }
+.div3 { grid-area: 3 / 6 / 6 / 8; }
+.div4 { grid-area: 2 / 8 / 5 / 11; }
+.div5 { grid-area: 1 / 11 / 5 / 13; }
+.div6 { grid-area: 6 / 1 / 10 / 3; }
+.div7 { grid-area: 5 / 3 / 9 / 6; }
+.div8 { grid-area: 5 / 8 / 8 / 10; }
+.div9 { grid-area: 5 / 10 / 7 / 12; }
+
+.img-grid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shop-banner img{
+    width: 100%;
+    height: 300px;
+    object-fit:contain;
+}
+.breadcrumb{
+    top: 200px;
+}
+.label{
+    width: 80px !important;
+    height: 15px !important;
+}
+.colon{
+    width: 20px !important;
+    height: 15px !important;
+}
+.card{
+    transition: all 0.3s ease-in;
+}
+.card:hover{
+    border: 2px solid var(--yellowColor);
+    box-shadow: var(--lightPink) 0px 54px 55px, var(--lightPink) 0px -12px 30px, var(--lightPink) 0px 4px 6px, var(--lightPink) 0px 12px 13px, var(--lightPink) 0px -3px 5px !important;
+}
+.submit-btn:hover{
+    background-color: black!important;
+}
+.pagination div:hover{
+    background-color: var(--yellowColor) !important;
+}
+.banner{
+    width: 100% !important;
+    min-height: 60vh  !important;
+    background-image: url(./Asset/shop-banner.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
