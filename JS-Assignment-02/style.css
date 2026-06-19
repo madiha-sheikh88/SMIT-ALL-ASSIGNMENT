@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    background-color: black;
+    /* background: radial-gradient(circle at top, #E8B8D2, #93B5E0, #9F8BC2); */
+}
+h1{
+    text-shadow: 5px 5px 10px goldenrod;
+    padding-top: 10px;
+    color: white;
+    font-family: "Momo Signature", cursive;
+    animation-timing-function: ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+}
+.winterh1{
+    text-shadow: 5px 5px 10px white !important;
+}
+.parent{
+    margin:10% auto;
+    width: 180px;
+    height: 220px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    transition: all 1s ease-in 0s;
+}
+.parent:hover{
+    transform: scale(1.5);
+    border: 5px solid #a273b6;
+}
+.parent-sum{
+        transition: all 1s ease-in 0s;
+}
+.parent-sum:hover{
+    transform: scale(1.5);
+    border: 5px solid goldenrod !important;
+}
+.image-weather{
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0px 0px;
+}
+.image{
+    width: 180px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #E8B8D2;
+    border-radius: 20px 20px 0px 0px;
+    border: 2px solid white;
+}
+.weather{
+    width: 180px;
+    height: 65px;
+    background-color: #93B5E0;
+    border-radius: 0px 0px 20px 20px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+/* sun animation */
+.sun {
+  width: 80px;
+  height: 80px;
+  padding-top: 10px;
+  background: #ffcc00;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ff9900;
+  animation: pulse-and-spin 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-and-spin {
+  0% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 20px #ff9900;
+  }
+  100% {
+    transform: scale(1.1) rotate(180deg);
+    box-shadow: 0 0 40px #ff6600;
+  }
+}
+.animation{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* snow flakes animation */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+
+/* falling leaves animation */
+
+.loader {
+    text-align: center;
+}
+.loader span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+	  margin: -280px 40px 54px  -34px;
+         background:url("http://premiumcoding.com/CSSTricks/fallingLeaves/leaf.png");
+    
+    -webkit-animation: loader 10s infinite  linear;
+    -moz-animation: loader 10s infinite  linear;
+}
+.loader span:nth-child(5n+5) {
+
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+.loader span:nth-child(3n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+.loader span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.loader span:nth-child(3n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+.loader span:nth-child(7n+2) {
+
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+.loader span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+.loader span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+@-webkit-keyframes loader {
+  0% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+
+	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+
+	-webkit-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+@-moz-keyframes loader {
+  0% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    
+	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+   
+	-webkit-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+/* spring season animation */
+
+.flower {
+  position: absolute;
+  top: -50px; /* Start completely off-screen at the top */
+  font-size: 2rem;
+  user-select: none;
+  pointer-events: none; /* Prevents blocking clicks on underlying elements */
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    /* Swaying to the right mid-way down */
+    transform: translateX(80px) rotate(180deg);
+    opacity: 0.9;
+  }
+  100% {
+    /* Move below the viewport while swaying back left */
+    top: 105vh;
+    transform: translateX(-40px) rotate(360deg);
+    opacity: 0; /* Fade out right before deletion/reset */
+  }
+}
+.flower:nth-child(1) { left: 10%; animation-duration: 7s;  animation-delay: 0s;   font-size: 1.5rem; }
+.flower:nth-child(2) { left: 25%; animation-duration: 10s; animation-delay: 2s;   font-size: 2.5rem; }
+.flower:nth-child(3) { left: 45%; animation-duration: 8s;  animation-delay: 1s;   font-size: 1.8rem; }
+.flower:nth-child(4) { left: 60%; animation-duration: 12s; animation-delay: 4s;   font-size: 2.2rem; }
+.flower:nth-child(5) { left: 75%; animation-duration: 6s;  animation-delay: 0.5s; font-size: 1.3rem; }
+.flower:nth-child(6) { left: 90%; animation-duration: 9s;  animation-delay: 3s;   font-size: 2rem; }
