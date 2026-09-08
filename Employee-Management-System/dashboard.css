@@ -1,0 +1,423 @@
+/* dashbboard page css */
+
+.dashboardBody{
+    background-color: #121212;
+    color: #F8F9FA;
+}
+.main-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;      /* lock to viewport height */
+    overflow: hidden;    /* prevent the whole page from scrolling */
+}
+
+.sidebar {
+    flex: 0 0 280px;
+    height: 100vh;
+    position: sticky;    /* keeps it in place during scroll */
+    top: 0;
+    overflow-y: auto;    /* in case sidebar content itself grows tall */
+}
+
+.main-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 100vh;
+    overflow-y: auto;    /* this is what gives main-content its own scrollbar */
+    padding-right: 4px;  /* small buffer so content doesn't hug the scrollbar */
+}
+@media (max-width: 767px) {
+  /* Make the container stack items */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* Main content takes full width */
+  .main-content {
+    width: 100%;
+    /* Push main content down so the sidebar can sit behind/above it */
+    padding-top: 20px; /* Adjust this value to match your sidebar height */
+  }
+
+  /* Sidebar sits on top */
+  .sidebar {
+    position: absolute;
+    z-index: 10; /* Higher number keeps it above the main content */
+    max-width: 280px !important;
+  }
+}
+
+/* main content css */
+
+.btn-review {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-review:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+    border-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-add-employee {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #212529; /* matches your dark sidebar */
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-add-employee:hover {
+    background-color: #000;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    transform: translateY(-2px);
+}
+
+.btn-add-employee:active,
+.btn-review:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+@media (max-width: 480px) {
+  .btn-review,
+  .btn-add-employee {
+    width: 100% !important;
+  }
+  .all-btn{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* search section css  */
+@media (max-width: 991.98px) {
+        .search-form {
+            flex-direction: column;
+        }
+
+        .search-form .form-control {
+            width: 100%;
+            margin-right: 0 !important;
+            margin-bottom: 0.5rem;
+        }
+
+        .search-form .btn {
+            width: 100%;
+        }
+    }
+
+/* dashboard showing:Total Employees, Active Employees, Inactive Employees, Total Departments */
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.stat-label {
+    margin: 0;
+    font-size: 13px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.stat-value {
+    margin: 2px 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #212529;
+}
+
+/* Theme-specific accents per card, tied to your blue header + dark sidebar */
+.stat-total {
+    border-left-color: #0d6efd;
+}
+.stat-total .stat-icon {
+    background-color: rgba(13, 110, 253, 0.12);
+    color: #0d6efd;
+}
+
+.stat-active {
+    border-left-color: #198754;
+}
+.stat-active .stat-icon {
+    background-color: rgba(25, 135, 84, 0.12);
+    color: #198754;
+}
+
+.stat-inactive {
+    border-left-color: #dc3545;
+}
+.stat-inactive .stat-icon {
+    background-color: rgba(220, 53, 69, 0.12);
+    color: #dc3545;
+}
+
+.stat-dept {
+    border-left-color: #212529;
+}
+.stat-dept .stat-icon {
+    background-color: rgba(33, 37, 41, 0.1);
+    color: #212529;
+}
+
+/* employee mamnagement table css */
+
+/* Status badges */
+.badge-status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-active {
+    background-color: rgba(25, 135, 84, 0.15);
+    color: #198754;
+}
+
+.badge-inactive {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545;
+}
+
+/* Action buttons */
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-view {
+    background-color: rgba(13, 110, 253, 0.12);
+    color: #0d6efd;
+}
+.btn-view:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.35);
+}
+
+.btn-edit {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: #b8860b;
+}
+.btn-edit:hover {
+    background-color: #ffc107;
+    color: #212529;
+    box-shadow: 0 3px 8px rgba(255, 193, 7, 0.35);
+}
+
+.btn-delete {
+    background-color: rgba(220, 53, 69, 0.12);
+    color: #dc3545;
+}
+.btn-delete:hover {
+    background-color: #dc3545;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(220, 53, 69, 0.35);
+}
+
+.btn-action:active {
+    transform: scale(0.92);
+}
+
+/* Responsive scroll on smaller screens */
+@media (max-width: 992px) {
+    .employee-table {
+        font-size: 13px;
+    }
+    .employee-table thead th,
+    .employee-table tbody td {
+        padding: 10px 12px;
+    }
+}
+ /* form page css */
+
+.container {
+background-color: 
+#0d6efd;
+border-radius: 16px;
+padding: 24px;
+box-shadow: 0 4px 20px rgba(0, 61, 128, 0.08);
+border: 1px solid 
+#e0edfd;
+border-left: 4px solid #0a0f1c;
+}
+
+/* buttons of forms */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: #0a0f1c;
+  border: 1.5px solid #0a0f1c;
+}
+
+.btn-cancel:hover {
+  background-color: #0a0f1c;
+  color: #ffffff;
+}
+
+.btn-save {
+   background-color: #212529; /* matches your dark sidebar */
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-save:hover {
+  background-color: #000;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    transform: translateY(-2px);
+}
+.btn-save:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+
+/* to make the sidebar side by side on every screen */
+.main-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    min-width: 250px;
+    max-width: 400px;
+    flex-shrink: 0;
+}
+
+/* Inner sidebar */
+.sidebar-inner {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    width: 75%;
+}
+
+/* Desktop - make sidebar grow with screen */
+@media (min-width: 768px) {
+    .sidebar {
+        width: 25%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .main-container {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        max-width: none;
+    }
+
+    .sidebar-inner {
+        min-height: auto;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+/* employee dashboard charts */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+}

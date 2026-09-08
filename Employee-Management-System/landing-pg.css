@@ -1,0 +1,163 @@
+:root {
+    --primary-color: rgb(13 28 62);
+    --secondary-color: rgb(20 40 90);
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #757575;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+#btn-signin {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#btn-signin:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+#btn-signin:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* hero section */
+
+/* Core Dark Theme Settings */
+body {
+    background-color: #0b0f19;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Hero Base Styling with Deep Blue-Black Gradient */
+.hero-section {
+    background: radial-gradient(circle at 10% 20%, rgba(11, 27, 61, 0.9) 0%, rgba(11, 15, 25, 1) 90%);
+    color: #ffffff;
+}
+
+/* Typography Enhancements */
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.text-secondary {
+    color: #94a3b8 !important;
+}
+
+/* Glowing text highlight effect */
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Ambient glow orbs in the background */
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: #2563eb;
+    top: -10%;
+    right: -5%;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: #1e3a8a;
+    bottom: -20%;
+    left: -10%;
+}
+
+/* Eye-Catching Gradient Button */
+.btn-gradient {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+}
+
+/* Advanced Image Presentation Wrapper */
+.hero-img-wrapper {
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(30, 58, 138, 0.05) 100%);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-img-wrapper:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+}
+
+.hero-img {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-overlay-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    pointer-events: none;
+}
+
+.hero-img {
+    height: 580px !important;
+    object-fit: cover;
+}

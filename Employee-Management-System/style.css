@@ -1,3 +1,12 @@
+:root {
+    --primary-color: rgb(13 28 62);
+    --secondary-color: rgb(20 40 90);
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #757575;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -8,454 +17,327 @@
     font-family: "Roboto", sans-serif;
 }
 
-.indexBody {
-    background-color: #121212;
-    color: #F8F9FA;
-    background-image: url('./asset/background.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-.form-signin {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
-}
-h1.text-center , h2.text-center {
-  color: #ffffff;
-  font-weight: 700;
-  text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.7), 
-    0 4px 16px rgba(15, 23, 42, 0.6); 
-}
-
-
-
-/* dashbboard page css */
-
-.dashboardBody{
-    background-color: #121212;
-    color: #F8F9FA;
-}
-.main-container {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;      /* lock to viewport height */
-    overflow: hidden;    /* prevent the whole page from scrolling */
-}
-
-.sidebar {
-    flex: 0 0 280px;
+html,
+body {
     height: 100vh;
-    position: sticky;    /* keeps it in place during scroll */
-    top: 0;
-    overflow-y: auto;    /* in case sidebar content itself grows tall */
+    overflow: hidden;
+    background-color: var(--black);
 }
-
-.main-content {
-    flex: 1 1 auto;
-    min-width: 0;
-    height: 100vh;
-    overflow-y: auto;    /* this is what gives main-content its own scrollbar */
-    padding-right: 4px;  /* small buffer so content doesn't hug the scrollbar */
-}
-@media (max-width: 767px) {
-  /* Make the container stack items */
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  /* Main content takes full width */
-  .main-content {
-    width: 100%;
-    /* Push main content down so the sidebar can sit behind/above it */
-    padding-top: 20px; /* Adjust this value to match your sidebar height */
-  }
-
-  /* Sidebar sits on top */
-  .sidebar {
-    position: absolute;
-    z-index: 10; /* Higher number keeps it above the main content */
-    max-width: 280px !important;
-  }
-}
-
-/* main content css */
-
-.btn-review {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 10px 22px;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-}
-
-.btn-review:hover {
-    background-color: rgba(255, 255, 255, 0.28);
-    border-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transform: translateY(-1px);
-}
-
-.btn-add-employee {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #212529; /* matches your dark sidebar */
-    color: #fff;
-    border: none;
-    text-decoration: none;
-    padding: 10px 24px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.25s ease;
-}
-
-.btn-add-employee:hover {
-    background-color: #000;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
-    transform: translateY(-2px);
-}
-
-.btn-add-employee:active,
-.btn-review:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-@media (max-width: 480px) {
-  .btn-review,
-  .btn-add-employee {
-    width: 100% !important;
-  }
-  .all-btn{
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* search section css  */
-@media (max-width: 991.98px) {
-        .search-form {
-            flex-direction: column;
-        }
-
-        .search-form .form-control {
-            width: 100%;
-            margin-right: 0 !important;
-            margin-bottom: 0.5rem;
-        }
-
-        .search-form .btn {
-            width: 100%;
-        }
-    }
-
-/* dashboard showing:Total Employees, Active Employees, Inactive Employees, Total Departments */
-.stat-card {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 18px 20px;
-    height: 100%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid transparent;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
-.stat-icon {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.stat-label {
-    margin: 0;
-    font-size: 13px;
-    color: #6c757d;
-    font-weight: 500;
-}
-
-.stat-value {
-    margin: 2px 0 0;
-    font-size: 24px;
-    font-weight: 700;
-    color: #212529;
-}
-
-/* Theme-specific accents per card, tied to your blue header + dark sidebar */
-.stat-total {
-    border-left-color: #0d6efd;
-}
-.stat-total .stat-icon {
-    background-color: rgba(13, 110, 253, 0.12);
-    color: #0d6efd;
-}
-
-.stat-active {
-    border-left-color: #198754;
-}
-.stat-active .stat-icon {
-    background-color: rgba(25, 135, 84, 0.12);
-    color: #198754;
-}
-
-.stat-inactive {
-    border-left-color: #dc3545;
-}
-.stat-inactive .stat-icon {
-    background-color: rgba(220, 53, 69, 0.12);
-    color: #dc3545;
-}
-
-.stat-dept {
-    border-left-color: #212529;
-}
-.stat-dept .stat-icon {
-    background-color: rgba(33, 37, 41, 0.1);
-    color: #212529;
-}
-
-/* employee mamnagement table css */
-
-/* Status badges */
-.badge-status {
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12.5px;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.badge-active {
-    background-color: rgba(25, 135, 84, 0.15);
-    color: #198754;
-}
-
-.badge-inactive {
-    background-color: rgba(220, 53, 69, 0.15);
-    color: #dc3545;
-}
-
-/* Action buttons */
-.btn-action {
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.btn-view {
-    background-color: rgba(13, 110, 253, 0.12);
-    color: #0d6efd;
-}
-.btn-view:hover {
-    background-color: #0d6efd;
-    color: #fff;
-    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.35);
-}
-
-.btn-edit {
-    background-color: rgba(255, 193, 7, 0.15);
-    color: #b8860b;
-}
-.btn-edit:hover {
-    background-color: #ffc107;
-    color: #212529;
-    box-shadow: 0 3px 8px rgba(255, 193, 7, 0.35);
-}
-
-.btn-delete {
-    background-color: rgba(220, 53, 69, 0.12);
-    color: #dc3545;
-}
-.btn-delete:hover {
-    background-color: #dc3545;
-    color: #fff;
-    box-shadow: 0 3px 8px rgba(220, 53, 69, 0.35);
-}
-
-.btn-action:active {
-    transform: scale(0.92);
-}
-
-/* Responsive scroll on smaller screens */
-@media (max-width: 992px) {
-    .employee-table {
-        font-size: 13px;
-    }
-    .employee-table thead th,
-    .employee-table tbody td {
-        padding: 10px 12px;
-    }
-}
- /* form page css */
 
 .container {
-background-color: 
-#0d6efd;
-border-radius: 16px;
-padding: 24px;
-box-shadow: 0 4px 20px rgba(0, 61, 128, 0.08);
-border: 1px solid 
-#e0edfd;
-border-left: 4px solid #0a0f1c;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-/* buttons of forms */
-.button-group {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.btn {
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  transition: all 0.2s ease;
-}
-
-.btn-cancel {
-  background-color: transparent;
-  color: #0a0f1c;
-  border: 1.5px solid #0a0f1c;
-}
-
-.btn-cancel:hover {
-  background-color: #0a0f1c;
-  color: #ffffff;
-}
-
-.btn-save {
-   background-color: #212529; /* matches your dark sidebar */
-    color: #fff;
-    border: none;
-    padding: 10px 24px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.25s ease;
-}
-
-.btn-save:hover {
-  background-color: #000;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
-    transform: translateY(-2px);
-}
-.btn-save:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-@media (max-width: 480px) {
-  .button-group {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-
-/* to make the sidebar side by side on every screen */
-.main-container {
+.row {
     display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.col {
+    width: 50%;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-wrapper {
     width: 100%;
-    min-height: 100vh;
-    align-items: stretch;
+    max-width: 28rem;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 25%;
-    min-width: 250px;
-    max-width: 400px;
-    flex-shrink: 0;
-}
-
-/* Inner sidebar */
-.sidebar-inner {
+.form {
+    padding: 1rem;
+    background-color: var(--black);
+    border-radius: 1.5rem;
     width: 100%;
-    min-height: 100vh;
-    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1s;
 }
 
-/* Main content */
-.main-content {
-    flex: 1;
-    min-width: 0;
-    width: 75%;
+.input-group {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
 }
 
-/* Desktop - make sidebar grow with screen */
-@media (min-width: 768px) {
-    .sidebar {
-        width: 25%;
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--gray-2);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background-color: var(--gray);
+    border-radius: .5rem;
+    border: 0.125rem solid var(--white);
+    outline: none;
+}
+
+.input-group input:focus {
+    border: 0.125rem solid var(--primary-color);
+}
+
+.form button {
+    cursor: pointer;
+    width: 100%;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.form p {
+    margin: 1rem 0;
+    font-size: .7rem;
+    color: var(--white);
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.social-list {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1.2s;
+}
+
+.social-list>div {
+    color: var(--white);
+    margin: 0 .5rem;
+    padding: .7rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    cursor: pointer;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+}
+
+.social-list>div:nth-child(1) {
+    transition-delay: 1.4s;
+}
+
+.social-list>div:nth-child(2) {
+    transition-delay: 1.6s;
+}
+
+.social-list>div:nth-child(3) {
+    transition-delay: 1.8s;
+}
+
+.social-list>div:nth-child(4) {
+    transition-delay: 2s;
+}
+
+.social-list>div>i {
+    font-size: 1.5rem;
+    transition: .4s ease-in-out;
+}
+
+.social-list>div:hover i {
+    transform: scale(1.5);
+}
+
+.facebook-bg {
+    background-color: var(--facebook-color);
+}
+
+.google-bg {
+    background-color: var(--google-color);
+}
+
+.twitter-bg {
+    background-color: var(--twitter-color);
+}
+
+.insta-bg {
+    background-color: var(--insta-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.container.sign-in .form.sign-in,
+.container.sign-in .social-list.sign-in,
+.container.sign-in .social-list.sign-in>div,
+.container.sign-up .form.sign-up,
+.container.sign-up .social-list.sign-up,
+.container.sign-up .social-list.sign-up>div {
+    transform: scale(1);
+}
+
+.content-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 6;
+    width: 100%;
+}
+
+.text {
+    margin: 4rem;
+    color: var(--white);
+}
+
+.text h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 2rem 0;
+    transition: 1s ease-in-out;
+}
+
+.text p {
+    font-weight: 600;
+    transition: 1s ease-in-out;
+    transition-delay: .2s;
+}
+
+.img img {
+    width: 30vw;
+    transition: 1s ease-in-out;
+    transition-delay: .4s;
+}
+
+.text.sign-in h2,
+.text.sign-in p,
+.img.sign-in img {
+    transform: translateX(-250%);
+}
+
+.text.sign-up h2,
+.text.sign-up p,
+.img.sign-up img {
+    transform: translateX(250%);
+}
+
+.container.sign-in .text.sign-in h2,
+.container.sign-in .text.sign-in p,
+.container.sign-in .img.sign-in img,
+.container.sign-up .text.sign-up h2,
+.container.sign-up .text.sign-up p,
+.container.sign-up .img.sign-up img {
+    transform: translateX(0);
+}
+
+/* BACKGROUND */
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300vw;
+    transform: translate(35%, 0);
+    background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    transition: 1s ease-in-out;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-right-radius: max(50vw, 50vh);
+    border-top-left-radius: max(50vw, 50vh);
+}
+
+.container.sign-in::before {
+    transform: translate(0, 0);
+    right: 50%;
+}
+
+.container.sign-up::before {
+    transform: translate(100%, 0);
+    right: 50%;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 425px) {
+
+    .container::before,
+    .container.sign-in::before,
+    .container.sign-up::before {
+        height: 100vh;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        z-index: 0;
+        transform: none;
+        right: 0;
     }
-}
 
-/* Mobile */
-@media (max-width: 767px) {
+    /* .container.sign-in .col.sign-up {
+        transform: translateY(100%);
+    } */
 
-    .main-container {
-        display: block;
+    .container.sign-in .col.sign-in,
+    .container.sign-up .col.sign-up {
+        transform: translateY(0);
     }
 
-    .sidebar {
+    .content-row {
+        align-items: flex-start !important;
+    }
+
+    .content-row .col {
+        transform: translateY(0);
+        background-color: unset;
+    }
+
+    .col {
         width: 100%;
-        min-width: 100%;
-        max-width: none;
+        position: absolute;
+        padding: 2rem;
+        background-color: var(--white);
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        transform: translateY(100%);
+        transition: 1s ease-in-out;
     }
 
-    .sidebar-inner {
-        min-height: auto;
+    .row {
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 
-    .main-content {
-        width: 100%;
+    .form,
+    .social-list {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
     }
-}
 
-/* employee dashboard charts */
-.chart-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  height: 300px;
+    .text {
+        margin: 0;
+    }
+
+    .text p {
+        display: none;
+    }
+
+    .text h2 {
+        margin: .5rem;
+        font-size: 2rem;
+    }
 }

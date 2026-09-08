@@ -4,42 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Management System</title>
+    <title>Landing page of EMS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./landing-pg.css">
 </head>
 
-<body class="indexBody">
-    <header>
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> <a href="/"
-                class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"> <img
-                    src="./asset/logo.png" alt="logo" width="250px" height="80px"></a>
-        </div>
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"> <img
+                        src="./asset/logo.png" alt="logo" width="250px" height="80px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4 text-light">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./employee-details.html">Employee</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Payroll</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Departments</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="signup-login.html" id="btn-signin">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-        <main class="form-signin col-lg-4 col-md-8 col-12 m-auto p-4">
-            <h1 class="my-2 text-center">Employee Management System</h1>
-        <form>
-            <h2 class="h3 mb-3 my-5 fw-large text-center">Sign In</h2>
-            <div class="form-floating mb-3"> <input type="email" class="form-control" id="floatingInput"
-                    placeholder="name@example.com"> <label for="floatingInput">Email address</label> </div>
-            <div class="form-floating"> <input type="password" class="form-control" id="floatingPassword"
-                    placeholder="Password"> <label for="floatingPassword">Password</label> </div>
-            <div class="form-check text-start my-3"> <input class="form-check-input" type="checkbox" value="remember-me"
-                    id="checkDefault"> <label class="form-check-label" for="checkDefault">
-                    Remember me
-                </label> </div> <button id="signInBtn" class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='dashboard.html';">Sign in</button>
-        </form>
-    </main>
+       <!-- hero section start -->
+       <section class="hero-section d-flex align-items-center justify-content-center min-vh-100 position-relative overflow-hidden">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+
+        <div class="container position-relative z-1 py-3">
+            <div class="row align-items-center g-5">
+                <!-- Text Content -->
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="badge text-bg-primary px-3 py-2 rounded-pill mb-3 text-uppercase tracking-wider">Effortless Workforce Management</span>
+                    <h1 class="display-4 fw-extrabold text-white mb-3">
+                        Unlocks Your Team’s <span class="text-gradient">True Potential</span>
+                    </h1>
+                    <p class="lead text-secondary mb-4">
+                        Streamline payroll, track performance, and optimize scheduling with our intuitive, all-in-one employee management platform built for modern scaling teams.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                        <a href="./signup-login.html" class="btn btn-gradient btn-lg px-4 py-3 fw-semibold">
+                            Sign Up here <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Image Container -->
+                <div class="col-lg-6">
+                    <div class="hero-img-wrapper" style="height: 600px;">
+                        <img src="./asset/hero.jpg" alt="Employee Management System landing page" class="hero-img img-fluid rounded-4 shadow-2xl hero-img">
+                        <div class="img-overlay-border rounded-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- hero section ends -->
 
 
 
-
-
-
-
-
-    <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
