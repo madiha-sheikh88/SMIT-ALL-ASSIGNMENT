@@ -15,26 +15,26 @@
 		<!-- FORM SECTION -->
 		<div class="row">
 			<!-- SIGN UP -->
-			<div class="col align-items-center flex-col sign-up">
+			<div  id="sign-up-form" class="col align-items-center flex-col sign-up">
 				<div class="form-wrapper align-items-center">
 					<div class="form sign-up">
 						<div class="input-group">
 							<i class='bx bxs-user'></i>
-							<input type="text" placeholder="Username">
+							<input type="text" id="su-username" placeholder="Username">
 						</div>
 						<div class="input-group">
 							<i class='bx bx-mail-send'></i>
-							<input type="email" placeholder="Email">
+							<input type="email" id="su-email" placeholder="Email">
 						</div>
 						<div class="input-group">
 							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Password">
+							<input type="password" id="su-password" placeholder="Password">
 						</div>
 						<div class="input-group">
 							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Confirm password">
+							<input type="password" id="su-confirm" placeholder="Confirm password">
 						</div>
-						<button>
+						<button id="su-submit" type="button">
 							Sign up
 						</button>
 						<p>
@@ -56,13 +56,13 @@
 					<div class="form sign-in">
 						<div class="input-group">
 							<i class='bx bxs-user'></i>
-							<input type="text" placeholder="Username">
+							<input type="text" id="si-username" placeholder="Username">
 						</div>
 						<div class="input-group">
 							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Password">
+							<input type="password" id="si-password" placeholder="Password">
 						</div>
-						<button>
+						<button id="si-submit" type="button">
 							Sign in
 						</button>
 						<p>
@@ -125,7 +125,7 @@
 
 
 
-
+<script src="./auth.js"></script>
     <script src="./signup-login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

@@ -1,8 +1,16 @@
 /* dashbboard page css */
-
+:root {
+    --primary-color: rgb(13 28 62);
+    --secondary-color: rgb(20 40 90);
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #757575;
+    --blue: #0d6efd;
+}
 .dashboardBody{
-    background-color: #121212;
-    color: #F8F9FA;
+    background-color: var(--black);
+    color: var(--white);
 }
 .main-container {
     display: flex;
@@ -65,8 +73,8 @@
 
 .btn-review:hover {
     background-color: rgba(255, 255, 255, 0.28);
-    border-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border-color: var(--white);
+    box-shadow: 0 4px 12px var(--black);
     transform: translateY(-1px);
 }
 
@@ -83,13 +91,13 @@
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px var(--black);
     transition: all 0.25s ease;
 }
 
 .btn-add-employee:hover {
-    background-color: #000;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    background-color: var(--blue);
+    box-shadow: 0 6px 16px var(--black);
     transform: translateY(-2px);
 }
 
@@ -130,18 +138,18 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 10px;
     padding: 18px 20px;
     height: 100%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px var(--black);
     border-left: 4px solid transparent;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .stat-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 16px var(--black);
 }
 
 .stat-icon {
@@ -170,11 +178,11 @@
 
 /* Theme-specific accents per card, tied to your blue header + dark sidebar */
 .stat-total {
-    border-left-color: #0d6efd;
+    border-left-color: var(--blue);
 }
 .stat-total .stat-icon {
-    background-color: rgba(13, 110, 253, 0.12);
-    color: #0d6efd;
+    background-color: var(--primary-color);
+    color: var(--blue);
 }
 
 .stat-active {
@@ -236,13 +244,13 @@
 }
 
 .btn-view {
-    background-color: rgba(13, 110, 253, 0.12);
-    color: #0d6efd;
+    background-color:var(--primary-color);
+    color: var(--blue);
 }
 .btn-view:hover {
-    background-color: #0d6efd;
-    color: #fff;
-    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.35);
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0 3px 8px var(--primary-color);
 }
 
 .btn-edit {
@@ -283,13 +291,13 @@
 
 .container {
 background-color: 
-#0d6efd;
+var(--blue);
 border-radius: 16px;
 padding: 24px;
-box-shadow: 0 4px 20px rgba(0, 61, 128, 0.08);
+box-shadow: 0 4px 20px var(--secondary-color);
 border: 1px solid 
-#e0edfd;
-border-left: 4px solid #0a0f1c;
+var(--light-border);
+border-left: 4px solid var(--secondary-color);
 }
 
 /* buttons of forms */
@@ -312,18 +320,18 @@ border-left: 4px solid #0a0f1c;
 
 .btn-cancel {
   background-color: transparent;
-  color: #0a0f1c;
-  border: 1.5px solid #0a0f1c;
+  color: var(--secondary-color);
+  border: 1.5px solid var(--secondary-color);
 }
 
 .btn-cancel:hover {
-  background-color: #0a0f1c;
-  color: #ffffff;
+  background-color: var(--secondary-color);
+  color: var(--white);
 }
 
 .btn-save {
    background-color: #212529; /* matches your dark sidebar */
-    color: #fff;
+    color: var(--white);
     border: none;
     padding: 10px 24px;
     font-size: 15px;
@@ -335,7 +343,7 @@ border-left: 4px solid #0a0f1c;
 }
 
 .btn-save:hover {
-  background-color: #000;
+  background-color: var(--black);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
     transform: translateY(-2px);
 }
@@ -412,6 +420,24 @@ border-left: 4px solid #0a0f1c;
     .main-content {
         width: 100%;
     }
+}
+@media (max-width: 1110px) {
+    .chart-main {
+        flex-direction: column !important;
+    }
+}
+
+/* employee svg */
+.user-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: var(--white);
+    flex-shrink: 0;
 }
 
 /* employee dashboard charts */

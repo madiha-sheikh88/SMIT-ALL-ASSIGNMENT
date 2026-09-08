@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --primary-color: rgb(13 28 62);
     --secondary-color: rgb(20 40 90);
@@ -6,8 +8,6 @@
     --gray: #efefef;
     --gray-2: #757575;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
