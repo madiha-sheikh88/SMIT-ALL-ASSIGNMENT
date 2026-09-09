@@ -46,7 +46,7 @@
   .main-content {
     width: 100%;
     /* Push main content down so the sidebar can sit behind/above it */
-    padding-top: 20px; /* Adjust this value to match your sidebar height */
+    padding-top: 20px; /* Adjust this value to match sidebar height */
   }
 
   /* Sidebar sits on top */
@@ -82,7 +82,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: #212529; /* matches your dark sidebar */
+    background-color: #212529; /* matches dark sidebar */
     color: #fff;
     border: none;
     text-decoration: none;
@@ -176,7 +176,7 @@
     color: #212529;
 }
 
-/* Theme-specific accents per card, tied to your blue header + dark sidebar */
+/* Theme-specific accents per card, tied to blue header + dark sidebar */
 .stat-total {
     border-left-color: var(--blue);
 }
@@ -407,11 +407,11 @@ border-left: 4px solid var(--secondary-color);
         display: block;
     }
 
-    .sidebar {
-        width: 100%;
-        min-width: 100%;
-        max-width: none;
-    }
+   .sidebar {
+    width: 280px;
+    min-width: 0;
+    max-width: 280px;
+}
 
     .sidebar-inner {
         min-height: auto;
@@ -446,4 +446,173 @@ border-left: 4px solid var(--secondary-color);
   width: 100%;
   max-width: 400px;
   height: 300px;
+}
+/* GLOW ENHANCEMENTS — matches the landing page's */
+
+:root {
+    --glow-strong: rgba(13, 110, 253, 0.45);
+    --glow-soft: rgba(13, 110, 253, 0.16);
+    --ems-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---- Ambient glow orbs behind the whole dashboard,
+   same idea as the landing hero's .glow-orb ---- */
+.main-container {
+    position: relative;
+    isolation: isolate;
+}
+
+.main-container::before,
+.main-container::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main-container::before {
+    width: 420px;
+    height: 420px;
+    top: -8%;
+    right: -6%;
+    background: var(--blue);
+}
+
+.main-container::after {
+    width: 480px;
+    height: 480px;
+    bottom: -12%;
+    left: 20%;
+    background: var(--secondary-color);
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ---- Header banners: swap the flat inline blue for the
+   landing page's navy-to-blue gradient + glow ---- */
+.heading-db {
+    background: linear-gradient(120deg, var(--primary-color) 0%, var(--secondary-color) 55%, var(--blue) 130%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45), 0 0 45px var(--glow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.heading-db::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.12) 45%, transparent 60%);
+    background-size: 220% 100%;
+    animation: ems-sheen 7s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ems-sheen {
+    0% {
+        background-position: 130% 0;
+    }
+
+    55%,
+    100% {
+        background-position: -30% 0;
+    }
+}
+
+/* ---- Stat cards: accent glow bar + stronger hover glow ---- */
+.stat-card {
+    position: relative;
+    border: 1px solid rgba(13, 28, 62, 0.06);
+    overflow: hidden;
+    transition: transform .3s var(--ems-ease), box-shadow .3s var(--ems-ease), border-color .3s ease;
+}
+
+.stat-card:hover {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25), 0 0 24px var(--glow-soft);
+    border-color: rgba(13, 110, 253, 0.35);
+}
+
+.stat-card .stat-icon {
+    box-shadow: 0 0 0 6px var(--glow-soft);
+    transition: transform .35s var(--ems-ease), box-shadow .35s var(--ems-ease);
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 8px var(--glow-soft), 0 0 18px var(--glow-strong);
+}
+
+/* ---- Chart panels: glowing glass frame ---- */
+.chart-container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 30px var(--glow-soft);
+    border: 1px solid rgba(13, 110, 253, 0.15);
+    transition: box-shadow .35s var(--ems-ease), transform .35s var(--ems-ease);
+}
+
+.chart-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 40px var(--glow-strong);
+}
+
+/* ---- Buttons: extra glow to match the landing/sign-in buttons ---- */
+.btn-add-employee:hover {
+    box-shadow: 0 0 22px var(--glow-strong), 0 6px 16px var(--black);
+}
+
+.btn-review:hover {
+    box-shadow: 0 0 16px var(--glow-soft), 0 4px 12px var(--black);
+}
+
+.btn-view:hover {
+    box-shadow: 0 0 14px var(--glow-strong);
+}
+
+.btn-save:hover {
+    box-shadow: 0 0 20px var(--glow-strong), 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+/* ---- Badges: subtle glow ring ---- */
+.badge-active {
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.25);
+}
+
+.badge-inactive {
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heading-db::after {
+        animation: none;
+    }
+}
+
+/* ---- Responsiveness: keep the ambient glow from causing
+   overflow or clutter on small screens ---- */
+@media (max-width: 767px) {
+
+    .main-container::before,
+    .main-container::after {
+        width: 260px;
+        height: 260px;
+        filter: blur(70px);
+        opacity: 0.14;
+    }
+
+    .chart-container:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-container::before,
+    .main-container::after {
+        display: none;
+    }
 }

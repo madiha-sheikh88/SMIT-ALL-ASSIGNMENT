@@ -1,0 +1,658 @@
+/* added new styling and sections */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ems-radius-sm: 12px;
+    --ems-radius-md: 18px;
+    --ems-radius-lg: 28px;
+    --ems-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ems-section-heading {
+    font-family: 'Sora', 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--heading-color);
+    letter-spacing: -0.02em;
+}
+
+.ems-eyebrow {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.ems-lead {
+    color: var(--muted-text);
+    max-width: 640px;
+}
+
+/* -----------------------------------------------------
+   Reusable: conic-gradient animated border
+   ----------------------------------------------------- */
+.ems-animated-border {
+    position: relative;
+    border-radius: var(--ems-radius-lg);
+    isolation: isolate;
+}
+
+.ems-animated-border::before {
+    content: "";
+    position: absolute;
+    inset: -1.5px;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: conic-gradient(from 0deg,
+            transparent 0%,
+            var(--blue) 15%,
+            transparent 35%,
+            var(--secondary-color) 55%,
+            transparent 75%,
+            var(--blue) 92%,
+            transparent 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: ems-rotate-border 5s linear infinite;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+@keyframes ems-rotate-border {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* -----------------------------------------------------
+   Reusable: glass surface
+   ----------------------------------------------------- */
+.ems-glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--border-color);
+}
+
+/* -----------------------------------------------------
+   Reveal-on-scroll (single orchestrated pattern, not
+   every element — see JS for which elements get .ems-reveal)
+   ----------------------------------------------------- */
+.ems-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ems-ease), transform 0.7s var(--ems-ease);
+}
+
+.ems-reveal.ems-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ems-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* =======================================================
+   HERO ADDITIONS — floating live-status cards over the
+   existing hero image (existing hero markup untouched)
+   ======================================================= */
+.ems-hero-floaters {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.ems-float-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: var(--ems-radius-sm);
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 15px 40px var(--shadow-color);
+    font-family: 'Sora', sans-serif;
+    color: var(--text-color);
+    animation: ems-float 6s ease-in-out infinite;
+}
+
+.ems-float-card .ems-float-num {
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.1;
+}
+
+.ems-float-card .ems-float-label {
+    font-size: 0.72rem;
+    color: var(--muted-text);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ems-float-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2ecc71;
+    box-shadow: 0 0 8px #2ecc71;
+    flex-shrink: 0;
+}
+
+.ems-float-1 {
+    top: 8%;
+    left: -6%;
+    animation-delay: 0s;
+}
+
+.ems-float-2 {
+    top: 38%;
+    right: -8%;
+    animation-delay: 1.4s;
+}
+
+.ems-float-3 {
+    bottom: 14%;
+    left: -4%;
+    animation-delay: 2.6s;
+}
+
+.ems-float-4 {
+    bottom: -4%;
+    right: 6%;
+    animation-delay: 0.8s;
+}
+
+@keyframes ems-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 991px) {
+    .ems-hero-floaters {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ems-float-card {
+        animation: none;
+    }
+}
+
+/* =======================================================
+   DATA STRIP — continuous scrolling ticker
+   ======================================================= */
+.ems-strip {
+    background: var(--primary-color);
+    overflow: hidden;
+    position: relative;
+    padding: 14px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ems-strip-track {
+    display: flex;
+    width: max-content;
+    animation: ems-scroll-strip 28s linear infinite;
+}
+
+.ems-strip:hover .ems-strip-track {
+    animation-play-state: paused;
+}
+
+.ems-strip-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--white);
+    white-space: nowrap;
+    padding: 0 28px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.02em;
+}
+
+.ems-strip-item .bi,
+.ems-strip-item i {
+    color: var(--blue);
+}
+
+@keyframes ems-scroll-strip {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ems-strip-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =======================================================
+   RUNNING DECORATIVE ELEMENTS (behind sections)
+   ======================================================= */
+.ems-runners {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ems-runner {
+    position: absolute;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    opacity: 0.35;
+    animation-name: ems-run-right;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.ems-runner.ems-runner-rev {
+    animation-name: ems-run-left;
+}
+
+.ems-runner-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 10px var(--blue);
+    opacity: 0.5;
+    animation-name: ems-run-right;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ems-run-right {
+    from {
+        transform: translateX(-10%);
+    }
+
+    to {
+        transform: translateX(110vw);
+    }
+}
+
+@keyframes ems-run-left {
+    from {
+        transform: translateX(110vw);
+    }
+
+    to {
+        transform: translateX(-10%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ems-runner,
+    .ems-runner-dot {
+        display: none;
+    }
+}
+
+/* =======================================================
+   FEATURES SECTION
+   ======================================================= */
+.ems-features {
+    position: relative;
+    padding: 90px 0;
+    background: var(--bg-color);
+}
+
+.ems-feature-card {
+    position: relative;
+    height: 100%;
+    padding: 30px 26px;
+    border-radius: var(--ems-radius-md);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform 0.4s var(--ems-ease), box-shadow 0.4s var(--ems-ease), border-color 0.4s ease;
+}
+
+.ems-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 55px rgba(13, 110, 253, 0.2);
+    border-color: rgba(13, 110, 253, 0.4);
+}
+
+.ems-feature-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    transition: transform 0.4s var(--ems-ease);
+}
+
+.ems-feature-card:hover .ems-feature-icon {
+    transform: rotate(-6deg) scale(1.08);
+}
+
+.ems-feature-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.ems-feature-card p {
+    color: var(--muted-text);
+    font-size: 0.93rem;
+    margin-bottom: 18px;
+}
+
+.ems-feature-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    color: var(--blue);
+    transition: transform 0.35s var(--ems-ease), background 0.35s ease, color 0.35s ease;
+}
+
+.ems-feature-card:hover .ems-feature-arrow {
+    transform: translateX(4px);
+    background: var(--blue);
+    color: var(--white);
+}
+
+.ems-feature-dot {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    opacity: 0.5;
+}
+
+/* =======================================================
+   STATISTICS SECTION
+   ======================================================= */
+.ems-stats {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--surface-color) 0%, var(--bg-color) 100%);
+    overflow: hidden;
+}
+
+.ems-stat-card {
+    position: relative;
+    text-align: center;
+    padding: 34px 20px;
+    border-radius: var(--ems-radius-md);
+    background: var(--card-bg);
+}
+
+.ems-stat-num {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--white);
+    background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+html[data-theme="light"] .ems-stat-num {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ems-stat-label {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* =======================================================
+   WORKFLOW / LIFECYCLE SECTION
+   ======================================================= */
+.ems-workflow {
+    padding: 90px 0;
+    background: var(--bg-color);
+}
+
+.ems-workflow-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 50px;
+}
+
+.ems-workflow-track::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 4%;
+    right: 4%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+.ems-workflow-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 16%;
+}
+
+.ems-workflow-node {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-secondary);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    margin-bottom: 14px;
+    box-shadow: 0 0 0 6px var(--glow-color);
+    transition: transform 0.4s var(--ems-ease);
+}
+
+.ems-workflow-step:hover .ems-workflow-node {
+    transform: scale(1.12);
+}
+
+.ems-workflow-step h4 {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 4px;
+}
+
+.ems-workflow-step p {
+    font-size: 0.78rem;
+    color: var(--muted-text);
+}
+
+@media (max-width: 991px) {
+    .ems-workflow-track {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        margin-left: 20px;
+    }
+
+    .ems-workflow-track::before {
+        top: 0;
+        bottom: 0;
+        left: 26px;
+        right: auto;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, var(--blue), transparent);
+    }
+
+    .ems-workflow-step {
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+        gap: 16px;
+    }
+
+    .ems-workflow-node {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+}
+
+
+/* =======================================================
+   FINAL CTA
+   ======================================================= */
+.ems-cta {
+    position: relative;
+    margin: 60px 0;
+    padding: 80px 40px;
+    border-radius: var(--ems-radius-lg);
+    text-align: center;
+    overflow: hidden;
+    background: radial-gradient(circle at 30% 20%, rgba(13, 110, 253, 0.25) 0%, var(--primary-color) 65%);
+}
+
+.ems-cta h2 {
+    color: var(--white) !important;
+}
+
+.ems-cta p {
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 520px;
+    margin: 0 auto 28px;
+}
+
+.ems-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 34px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--blue) 0%, #1d4ed8 100%);
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.35);
+    transition: transform 0.35s var(--ems-ease), box-shadow 0.35s ease;
+}
+
+.ems-cta-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(13, 110, 253, 0.5);
+    color: var(--white);
+}
+
+.ems-cta-btn:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.ems-cta-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    animation: ems-particle-drift 8s ease-in-out infinite;
+}
+
+@keyframes ems-particle-drift {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-30px) translateX(12px);
+        opacity: 0.8;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ems-cta-particle {
+        animation: none;
+    }
+}
+
+/* =======================================================
+   Responsive polish for new sections
+   ======================================================= */
+@media (max-width: 576px) {
+
+    .ems-features,
+    .ems-stats,
+    .ems-workflow {
+        padding: 56px 0;
+    }
+
+    .ems-cta {
+        padding: 56px 20px;
+    }
+
+    .ems-strip-item {
+        font-size: 0.8rem;
+        padding: 0 18px;
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+}

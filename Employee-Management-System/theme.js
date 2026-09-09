@@ -1,30 +1,28 @@
+// THEME TOGGLE
 
-(function () {
-    "use strict";
+var root = document.documentElement;
+var savedTheme = localStorage.getItem("ems-theme");
+var systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+var currentTheme = savedTheme || systemTheme;
 
-    const STORAGE_KEY = "ems_theme";
-    const saved = localStorage.getItem(STORAGE_KEY) || "dark";
-    document.documentElement.setAttribute("data-theme", saved);
+root.setAttribute("data-theme", currentTheme);
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const btn = document.getElementById("theme-toggle");
-        updateIcon(saved, btn);
+document.addEventListener("DOMContentLoaded", function () {
+    var toggleBtn = document.getElementById("theme-toggle");
+    var icon = toggleBtn.querySelector("i");
 
-        if (btn) {
-            btn.addEventListener("click", function () {
-                const current = document.documentElement.getAttribute("data-theme");
-                const next = current === "dark" ? "light" : "dark";
-                document.documentElement.setAttribute("data-theme", next);
-                localStorage.setItem(STORAGE_KEY, next);
-                updateIcon(next, btn);
-            });
-        }
+    icon.className = "bx " + (currentTheme === "light" ? "bx-moon" : "bx-sun");
+
+    toggleBtn.addEventListener("click", function () {
+        currentTheme = currentTheme === "light" ? "dark" : "light";
+
+        root.setAttribute("data-theme", currentTheme);
+        icon.className = "bx " + (currentTheme === "light" ? "bx-moon" : "bx-sun");
+        localStorage.setItem("ems-theme", currentTheme);
+
+        toggleBtn.classList.add("spin");
+        setTimeout(function () {
+            toggleBtn.classList.remove("spin");
+        }, 500);
     });
-
-    function updateIcon(theme, btn) {
-        if (!btn) return;
-        const icon = btn.querySelector("i");
-        if (!icon) return;
-        icon.className = theme === "dark" ? "bx bx-moon" : "bx bx-sun";
-    }
-})();
+});

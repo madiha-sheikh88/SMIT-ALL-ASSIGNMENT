@@ -341,3 +341,126 @@ body {
         font-size: 2rem;
     }
 }
+
+/* GLOW ENHANCEMENTS */
+
+:root {
+    --blue: #0d6efd;
+    --glow-strong: rgba(13, 110, 253, 0.45);
+    --glow-soft: rgba(13, 110, 253, 0.18);
+}
+
+/* ambient glow orb behind the panel, like the landing hero's glow-orb */
+.container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60vmax;
+    height: 60vmax;
+    max-width: 900px;
+    max-height: 900px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, var(--glow-soft) 0%, transparent 65%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: -1;
+    animation: glowPulse 6s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* soft blue rim on the curved brand panel */
+.container::before {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, 0 0 90px var(--glow-soft);
+}
+
+/* glowing focus state on inputs */
+.input-group input:focus {
+    box-shadow: 0 0 0 4px var(--glow-soft), 0 0 18px var(--glow-strong);
+}
+
+.input-group:focus-within i {
+    color: var(--blue);
+    text-shadow: 0 0 8px var(--glow-strong);
+}
+
+/* glowing active form card */
+.container.sign-in .form.sign-in,
+.container.sign-up .form.sign-up {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, 0 0 40px var(--glow-soft);
+}
+
+/* glowing button */
+.form button {
+    transition: box-shadow .35s ease, transform .35s ease, background-color .35s ease;
+}
+
+.form button:hover {
+    background-color: var(--blue);
+    box-shadow: 0 0 24px var(--glow-strong), 0 6px 18px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+.form button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 10px var(--glow-strong);
+}
+
+/* glowing links */
+.form p b {
+    transition: text-shadow .3s ease, color .3s ease;
+}
+
+.form p b:hover {
+    color: var(--blue);
+    text-shadow: 0 0 10px var(--glow-strong);
+}
+
+/* subtle glow on the welcome / join headings */
+.text h2 {
+    text-shadow: 0 0 24px var(--glow-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .container::after {
+        animation: none;
+    }
+}
+
+/* ---- Responsiveness: keep the glow contained and light
+   on the stacked mobile layout, matching the existing
+   425px breakpoint already used above ---- */
+@media only screen and (max-width: 425px) {
+    .container::after {
+        width: 130vw;
+        height: 130vw;
+        filter: blur(50px);
+    }
+
+    .input-group input:focus {
+        box-shadow: 0 0 0 3px var(--glow-soft), 0 0 12px var(--glow-strong);
+    }
+
+    .form button:hover {
+        box-shadow: 0 0 16px var(--glow-strong);
+        transform: none;
+    }
+}
+/* theme css to keep it on right side */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
