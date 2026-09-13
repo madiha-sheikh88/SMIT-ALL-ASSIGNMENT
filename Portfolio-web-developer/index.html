@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madiha Sheikh — Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="site-nav" id="siteNav">
+    <div class="container">
+      <div class="nav-inner">
+        <img src="./asset/logo-madiha.jpg" style="width:46px;height:46px;border-radius:50%">
+
+        <button class="nav-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-md-flex justify-content-md-center" id="navLinks">
+          <div class="nav-capsule my-3 my-md-0">
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-contact d-none d-md-inline-block">Contact Me</a>
+      </div>
+    </div>
+  </nav>
+  <!-- ================= HERO (Aurora Drift) ================= -->
+  <section class="bg-aurora" id="hero">
+    <div class="aurora-wave"></div>
+    <div class="halo-ring" style="width:480px;height:480px; top:12%; left:6%;"></div>
+    <div class="halo-ring" style="width:340px;height:340px; bottom:8%; right:8%; animation-delay:-2.5s;"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Portfolio</div>
+      <h1 class="hero-name" id="heroName"></h1>
+      <p class="hero-tagline">I code ideas into interactive realities.</p>
+    </div>
+
+    <div class="hero-social d-none d-lg-flex">
+      <div class="side-capsule">
+        <ul>
+          <li><a href="https://github.com/madiha-sheikh88/" target="_blank" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.3-1.4-1.7-1.4-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3z" />
+              </svg>
+            </a></li>
+          <li><a href="https://www.instagram.com/madiha_sheikh16" target="_blank" aria-label="Instagram"
+              title="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor"
+                  stroke-width="1.6" />
+                <circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <circle cx="17.4" cy="6.6" r="1.2" />
+              </svg>
+            </a></li>
+          <li><a href="https://codepen.io/madiha-sheikh88" target="_blank" aria-label="CodePen" title="CodePen">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2 22 8.5v7L12 22 2 15.5v-7L12 2Z" />
+                <path d="M2 8.5 12 15l10-6.5M12 2v6.3M12 22v-6.7M2 15.5 12 9l10 6.5" />
+              </svg>
+            </a></li>
+          <li><a href="https://app.netlify.com/teams/madiha-sheikh88/projects" target="_blank" aria-label="Netlify"
+              title="Netlify">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 20 12 4l8 16H4Z" />
+                <path d="M12 4v16M8 12h8" />
+              </svg>
+            </a></li>
+        </ul>
+      </div>
+      <div class="side-line"></div>
+      <!-- date and time -->
+      <div class="datetime"> <span class="live-dot">◉</span> <span id="time"></span> <span class="separator">|</span>
+        <span id="date"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS (Circuit Glow) ================= -->
+  <section class="bg-circuit" id="projects">
+    <div class="grid-overlay"></div>
+    <div class="beam-h b1"></div>
+    <div class="beam-h b2"></div>
+
+    <div class="container position-relative">
+      <div class="section-heading">
+        <h2>Recent Projects</h2>
+        <p>A few things I've built recently</p>
+      </div>
+    </div>
+
+    <div class="slider-wrapper">
+      <div class="slider-track">
+        <!-- project 1 -->
+        <div class="project-card">
+          <img src="./asset/EMS-IMG.png" alt="Employee Management System" class="project-img">
+          <div class="project-info">
+            <h4>Employee Management System</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/Employee-Management-System"
+                target="_blank" rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/Employee-Management-System/index.html"
+                target="_blank" rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 2 -->
+        <div class="project-card">
+          <img src="./asset/SERVICE-WEB-APP.png" alt="SERVICE WEB APP" class="project-img">
+          <div class="project-info">
+            <h4>Service Web Application</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/hackathon-smit" target="_blank"
+                rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/hackathon-smit/index.html" target="_blank"
+                rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 3 -->
+        <div class="project-card">
+          <img src="./asset/clone-smit-form.png" alt="clone of SMIT form" class="project-img">
+          <div class="project-info">
+            <h4>Enrollment Form SMIT-Clone</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/Enrollment-Form" target="_blank"
+                rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/Enrollment-Form/index.html" target="_blank"
+                rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 4 -->
+        <div class="project-card">
+          <img src="./asset/atm-system.png" alt="ATM System" class="project-img">
+          <div class="project-info">
+            <h4>ATM System</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/ATM-SYSTEM" target="_blank"
+                rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/ATM-SYSTEM/index.html" target="_blank"
+                rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 5 -->
+        <div class="project-card">
+          <img src="./asset/Add-to-cart.png" alt="Add to Cart" class="project-img">
+          <div class="project-info">
+            <h4>Add to Cart</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/Add-to-Cart" target="_blank"
+                rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/Add-to-Cart/index.html" target="_blank"
+                rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 6 -->
+        <div class="project-card">
+          <img src="./asset/digital calculator.png" alt="Digital Calculator" class="project-img">
+          <div class="project-info">
+            <h4>Digital Calculator</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/Digital-Calculator"
+                target="_blank" rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/Digital-Calculator/index.html"
+                target="_blank" rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 7 -->
+        <div class="project-card">
+          <img src="./asset/figma-landing-pg.png" alt="figma-website-pg" class="project-img">
+          <div class="project-info">
+            <h4>Figma Website-Bootstrap</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/Assignment-13CSS"
+                target="_blank" rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/Assignment-13CSS/index.html"
+                target="_blank" rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 8 -->
+        <div class="project-card">
+          <img src="./asset/Positivus-landing-pg.png" alt="Positivus Landing Page" class="project-img">
+          <div class="project-info">
+            <h4>Positivus Landing Page-Bootstrap</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/positivus" target="_blank"
+                rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/positivus/index.html" target="_blank"
+                rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 9 -->
+        <div class="project-card">
+          <img src="./asset/real-estate-landing-pg.png" alt="Real Estate Landing Page" class="project-img">
+          <div class="project-info">
+            <h4>Real Estate Landing Page</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/Assignment-12CSS"
+                target="_blank" rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/Assignment-12CSS/index.html"
+                target="_blank" rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- project 9 -->
+        <div class="project-card">
+          <img src="./asset/figma-beauty-landing-pg.png" alt="Figma Beauty Landing Page" class="project-img">
+          <div class="project-info">
+            <h4>Figma Beauty Landing Page</h4>
+            <div class="project-links">
+              <a href="https://github.com/madiha-sheikh88/SMIT-ALL-ASSIGNMENT/tree/main/Assignment-11CSS"
+                target="_blank" rel="noopener" class="link-item github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://madiha-sheikh88.github.io/SMIT-ALL-ASSIGNMENT/Assignment-11CSS/index.html"
+                target="_blank" rel="noopener" class="link-item live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- projects ended -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT + SKILLS ================= -->
+  <section class="bg-about" id="about">
+    <div class="aurora-wave"></div>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-avatar"><img src="./asset/yourphoto.jpg.jpeg" alt="Madiha Sheikh"></div>
+        <div class="about-text">
+          <div class="section-heading">
+            <h2>About Me</h2>
+          </div>
+          <p>I’m Madiha Sheikh, a front-end focused developer who enjoys turning ideas into interfaces that feel alive —
+            combining clean structure with thoughtful interactions, subtle motion, and a touch of glow.</p>
+          <p>I build with HTML, CSS, and JavaScript every day, creating responsive, interactive websites and keeping my
+            work organized and version-controlled on GitHub. I’m also comfortable moving between design tools and
+            practical tools like Excel whenever a project calls for it.</p>
+          <div class="about-stats">
+            <div><b>10+</b><span>Projects Built</span></div>
+            <div><b>2+</b><span>Years Learning &amp; Building</span></div>
+            <div><b>6+</b><span>Tools &amp; Languages</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-marquee" id="skills">
+        <div class="skill-row">
+          <div class="skill-track dir-left" id="skillTrackLeft"></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-track dir-right" id="skillTrackRight"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-top-line"></div>
+    <div class="container">
+      <div class="row g-5">
+
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <div class="logo-slot mb-3"><img src="./asset/logo-madiha.jpg" alt="logo madiha sheikh"></div>
+          <h3>Madiha Sheikh</h3>
+          <p>Designing and building interfaces with intention — open to freelance work and collaborations.</p>
+          <div class="social-row">
+            <!-- GitHub -->
+            <a href="https://github.com/madiha-sheikh88/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+              title="GitHub" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.3-1.4-1.7-1.4-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3z" />
+              </svg>
+            </a>
+
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/madiha_sheikh16" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram" title="Instagram" class="social-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor"
+                  stroke-width="1.6" />
+
+                <circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="1.6" />
+
+                <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" />
+              </svg>
+            </a>
+
+
+            <!-- CodePen -->
+            <a href="https://codepen.io/madiha-sheikh88" target="_blank" rel="noopener noreferrer" aria-label="CodePen"
+              title="CodePen" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2 22 8.5v7L12 22 2 15.5v-7L12 2Z" />
+                <path d="M2 8.5 12 15l10-6.5M12 2v6.3M12 22v-6.7M2 15.5 12 9l10 6.5" />
+              </svg>
+            </a>
+
+
+            <!-- Netlify -->
+            <a href="https://app.netlify.com/teams/madiha-sheikh88/projects" target="_blank" rel="noopener noreferrer"
+              aria-label="Netlify" title="Netlify" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 20 12 4l8 16H4Z" />
+                <path d="M12 4v16M8 12h8" />
+              </svg>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-heading">Explore</div>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links footer-contact">
+            <li><span class="ic">&#9993;</span> madihas588@gmail.com</li>
+            <li><span class="ic">&#9742;</span> +92 345 2322348</li>
+            <li><span class="ic">&#9679;</span> Karachi, Pakistan</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-heading">Stay in touch</div>
+          <p style="font-size:13px; color:rgba(236,232,255,.5); margin-bottom:0;">Get occasional updates on new
+            projects.</p>
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="submitBtn"> Send Message</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <small>&copy; 2026 Madiha Sheikh. All rights reserved.</small>
+        <div class="legal-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">&uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
