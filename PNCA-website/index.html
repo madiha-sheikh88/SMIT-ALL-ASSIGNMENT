@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan National Council of the Arts | PNCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="website-wrapper">
+
+        <!-- Background image (max 75vh, fluid) -->
+        <section class="container-fluid bg-section p-0"></section>
+
+        <!-- Main container: fixed width, overlaps the image -->
+        <div class="main-container">
+
+            <!-- NAVBAR -->
+            <header>
+                <nav class="navbar navbar-expand-xl site-nav" data-bs-theme="dark">
+                    <div class="container-fluid px-3 px-xl-4">
+                        <a class="navbar-brand" href="index.html">
+                            <span class="logo-circle">
+                                <img src="./asset/Pakistan_National_Council_of_the_Arts_logo.png" alt="PNCA logo">
+                            </span>
+                        </a>
+
+                        <div class="d-flex align-items-center gap-2 order-xl-last ms-auto ms-xl-0">
+                            <button id="themeToggle" class="btn theme-toggle" aria-label="Toggle theme">
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </button>
+                            <a href="signup.html" class="btn btn-glow d-none d-xl-inline-block">Sign In</a>
+                            <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="mainNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="visual-arts.html">Visual Arts</a></li>
+                                <li class="nav-item"><a class="nav-link" href="music-drama.html">Music &amp; Drama</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="education.html">Educational Programs</a>
+                                </li>
+                            </ul>
+                            <a href="signup.html" class="btn btn-glow d-xl-none mt-2 mb-2">Sign In</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- MAIN / HERO -->
+            <main>
+                <section class="hero py-5">
+                    <div class="row align-items-center g-5">
+
+                        <div class="col-lg-6 hero-text" data-observe>
+                            <p class="site-name anim-down">Pakistan National Council of the Arts</p>
+                            <h1 class="anim-left">The Intersection of <span class="accent">Art and Ideas</span></h1>
+                            <h3 class="sub-heading typewriter" data-text="Stories Written in Color and Contrast"
+                                aria-label="Stories Written in Color and Contrast"></h3>
+
+                            <div class="d-flex flex-wrap align-items-center gap-4 mt-4 hero-buttons">
+                                <a href="#explore" class="btn-orbit">Explore</a>
+                                <a href="tickets.html" class="btn btn-glow btn-lg">Book Tickets</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="art-frame reveal" data-observe>
+                                <div class="art-shadow">
+                                    <figure class="art-picture">
+                                        <img src="./asset/PNCA-building-hero-img.jpg" alt="Featured artwork">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ==================== FREEFRONTEND.COM ANIMATED SECTION — START ==================== -->
+                <!-- GSAP ScrollSmoother overlapping text + parallax images. Edit headings, paragraphs and image src below. -->
+                <div class="ff-anim-section">
+
+                    <section class="wrapper">
+                        <article>
+                            <header class="overlapping" data-speed="1.25">
+                                <h2>Visual Arts <br> <span class="accent">& Galleries</span></h2>
+                                <p>Chronicle the evolution of creative expression through timeless and modern masterpieces—spanning painting, calligraphy, sculpture, and curated gallery showcases.</p>
+                                <div class="explore-more">
+                                    <a href="#" class="btn-orbit">Explore More</a>
+                                </div>
+                            </header>
+                            <div class="video-bg overlapping-video-bg">
+                                <div class="image-parent">
+                                    <div class="image-child">
+                                        <img data-speed="auto"
+                                            src="./asset/visual-art-image.webp"
+                                            alt="visual art and gallery image">
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="wrapper">
+                        <article>
+                            <header class="reverse-overlapping" data-speed="1.25">
+                                <h2>Performing <span class="accent"> Arts & Drama</span>
+                                </h2>
+                                <p>Celebrating theatre festivals, classical dance productions, string puppetry, and stage performances.</p>
+                                <div class="explore-more">
+                                    <a href="#" class="btn-orbit">Explore More</a>
+                                </div>
+                            </header>
+                            <div class="video-bg reverse-overlapping-video-bg">
+                                <div class="image-parent">
+                                    <div class="image-child">
+                                        <img data-speed="auto"
+                                            src="./asset/music-drama-img.jpg"
+                                            alt="art drama and music">
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="wrapper">
+                        <article>
+                            <header class="overlapping" data-speed="1.25">
+                                <h2>Cultural Arts <span class="accent">& Music Programs</span></h2>
+                                <p>Now accepting admissions. Discover immersive educational programs designed to celebrate diverse global heritages, traditional harmonies, and creative artistic expressions.</p>
+                                <div class="explore-more">
+                                    <a href="#" class="btn-orbit">Explore More</a>
+                                </div>
+                            </header>
+                            <div class="video-bg overlapping-video-bg">
+                                <div class="image-parent">
+                                    <div class="image-child">
+                                        <img data-speed="auto"
+                                            src="./asset/tie-n-die-image.png"
+                                            alt="tie and die workshop">
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="wrapper">
+                        <article>
+                            <header class="reverse-overlapping" data-speed="1.25">
+                                <h2>Cultural Arts <span class="accent">& Music Programs</span></h2>
+                                <p>Now accepting admissions. Discover immersive educational programs designed to celebrate diverse global heritages, traditional harmonies, and creative artistic expressions.</p>
+                                <div class="explore-more">
+                                    <a href="#" class="btn-orbit">Explore More</a>
+                                </div>
+                            </header>
+                            <div class="video-bg reverse-overlapping-video-bg">
+                                <div class="image-parent">
+                                    <div class="image-child">
+                                        <img data-speed="auto"
+                                            src="https://ensigndev.no/playground/ensign/wp-content/uploads/2022/04/pic3-1.jpg"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                </div>
+                <!-- ==================== FREEFRONTEND.COM ANIMATED SECTION — END ==================== -->
+
+
+            </main>
+
+        </div>
+
+        <!-- FOOTER -->
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row g-5 py-5">
+
+                    <!-- Left: logo + name + address + phone -->
+                    <div class="col-lg-4">
+                        <div class="footer-brand d-flex align-items-start gap-3">
+                            <a href="index.html"><img src="./asset/Pakistan_National_Council_of_the_Arts_logo.png"
+                                    alt="PNCA logo" height="64"></a>
+                            <div>
+                                <h5 class="footer-title mb-2">Pakistan National Council of the Arts</h5>
+                                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> F-5/1, Sector F-5, Islamabad,
+                                    Pakistan</p>
+                                <p class="mb-3"><i class="bi bi-telephone-fill"></i> <a href="tel:+92519205273">+92 51
+                                        9205273</a></p>
+                                <div class="social d-flex gap-3">
+                                    <a href="https://www.facebook.com/PNCAOfficial/" target="_blank" rel="noopener"
+                                        aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://www.instagram.com/pnca.official/?hl=en" target="_blank"
+                                        rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="col-6 col-lg-2">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="visual-arts.html">Visual Arts</a></li>
+                            <li><a href="music-drama.html">Music &amp; Drama</a></li>
+                            <li><a href="education.html">Educational Programs</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Timings -->
+                    <div class="col-6 col-lg-3">
+                        <h5 class="footer-title">Timings</h5>
+                        <p>Usually open 10:00 AM to 4:00 PM for exhibitions. Galleries are often closed on Saturdays;
+                            specific event times vary.</p>
+                    </div>
+
+                    <!-- Subscribe -->
+                    <div class="col-lg-3">
+                        <h5 class="footer-title">Newsletter</h5>
+                        <form class="subscribe-form" action="#" method="post">
+                            <input type="email" class="form-control subscribe-input" placeholder="Your email address"
+                                aria-label="Email address" required>
+                            <button type="submit" class="btn-orbit">Subscribe</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom text-center py-3">
+                    &copy; <span id="year">2026</span> All rights reserved to Madiha Sheikh
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- wrapper ended -->
+
+
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ==================== FREEFRONTEND.COM ANIMATED SECTION (GSAP) — START ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <!-- ==================== FREEFRONTEND.COM ANIMATED SECTION (GSAP) — END ==================== -->
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
