@@ -403,156 +403,9 @@ a {
 }
 
 
-/* ========== FOOTER ========== */
-.site-footer {
-    background: var(--dark-ui);
-    color: var(--dark-ui-text);
-}
-
-.site-footer p,
-.site-footer li,
-.site-footer strong {
-    color: var(--dark-ui-text);
-}
-
-.site-footer .footer-title {
-    color: #fff;
-    font-family: var(--font-body);
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.site-footer a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.site-footer a:hover {
-    text-decoration: underline;
-}
-
-.site-footer .social a {
-    font-size: 1.4rem;
-    color: var(--dark-ui-text);
-    transition: color .25s, transform .25s;
-}
-
-.site-footer .social a:hover {
-    color: var(--accent);
-    transform: translateY(-3px);
-    text-decoration: none;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    font-size: .9rem;
-    color: var(--muted);
-}
-
-@media (max-width: 991px) {
-    .art-picture img {
-        height: 280px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-
-        .art-picture {
-            clip-path: none;
-        }
-
-        .art-picture img {
-            filter: none;
-            transform: none;
-        }
-    }
-
-    .anim-down,
-    .anim-left,
-    .hero-buttons,
-    .art-frame {
-        opacity: 1;
-        transform: none;
-    }
-}
 
 
-
-
-/* Footer brand */
-.footer-brand img {
-    display: block;
-}
-
-.footer-brand i {
-    color: var(--accent);
-    margin-right: .35rem;
-}
-
-/* Footer link list */
-.footer-links li {
-    margin-bottom: .5rem;
-}
-
-.footer-links a {
-    color: var(--dark-ui-text);
-    transition: color .25s, padding-left .25s;
-}
-
-.footer-links a:hover {
-    color: var(--accent);
-    padding-left: 6px;
-    text-decoration: none;
-}
-
-/* Subscribe form */
-.subscribe-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2.6rem;
-    /* was 1.4rem: more space so the rings don't touch the input */
-    width: 100%;
-    max-width: 340px;
-}
-
-.subscribe-form .btn-orbit {
-    margin-left: .6rem;
-}
-
-/* keeps the ring's left edge clear of the input edge */
-.subscribe-input {
-    background: rgba(255, 255, 255, .06);
-    border: 1px solid rgba(255, 255, 255, .15);
-    color: #fff;
-    border-radius: 50rem;
-    padding: .65rem 1.2rem;
-}
-
-.subscribe-input::placeholder {
-    color: var(--muted);
-}
-
-.subscribe-input:focus {
-    background: rgba(255, 255, 255, .08);
-    color: #fff;
-    border-color: var(--accent);
-    box-shadow: 0 0 14px var(--accent-glow);
-}
-
-/* The footer is always dark, so the ring button text must stay white in both themes */
-.site-footer .btn-orbit {
-    color: #fff;
-    cursor: pointer;
-}
-
-.site-footer .btn-orbit:hover {
-    color: var(--accent);
-}
-
+/* bento section */
 
 /* ==================== FREEFRONTEND.COM ANIMATED SECTION — START ==================== */
 /* Everything is scoped under .ff-anim-section so the rest of your site/theme is untouched.
@@ -657,3 +510,586 @@ a {
     }
 }
 /* ==================== FREEFRONTEND.COM ANIMATED SECTION — END ==================== */
+
+
+/* ===== ART GALLERY CSS: START ===== */
+.art-gallery {
+  /* map these to YOUR existing theme variables if the names differ */
+  --gal-accent: var(--accent, #EA580C);
+  --gal-text: var(--text-color, currentColor);
+  --gal-muted: var(--muted, #6b7280);
+
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: clamp(3rem, 7vh, 5rem) 0;
+  overflow: hidden;
+}
+
+/* two-colour heading (same idea as your other sections) */
+.art-gallery .section-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--gal-text);
+  margin: 0;
+}
+.art-gallery .section-title span { color: var(--gal-accent); }
+
+.art-gallery .title-bar {
+  width: 0;
+  height: 3px;
+  margin: .8rem auto 1rem;
+  background: var(--gal-accent);
+  border-radius: 3px;
+  transition: width .9s cubic-bezier(.2,.8,.2,1) .3s;
+}
+.art-gallery .gallery-sub {
+  font-family: 'Playfair Display', serif;
+  color: var(--gal-muted);
+  max-width: 560px;
+  margin: 0 auto clamp(1.2rem, 3vh, 2rem);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all .8s ease .45s;
+}
+.art-gallery .gallery-head.in-view .title-bar { width: 90px; }
+.art-gallery .gallery-head.in-view .gallery-sub { opacity: 1; transform: none; }
+
+/* ---------- GRID (bento, 8 cols x 6 rows) ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 12px;
+  height: clamp(520px, 82vh, 900px);
+}
+
+.g1 { grid-area: 1 / 1 / 4 / 5; }   /* big horizontal feature */
+.g2 { grid-area: 4 / 1 / 7 / 3; }   /* vertical */
+.g3 { grid-area: 4 / 3 / 7 / 5; }   /* vertical */
+.g4 { grid-area: 1 / 5 / 3 / 8; }   /* horizontal */
+.g5 { grid-area: 1 / 8 / 3 / 9; }   /* small vertical */
+.g6 { grid-area: 3 / 5 / 7 / 7; }   /* tall centre block */
+.g7 { grid-area: 3 / 7 / 5 / 9; }   /* horizontal */
+.g8 { grid-area: 5 / 7 / 7 / 9; }   /* horizontal */
+
+/* ---------- TILE ---------- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  cursor: pointer;
+  transition: transform .5s cubic-bezier(.2,.8,.2,1),
+              box-shadow .5s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .9s cubic-bezier(.2,.8,.2,1), filter .5s ease;
+}
+
+/* orange caption gradient */
+.gallery-item::before {
+  content: attr(data-title);
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2.6rem 1rem .9rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(234,88,12,.92), rgba(234,88,12,0));
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all .45s ease;
+  z-index: 2;
+}
+/* orange frame */
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 2px solid var(--gal-accent);
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(.94);
+  transition: all .45s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ---------- HOVER ---------- */
+.gallery-grid .gallery-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(234,88,12,.45),
+              0 0 0 3px rgba(234,88,12,.25);
+  z-index: 5;
+}
+.gallery-item:hover img { transform: scale(1.15); filter: saturate(1.2) contrast(1.05); }
+.gallery-item:hover::before { opacity: 1; transform: none; }
+.gallery-item:hover::after  { opacity: 1; transform: scale(1); }
+
+/* dim the others while one is hovered */
+.gallery-grid:hover .gallery-item:not(:hover) { opacity: .65; filter: blur(1px); }
+
+/* ---------- SCROLL-IN ANIMATION ---------- */
+.gallery-grid.is-ready .gallery-item { opacity: 0; }
+.gallery-grid.in-view .gallery-item {
+  opacity: 1;
+  animation: tileIn .95s cubic-bezier(.2,.8,.2,1) backwards;
+  animation-delay: calc(var(--i) * 110ms);
+}
+.gallery-grid.in-view .gallery-item img {
+  animation: imgIn 1.4s cubic-bezier(.2,.8,.2,1) backwards;
+  animation-delay: calc(var(--i) * 110ms);
+}
+.gallery-item:nth-child(odd)  { --rot: -4deg; }
+.gallery-item:nth-child(even) { --rot: 4deg; }
+
+@keyframes tileIn {
+  from { opacity: 0; transform: translateY(60px) scale(.85) rotate(var(--rot)); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes imgIn {
+  from { transform: scale(1.5); filter: brightness(1.6) saturate(0); }
+  to   { transform: scale(1);   filter: none; }
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 991.98px) {
+  .gallery-grid { gap: 8px; height: clamp(460px, 72vh, 680px); }
+}
+
+@media (max-width: 767.98px) {
+  .art-gallery { min-height: auto; padding: 3rem 0; }
+  .gallery-grid {
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-auto-rows: 38vw;
+    grid-auto-flow: dense;
+    gap: 10px;
+  }
+  .gallery-item { grid-area: auto !important; }
+  .g2, .g3, .g5, .g6 { grid-row: span 2 !important; }        /* vertical  */
+  .g1, .g4, .g7, .g8 { grid-column: span 2 !important; }     /* horizontal */
+  .gallery-item::before { opacity: 1; transform: none; padding-top: 1.8rem; font-size: .85rem; }
+  .gallery-grid:hover .gallery-item:not(:hover) { opacity: 1; filter: none; }
+}
+/* ===== ART GALLERY CSS: END ===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== FOOTER ========== */
+.site-footer {
+    background: var(--dark-ui);
+    color: var(--dark-ui-text);
+}
+
+.site-footer p,
+.site-footer li,
+.site-footer strong {
+    color: var(--dark-ui-text);
+}
+
+.site-footer .footer-title {
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.site-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-footer .social a {
+    font-size: 1.4rem;
+    color: var(--dark-ui-text);
+    transition: color .25s, transform .25s;
+}
+
+.site-footer .social a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+@media (max-width: 991px) {
+    .art-picture img {
+        height: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+
+        .art-picture {
+            clip-path: none;
+        }
+
+        .art-picture img {
+            filter: none;
+            transform: none;
+        }
+    }
+
+    .anim-down,
+    .anim-left,
+    .hero-buttons,
+    .art-frame {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Footer brand */
+.footer-brand img {
+    display: block;
+}
+
+.footer-brand i {
+    color: var(--accent);
+    margin-right: .35rem;
+}
+
+/* Footer link list */
+.footer-links li {
+    margin-bottom: .5rem;
+}
+
+.footer-links a {
+    color: var(--dark-ui-text);
+    transition: color .25s, padding-left .25s;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 6px;
+    text-decoration: none;
+}
+
+/* Subscribe form */
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.6rem;
+    /* was 1.4rem: more space so the rings don't touch the input */
+    width: 100%;
+    max-width: 340px;
+}
+
+.subscribe-form .btn-orbit {
+    margin-left: .6rem;
+}
+
+/* keeps the ring's left edge clear of the input edge */
+.subscribe-input {
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: #fff;
+    border-radius: 50rem;
+    padding: .65rem 1.2rem;
+}
+
+.subscribe-input::placeholder {
+    color: var(--muted);
+}
+
+.subscribe-input:focus {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 0 14px var(--accent-glow);
+}
+
+/* The footer is always dark, so the ring button text must stay white in both themes */
+.site-footer .btn-orbit {
+    color: #fff;
+    cursor: pointer;
+}
+
+.site-footer .btn-orbit:hover {
+    color: var(--accent);
+}
+
+
+/* ==================== SIGN-IN / SIGN-UP PAGE — START ====================
+
+/* ---------- Theme tokens for this page only ---------- */
+.auth-section {
+    --auth-panel: linear-gradient(165deg, #2b1206 0%, #140b06 45%, #0b0b0c 100%);
+    --auth-sheet: #fff7f1;
+    --auth-sheet-text: #111111;
+    --auth-input-bg: #ffffff;
+    --auth-input-border: rgba(0, 0, 0, .14);
+    --auth-input-text: #111111;
+}
+
+[data-theme="dark"] .auth-section {
+    --auth-sheet: #1d1d21;
+    --auth-sheet-text: #ffffff;
+    --auth-input-bg: rgba(255, 255, 255, .06);
+    --auth-input-border: rgba(255, 255, 255, .16);
+    --auth-input-text: #ffffff;
+}
+
+.auth-section {
+    min-height: 640px;
+    padding: 2rem 0;
+}
+
+/* ---------- Intro text (left side) ---------- */
+.auth-intro .auth-points {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+}
+
+.auth-intro .auth-points li {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin-bottom: .8rem;
+}
+
+.auth-intro .auth-points i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+/* ---------- The flip card ---------- */
+.auth-card {
+    position: relative;
+    width: 360px;
+    max-width: 100%;
+    height: 590px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--auth-panel);
+    border: 1px solid rgba(234, 88, 12, .35);
+    box-shadow: 0 0 30px var(--accent-glow), 0 20px 50px rgba(0, 0, 0, .45);
+}
+
+/* the hidden checkbox that drives the animation */
+.auth-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.auth-signup,
+.auth-login {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.auth-signup {
+    top: 0;
+    height: 100%;
+}
+
+/* the big clickable heading (a <label> tied to the checkbox) */
+.auth-title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1.6rem 0 1.1rem;
+    font-family: var(--font-body);
+    font-size: 2.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .6s ease-in-out;
+}
+
+.auth-signup .auth-title {
+    color: #fff;
+}
+
+.auth-signup .auth-title span {
+    color: var(--accent);
+}
+
+/* ---------- Inputs ---------- */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .85rem;
+    padding: 0 1rem;
+}
+
+.auth-input {
+    width: 76%;
+    padding: .65rem 1.2rem;
+    font-family: var(--font-body);
+    font-size: .95rem;
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 50rem;
+    outline: none;
+    transition: border-color .25s, box-shadow .25s;
+}
+
+.auth-input::placeholder {
+    color: var(--muted);
+}
+
+.auth-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 14px var(--accent-glow);
+}
+
+/* buttons reuse .btn-glow; we only set the width/spacing here */
+.auth-form .btn-glow {
+    width: 76%;
+    margin-top: .6rem;
+}
+
+/* error / success message under the button */
+.auth-msg {
+    min-height: 1.3rem;
+    margin: 0;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: .85rem;
+    color: #ff8a5c;
+}
+
+.auth-msg.ok {
+    color: #4ade80;
+}
+
+/* ---------- Login sheet (slides over the sign-up panel) ---------- */
+.auth-login {
+    top: 0;
+    height: calc(100% - 40px);
+    background: var(--auth-sheet);
+    border-radius: 60% / 9%;
+    transform: translateY(410px);
+    transition: transform .8s ease-in-out, background .4s;
+}
+
+.auth-login .auth-title {
+    color: var(--accent);
+    transform: scale(.6);
+    padding-top: 2.6rem;
+}
+
+.auth-login .auth-input {
+    color: var(--auth-input-text);
+    background: var(--auth-input-bg);
+    border-color: var(--auth-input-border);
+}
+
+/* ---------- Checked = show the login sheet ---------- */
+.auth-toggle:checked~.auth-login {
+    transform: translateY(0);
+}
+
+.auth-toggle:checked~.auth-login .auth-title {
+    transform: scale(1);
+}
+
+.auth-toggle:checked~.auth-signup .auth-title {
+    transform: scale(.6);
+}
+
+/* keep hidden forms out of keyboard tab order */
+.auth-signup .auth-form,
+.auth-signup .auth-msg {
+    transition: visibility 0s 0s;
+}
+
+.auth-toggle:checked~.auth-signup .auth-form,
+.auth-toggle:checked~.auth-signup .auth-msg {
+    visibility: hidden;
+    transition: visibility 0s .8s;
+}
+
+.auth-login .auth-form,
+.auth-login .auth-msg {
+    visibility: hidden;
+    transition: visibility 0s .8s;
+}
+
+.auth-toggle:checked~.auth-login .auth-form,
+.auth-toggle:checked~.auth-login .auth-msg {
+    visibility: visible;
+    transition: visibility 0s 0s;
+}
+
+/* keyboard focus ring on the checkbox shows on the heading */
+.auth-toggle:focus-visible~.auth-signup .auth-title,
+.auth-toggle:focus-visible~.auth-login .auth-title {
+    text-shadow: 0 0 14px var(--accent-glow);
+}
+
+@media (max-width: 575.98px) {
+    .auth-card {
+        height: 600px;
+    }
+}
+
+/* ---------- Navbar "signed in" dropdown (used on every page) ---------- */
+.auth-user-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+}
+
+.auth-user-btn::after {
+    margin-left: .3rem;
+}
+
+.auth-role-badge {
+    font-size: .65rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .15rem .5rem;
+    border-radius: 50rem;
+    background: rgba(255, 255, 255, .22);
+    color: #fff;
+}
+ /* for no background on sign in page */
+.main-container.no-bg {
+    margin-top: 1.5rem;
+}
+
+/* ==================== SIGN-IN / SIGN-UP PAGE — END ==================== */

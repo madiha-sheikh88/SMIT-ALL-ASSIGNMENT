@@ -36,7 +36,9 @@
                             <button id="themeToggle" class="btn theme-toggle" aria-label="Toggle theme">
                                 <i class="bi bi-moon-stars-fill"></i>
                             </button>
-                            <a href="signup.html" class="btn btn-glow d-none d-xl-inline-block">Sign In</a>
+                            <div data-auth-slot class="d-none d-xl-block">
+                                <a href="sign-in.html" class="btn btn-glow">Sign In</a>
+                            </div>
                             <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
                                 aria-label="Toggle navigation">
@@ -55,7 +57,9 @@
                                 <li class="nav-item"><a class="nav-link" href="education.html">Educational Programs</a>
                                 </li>
                             </ul>
-                            <a href="signup.html" class="btn btn-glow d-xl-none mt-2 mb-2">Sign In</a>
+                            <div data-auth-slot class="d-xl-none mt-2 mb-2">
+                                <a href="sign-in.html" class="btn btn-glow">Sign In</a>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -74,7 +78,7 @@
 
                             <div class="d-flex flex-wrap align-items-center gap-4 mt-4 hero-buttons">
                                 <a href="#explore" class="btn-orbit">Explore</a>
-                                <a href="tickets.html" class="btn btn-glow btn-lg">Book Tickets</a>
+                                <a href="#" class="btn btn-glow btn-lg">Book Tickets</a>
                             </div>
                         </div>
 
@@ -90,7 +94,39 @@
 
                     </div>
                 </section>
+                <!-- ===== ART GALLERY SECTION: START ===== -->
+                <section class="art-gallery" id="gallery">
+                    <div class="container">
 
+                        <div class="gallery-head text-center" id="galleryHead">
+                            <h2 class="section-title">Art <span>Gallery</span></h2>
+                            <div class="title-bar"></div>
+                            <p class="gallery-sub">A glimpse into the colours, forms and stories of Pakistan's creative
+                                spirit.</p>
+                        </div>
+
+                        <div class="gallery-grid" id="galleryGrid">
+                            <div class="gallery-item g1" style="--i:0" data-title="Artwork 01"><img
+                                    src="./asset/art-2-horizontal.png" alt="Artwork 01"></div>
+                            <div class="gallery-item g2" style="--i:1" data-title="Artwork 02"><img
+                                    src="./asset/art-1-ver.png" alt="Artwork 02"></div>
+                            <div class="gallery-item g3" style="--i:2" data-title="Artwork 03"><img
+                                    src="./asset/art-2-ver.png" alt="Artwork 03"></div>
+                            <div class="gallery-item g4" style="--i:3" data-title="Artwork 04"><img
+                                    src="./asset/art-3-horizontal.webp" alt="Artwork 04"></div>
+                            <div class="gallery-item g5" style="--i:4" data-title="Artwork 05"><img
+                                    src="./asset/art-4-ver.png" alt="Artwork 05"></div>
+                            <div class="gallery-item g6" style="--i:5" data-title="Artwork 06"><img
+                                    src="./asset/art-3-ver.png" alt="Artwork 06"></div>
+                            <div class="gallery-item g7" style="--i:6" data-title="Artwork 07"><img
+                                    src="./asset/art-2-3-horizontal.webp" alt="Artwork 07"></div>
+                            <div class="gallery-item g8" style="--i:7" data-title="Artwork 08"><img
+                                    src="./asset/art-3-3-horizontal.webp" alt="Artwork 08"></div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- ===== ART GALLERY SECTION: END ===== -->
                 <!-- ==================== FREEFRONTEND.COM ANIMATED SECTION — START ==================== -->
                 <!-- GSAP ScrollSmoother overlapping text + parallax images. Edit headings, paragraphs and image src below. -->
                 <div class="ff-anim-section">
@@ -98,8 +134,10 @@
                     <section class="wrapper">
                         <article>
                             <header class="overlapping" data-speed="1.25">
-                                <h2>Visual Arts <br> <span class="accent">& Galleries</span></h2>
-                                <p>Chronicle the evolution of creative expression through timeless and modern masterpieces—spanning painting, calligraphy, sculpture, and curated gallery showcases.</p>
+                                <h2>Visual Arts <br> <span class="accent">Division</span></h2>
+                                <p>Chronicle the evolution of creative expression through timeless and modern
+                                    masterpieces—spanning painting, calligraphy, sculpture, and curated gallery
+                                    showcases.</p>
                                 <div class="explore-more">
                                     <a href="#" class="btn-orbit">Explore More</a>
                                 </div>
@@ -107,8 +145,7 @@
                             <div class="video-bg overlapping-video-bg">
                                 <div class="image-parent">
                                     <div class="image-child">
-                                        <img data-speed="auto"
-                                            src="./asset/visual-art-image.webp"
+                                        <img data-speed="auto" src="./asset/visual-art-image.webp"
                                             alt="visual art and gallery image">
                                     </div>
                                 </div>
@@ -119,9 +156,10 @@
                     <section class="wrapper">
                         <article>
                             <header class="reverse-overlapping" data-speed="1.25">
-                                <h2>Performing <span class="accent"> Arts & Drama</span>
+                                <h2>Performing <span class="accent"> Arts Division</span>
                                 </h2>
-                                <p>Celebrating theatre festivals, classical dance productions, string puppetry, and stage performances.</p>
+                                <p>Celebrating theatre festivals, classical dance productions, string puppetry, and
+                                    stage performances.</p>
                                 <div class="explore-more">
                                     <a href="#" class="btn-orbit">Explore More</a>
                                 </div>
@@ -129,8 +167,7 @@
                             <div class="video-bg reverse-overlapping-video-bg">
                                 <div class="image-parent">
                                     <div class="image-child">
-                                        <img data-speed="auto"
-                                            src="./asset/music-drama-img.jpg"
+                                        <img data-speed="auto" src="./asset/music-drama-img.jpg"
                                             alt="art drama and music">
                                     </div>
                                 </div>
@@ -141,8 +178,10 @@
                     <section class="wrapper">
                         <article>
                             <header class="overlapping" data-speed="1.25">
-                                <h2>Cultural Arts <span class="accent">& Music Programs</span></h2>
-                                <p>Now accepting admissions. Discover immersive educational programs designed to celebrate diverse global heritages, traditional harmonies, and creative artistic expressions.</p>
+                                <h2>Children Arts <span class="accent">Workshops</span></h2>
+                                <p>Now accepting admissions. Discover immersive educational programs designed to
+                                    celebrate diverse global heritages, traditional harmonies, and creative artistic
+                                    expressions.</p>
                                 <div class="explore-more">
                                     <a href="#" class="btn-orbit">Explore More</a>
                                 </div>
@@ -150,8 +189,7 @@
                             <div class="video-bg overlapping-video-bg">
                                 <div class="image-parent">
                                     <div class="image-child">
-                                        <img data-speed="auto"
-                                            src="./asset/tie-n-die-image.png"
+                                        <img data-speed="auto" src="./asset/tie-n-die-image.png"
                                             alt="tie and die workshop">
                                     </div>
                                 </div>
@@ -162,8 +200,8 @@
                     <section class="wrapper">
                         <article>
                             <header class="reverse-overlapping" data-speed="1.25">
-                                <h2>Cultural Arts <span class="accent">& Music Programs</span></h2>
-                                <p>Now accepting admissions. Discover immersive educational programs designed to celebrate diverse global heritages, traditional harmonies, and creative artistic expressions.</p>
+                                <h2>Leave <span class="accent">Your Impression</span></h2>
+                                <p>Sending tributes to the poersonalities in cultural and art way.</p>
                                 <div class="explore-more">
                                     <a href="#" class="btn-orbit">Explore More</a>
                                 </div>
@@ -171,9 +209,7 @@
                             <div class="video-bg reverse-overlapping-video-bg">
                                 <div class="image-parent">
                                     <div class="image-child">
-                                        <img data-speed="auto"
-                                            src="https://ensigndev.no/playground/ensign/wp-content/uploads/2022/04/pic3-1.jpg"
-                                            alt="">
+                                        <img data-speed="auto" src="./asset/tribute-image.jfif" alt="tribute to art personalities">
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +306,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
     <!-- ==================== FREEFRONTEND.COM ANIMATED SECTION (GSAP) — END ==================== -->
-
+    <script src="./auth.js"></script>
+    <script src="./script.js"></script>
     <script src="./script.js"></script>
 </body>
 
