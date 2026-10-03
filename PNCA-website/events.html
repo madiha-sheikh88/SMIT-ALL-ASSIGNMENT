@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events &amp; Tickets | PNCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="website-wrapper">
+        <div class="main-container no-bg events-container">
+
+            <!-- ===== START: NAVBAR (same as index.html) ===== -->
+            <header>
+                <nav class="navbar navbar-expand-xl site-nav" data-bs-theme="dark">
+                    <div class="container-fluid px-3 px-xl-4">
+                        <a class="navbar-brand" href="index.html">
+                            <span class="logo-circle">
+                                <img src="./asset/Pakistan_National_Council_of_the_Arts_logo.png" alt="PNCA logo">
+                            </span>
+                        </a>
+                        <div class="d-flex align-items-center gap-2 order-xl-last ms-auto ms-xl-0">
+                            <button id="themeToggle" class="btn theme-toggle" aria-label="Toggle theme">
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </button>
+                            <div data-auth-slot class="d-none d-xl-block">
+                                <a href="sign-in.html" class="btn btn-glow">Sign In</a>
+                            </div>
+                            <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="mainNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="visual-arts.html">Visual Arts</a></li>
+                                <li class="nav-item"><a class="nav-link" href="music-drama.html">Music &amp; Drama</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="education.html">Educational Programs</a>
+                                </li>
+                            </ul>
+                            <div data-auth-slot class="d-xl-none mt-2 mb-2">
+                                <a href="sign-in.html" class="btn btn-glow">Sign In</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!-- ===== END: NAVBAR ===== -->
+
+            <main>
+                <!-- ===== START: EVENTS HERO ===== -->
+                <section class="ev-hero">
+                    <p class="site-name">Pakistan National Council of the Arts</p>
+                    <h1>Reserve Your Seat at the <span class="accent">Heart of Culture</span></h1>
+                    <h3 class="sub-heading">Exhibitions, concerts and theatre &mdash; one ticket away</h3>
+                    <div class="ev-ring-wrap">
+                        <!-- IMAGE SPACE: put ring-1.jpg ... ring-10.jpg in ./asset/events/ -->
+                        <div class="ev-ring" style="--quantity:10;">
+                            <div class="ev-ring-card" style="--index:0">
+                                <div class="ev-ring-img"><img src="./asset/exhibition.webp" alt="PNCA event 1"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:1">
+                                <div class="ev-ring-img"><img src="./asset/muqaddima.jpg" alt="PNCA event 2"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:2">
+                                <div class="ev-ring-img"><img src="./asset/music-art-classes.jpg" alt="PNCA event 3"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:3">
+                                <div class="ev-ring-img"><img src="./asset/muqadma.jpg" alt="PNCA event 4"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:4">
+                                <div class="ev-ring-img"><img src="./asset/shame-moseequi.jpg" alt="PNCA event 5"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:5">
+                                <div class="ev-ring-img"><img src="./asset/saira-sufi.jpg" alt="PNCA event 6"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:6">
+                                <div class="ev-ring-img"><img src="./asset/babey-lok.heic" alt="PNCA event 7"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:7">
+                                <div class="ev-ring-img"><img src="./asset/competition.heic" alt="PNCA event 8"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:8">
+                                <div class="ev-ring-img"><img src="./asset/cyanotype-workshop.heic" alt="PNCA event 9"
+                                        onerror="this.remove()"></div>
+                            </div>
+                            <div class="ev-ring-card" style="--index:9">
+                                <div class="ev-ring-img"><img src="./asset/tribute-image.jfif" alt="PNCA event 10"
+                                        onerror="this.remove()"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ===== END: EVENTS HERO ===== -->
+
+                <!-- ===== START: EVENTS SECTION ===== -->
+                <section class="ev-section" id="events">
+                    <h2>Upcoming <span class="accent">Cultural Evenings, Exhibitions &amp; Live Performances</span>
+                        Waiting for You</h2>
+                    <p class="ev-sub">Add tickets to your cart, send your request and print your pass once it is approved.</p>
+                    <div class="row g-4" id="eventGrid"></div>
+                </section>
+                <!-- ===== END: EVENTS SECTION ===== -->
+            </main>
+        </div>
+
+        <!-- ===== START: CART BUTTON + CART POPUP ===== -->
+        <button type="button" class="cart-fab" id="cartFab" aria-label="Open cart">
+            <i class="bi bi-cart3"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <div class="ev-modal" id="cartModal" role="dialog" aria-modal="true" aria-label="Your cart">
+            <button class="ev-modal-close" data-close aria-label="Close">&times;</button>
+            <div class="cart-box" id="cartBody"></div>
+        </div>
+        <!-- ===== END: CART BUTTON + CART POPUP ===== -->
+
+        <!-- ===== START: FOOTER (same as index.html) ===== -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row g-5 py-5">
+                    <div class="col-lg-4">
+                        <div class="footer-brand d-flex align-items-start gap-3">
+                            <a href="index.html"><img src="./asset/Pakistan_National_Council_of_the_Arts_logo.png"
+                                    alt="PNCA logo" height="64"></a>
+                            <div>
+                                <h5 class="footer-title mb-2">Pakistan National Council of the Arts</h5>
+                                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> F-5/1, Sector F-5, Islamabad,
+                                    Pakistan</p>
+                                <p class="mb-3"><i class="bi bi-telephone-fill"></i> <a href="tel:+92519205273">+92 51
+                                        9205273</a></p>
+                                <div class="social d-flex gap-3">
+                                    <a href="https://www.facebook.com/PNCAOfficial/" target="_blank" rel="noopener"
+                                        aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://www.instagram.com/pnca.official/?hl=en" target="_blank"
+                                        rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="visual-arts.html">Visual Arts</a></li>
+                            <li><a href="music-drama.html">Music &amp; Drama</a></li>
+                            <li><a href="education.html">Educational Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <h5 class="footer-title">Timings</h5>
+                        <p>Usually open 10:00 AM to 4:00 PM for exhibitions. Galleries are often closed on Saturdays;
+                            specific event times vary.</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5 class="footer-title">Newsletter</h5>
+                        <form class="subscribe-form" action="#" method="post">
+                            <input type="email" class="form-control subscribe-input" placeholder="Your email address"
+                                aria-label="Email address" required>
+                            <button type="submit" class="btn-orbit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom text-center py-3">&copy; <span id="year">2026</span> All rights reserved to
+                    Madiha Sheikh</div>
+            </div>
+        </footer>
+        <!-- ===== END: FOOTER ===== -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./script.js"></script>
+    <script src="./shop.js"></script>
+</body>
+
+</html>

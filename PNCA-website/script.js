@@ -52,6 +52,11 @@ document.querySelectorAll("[data-observe]").forEach((el) => observer.observe(el)
 // ----- Footer year -----
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// ----- Book Tickets button: signed in -> events, not signed in -> sign-in -----
+document.getElementById("bookNowBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = PNCA.currentUser() ? "events.html" : "sign-in.html";
+});
 
 // ==================== FREEFRONTEND.COM ANIMATED SECTION — START ====================
 // GSAP ScrollSmoother: smooth scrolling + parallax (data-speed) on the headings and images.

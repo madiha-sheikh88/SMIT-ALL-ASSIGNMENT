@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | PNCA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="website-wrapper">
+        <div class="main-container no-bg events-container">
+
+            <!-- ===== START: NAVBAR (same as index.html) ===== -->
+            <header>
+                <nav class="navbar navbar-expand-xl site-nav" data-bs-theme="dark">
+                    <div class="container-fluid px-3 px-xl-4">
+                        <a class="navbar-brand" href="index.html">
+                            <span class="logo-circle">
+                                <img src="./asset/Pakistan_National_Council_of_the_Arts_logo.png" alt="PNCA logo">
+                            </span>
+                        </a>
+                        <div class="d-flex align-items-center gap-2 order-xl-last ms-auto ms-xl-0">
+                            <button id="themeToggle" class="btn theme-toggle" aria-label="Toggle theme">
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </button>
+                            <div data-auth-slot class="d-none d-xl-block">
+                                <a href="sign-in.html" class="btn btn-glow">Sign In</a>
+                            </div>
+                            <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="mainNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="visual-arts.html">Visual Arts</a></li>
+                                <li class="nav-item"><a class="nav-link" href="music-drama.html">Music &amp; Drama</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="education.html">Educational Programs</a>
+                                </li>
+                            </ul>
+                            <div data-auth-slot class="d-xl-none mt-2 mb-2">
+                                <a href="sign-in.html" class="btn btn-glow">Sign In</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!-- ===== END: NAVBAR ===== -->
+
+            <main>
+                <!-- ===== START: ADMIN DASHBOARD (sidebar + panels) ===== -->
+                <div class="dash-layout" id="adminApp">
+
+                    <!-- ----- SIDEBAR ----- -->
+                    <aside class="dash-side">
+                        <div class="dash-hello">
+                            <small id="dashGreet">Hello</small>
+                            <strong id="dashName">Admin</strong>
+                        </div>
+                        <nav class="dash-nav">
+                            <button type="button" data-panel="overview" class="active"><i class="bi bi-grid-1x2"></i> Overview</button>
+                            <button type="button" data-panel="requests"><i class="bi bi-ticket-perforated"></i> All Requests</button>
+                            <button type="button" data-panel="customers"><i class="bi bi-people"></i> Customers</button>
+                            <a href="events.html"><i class="bi bi-calendar-event"></i> Events page</a>
+                            <a href="index.html"><i class="bi bi-house"></i> Home</a>
+                            <button type="button" id="dashLogout"><i class="bi bi-box-arrow-right"></i> Log out</button>
+                        </nav>
+                    </aside>
+
+                    <!-- ----- PANELS ----- -->
+                    <div class="dash-main">
+
+                        <!-- Overview -->
+                        <section class="dash-panel active" id="panel-overview">
+                            <div class="dash-banner">
+                                <img src="./asset/muqadma.jpg" alt="" onerror="this.remove()">
+                                <div class="dash-banner-text">
+                                    <h2 class="dash-title"><span id="helloWord">Hello</span>, <span class="accent" id="helloName">Admin</span></h2>
+                                    <p>A quick look at today's ticket requests.</p>
+                                </div>
+                            </div>
+                            <div class="dash-grid" id="statGrid"></div>
+                            <div class="dash-chart">
+                                <h3 class="dash-chart-title">Tickets requested, by event</h3>
+                                <div class="dash-chart-box"><canvas id="mainChart" aria-label="Bar chart of tickets requested per event" role="img"></canvas></div>
+                            </div>
+                            <div class="dash-subhead">
+                                <h3>Waiting for your decision</h3>
+                                <button type="button" class="dash-link" data-panel="requests">View all</button>
+                            </div>
+                            <div class="dash-list" id="recentList"></div>
+                        </section>
+
+                        <!-- All requests (search / filter / sort) -->
+                        <section class="dash-panel" id="panel-requests">
+                            <h2 class="dash-title">All <span class="accent">Requests</span></h2>
+                            <p class="dash-sub">Approving creates the tickets and lets the customer print them.</p>
+                            <div class="dash-tools">
+                                <input type="search" class="dash-input" id="fSearch" placeholder="Search order, customer, email or event" aria-label="Search requests">
+                                <select class="dash-input" id="fStatus" aria-label="Filter by status">
+                                    <option value="all">All statuses</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="approved">Approved</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                                <select class="dash-input" id="fSort" data-default="pending" aria-label="Sort requests">
+                                    <option value="pending" selected>Pending first</option>
+                                    <option value="newest">Newest first</option>
+                                    <option value="oldest">Oldest first</option>
+                                    <option value="high">Highest total</option>
+                                    <option value="low">Lowest total</option>
+                                </select>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="fReset">Clear</button>
+                            </div>
+                            <p class="dash-count" id="fCount"></p>
+                            <div class="dash-list" id="orderList"></div>
+                        </section>
+
+                        <!-- Customers (search / filter / sort) -->
+                        <section class="dash-panel" id="panel-customers">
+                            <h2 class="dash-title"><span class="accent">Customers</span></h2>
+                            <p class="dash-sub">Everyone who has created an account.</p>
+                            <div class="dash-tools">
+                                <input type="search" class="dash-input" id="cSearch" placeholder="Search name, email or phone" aria-label="Search customers">
+                                <select class="dash-input" id="cFilter" aria-label="Filter customers">
+                                    <option value="all">All customers</option>
+                                    <option value="with">Sent requests</option>
+                                    <option value="without">No requests yet</option>
+                                </select>
+                                <select class="dash-input" id="cSort" aria-label="Sort customers">
+                                    <option value="newest">Newest sign-up</option>
+                                    <option value="name">Name A to Z</option>
+                                    <option value="most">Most requests</option>
+                                </select>
+                            </div>
+                            <p class="dash-count" id="cCount"></p>
+                            <div id="customerList"></div>
+                        </section>
+
+                    </div>
+                </div>
+                <!-- ===== END: ADMIN DASHBOARD ===== -->
+            </main>
+        </div>
+
+        <!-- ===== START: FOOTER (same as index.html) ===== -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row g-5 py-5">
+                    <div class="col-lg-4">
+                        <div class="footer-brand d-flex align-items-start gap-3">
+                            <a href="index.html"><img src="./asset/Pakistan_National_Council_of_the_Arts_logo.png"
+                                    alt="PNCA logo" height="64"></a>
+                            <div>
+                                <h5 class="footer-title mb-2">Pakistan National Council of the Arts</h5>
+                                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> F-5/1, Sector F-5, Islamabad,
+                                    Pakistan</p>
+                                <p class="mb-3"><i class="bi bi-telephone-fill"></i> <a href="tel:+92519205273">+92 51
+                                        9205273</a></p>
+                                <div class="social d-flex gap-3">
+                                    <a href="https://www.facebook.com/PNCAOfficial/" target="_blank" rel="noopener"
+                                        aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://www.instagram.com/pnca.official/?hl=en" target="_blank"
+                                        rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="visual-arts.html">Visual Arts</a></li>
+                            <li><a href="music-drama.html">Music &amp; Drama</a></li>
+                            <li><a href="education.html">Educational Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <h5 class="footer-title">Timings</h5>
+                        <p>Usually open 10:00 AM to 4:00 PM for exhibitions. Galleries are often closed on Saturdays;
+                            specific event times vary.</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5 class="footer-title">Newsletter</h5>
+                        <form class="subscribe-form" action="#" method="post">
+                            <input type="email" class="form-control subscribe-input" placeholder="Your email address"
+                                aria-label="Email address" required>
+                            <button type="submit" class="btn-orbit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom text-center py-3">&copy; <span id="year">2026</span> All rights reserved to
+                    Madiha Sheikh</div>
+            </div>
+        </footer>
+        <!-- ===== END: FOOTER ===== -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./script.js"></script>
+    <script src="./shop.js"></script>
+</body>
+
+</html>
