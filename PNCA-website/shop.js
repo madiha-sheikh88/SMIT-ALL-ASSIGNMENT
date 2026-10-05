@@ -1,41 +1,13 @@
 // =====================================================================================
-// shop.js — ONE file for: cart + ticket requests + ticket popup + user & admin dashboards
-//                (dashboards have a sidebar, a greeting, search / filter / sort, and a Chart.js chart)
-// Needs Chart.js loaded BEFORE this file on the two dashboard pages (see the <script> lines in the HTML).
-// Load it AFTER auth.js on these pages: events.html, user-dashboard.html, admin-dashboard.html
-//
-//   <script src="./auth.js"></script>
-//   <script src="./script.js"></script>
-//   <script src="./shop.js"></script>
-//
-// HOW THE WHOLE THING WORKS (read this first)
-//   1. On events.html the visitor picks a quantity and presses "Add to Cart".
-//   2. The cart is saved in localStorage (one cart per signed-in user).
-//   3. "Send Request to Buy" turns the cart into an ORDER with status "pending".
-//   4. The admin dashboard lists every order. Admin presses Approve or Reject.
-//   5. On Approve, one ticket per seat is created and stored inside that order.
-//   6. The user dashboard shows the status. When approved, the user can open and print the tickets.
-//
-// localStorage keys used:
-//   pnca_cart_<userId>  -> that user's cart:   [ { eventId: 2, qty: 3 }, ... ]
-//   pnca_orders         -> every order from every user (admin reads all, user reads own)
-//
-// REMINDER: localStorage can be edited by anyone with DevTools. Fine for a demo / learning,
-// not real security. A real site needs a backend, so the server decides what is approved.
-// =====================================================================================
+// cart + ticket requests + ticket popup + user & admin dashboards
 
-// Everything is wrapped in (function () { ... })(); so none of our variable names can clash
-// with names in script.js or auth.js. It runs by itself the moment the file loads.
 (function () {
 
   // ==================== SECTION 1: SETTINGS + EVENT DATA — START ====================
-  // A "const" is a box with a name whose label can never be re-assigned.
-  const ORDERS_KEY = "pnca_orders";   // the localStorage key where all orders live
-  const MAX_PER_EVENT = 10;           // a person can buy at most 10 tickets of one event
+ 
+  const ORDERS_KEY = "pnca_orders";   
+  const MAX_PER_EVENT = 10;          
 
-  // The events live here (moved out of events.html so every page can use the same list).
-  // IMPORTANT: price is a plain NUMBER now (500, not "Rs. 500") so we can multiply and add it.
-  // The word "Rs." is added later by the money() helper.
   const EVENTS = [
     { id: 1, type: "Exhibition", title: "Colours of Pakistan", img: "./asset/exhibition.webp", date: "Oct 18, 2026", time: "5:00 PM", venue: "PNCA Main Gallery", price: 500 },
     { id: 2, type: "Concert", title: "Sufi Night: Raags of the Indus", img: "./asset/saira-sufi.jpg", date: "Oct 25, 2026", time: "8:00 PM", venue: "PNCA Auditorium", price: 1500 },
@@ -48,15 +20,12 @@
 
 
   // ==================== SECTION 2: SMALL HELPER FUNCTIONS — START ====================
-  // A "function" is a named recipe: you write the steps once, then "call" it by name anywhere.
 
-  // Shortcut so we type byId("x") instead of document.getElementById("x") every time.
   function byId(id) {
     return document.getElementById(id);
   }
 
-  // Read JSON from localStorage. localStorage only stores TEXT, so JSON.parse turns the text
-  // back into real arrays/objects. If nothing is saved yet (or the text is broken) we return `fallback`.
+  
   function read(key, fallback) {
     try {
       const raw = localStorage.getItem(key);       // the saved text, or null if nothing saved
@@ -76,20 +45,18 @@
     return "Rs. " + Number(n).toLocaleString("en-US");
   }
 
-  // SAFETY: before we put any saved text into the page with innerHTML, we replace the special
-  // characters < > & " ' so that a name like <script>... can never run as code.
+
   function esc(text) {
     return String(text).replace(/[&<>"']/g, function (ch) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
     });
   }
 
-  // Find one event in the EVENTS list by its id. Number() makes sure "2" (text) matches 2 (number).
   function findEvent(id) {
     return EVENTS.find(function (e) { return e.id === Number(id); });
   }
 
-  // "2026-10-03T10:15:00.000Z" -> "3 Oct 2026, 10:15 am"
+
   function niceDate(iso) {
     return new Date(iso).toLocaleString("en-GB", {
       day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit"
@@ -121,7 +88,7 @@
   // ==================== SECTION 2: SMALL HELPER FUNCTIONS — END ====================
 
 
-  // ==================== SECTION 3: THE CART (data only, no screen code) — START ====================
+  // ==================== SECTION 3: THE CART — START ====================
   // Each signed-in user gets their own cart, so the key includes their id: "pnca_cart_u-abc123".
   function cartKey() {
     const user = PNCA.currentUser();                // PNCA.currentUser() comes from auth.js
@@ -192,14 +159,17 @@
 
 
   // ==================== SECTION 4: ORDERS (requests to buy) — START ====================
-  function getOrders() { return read(ORDERS_KEY, []); }
+  function getOrders() { 
+    return read(ORDERS_KEY, []); 
+  }
   function saveOrders(orders) { write(ORDERS_KEY, orders); }
 
   // Turn the current cart into a new "pending" order.
   function createOrder() {
     const user = PNCA.currentUser();
     const cart = getCart();
-    if (!user || cart.length === 0) return null;     // nothing to send
+    if (!user || cart.length === 0)
+      return null;     // nothing to send
 
     // map() builds a NEW list from the cart. We copy the title/price/date into the order
     // ("snapshot") so the order stays correct even if the event list changes later.
@@ -284,12 +254,11 @@
 
 
   // ==================== SECTION 5: TICKET POPUP (user dashboard) — START ====================
-  // Uses the ticket markup you already built. One order can hold many tickets, so we keep the
-  // list in `ticketList` and a pointer `ticketPos` for "which one is on screen now".
+
   let ticketList = [];
   let ticketPos = 0;
 
-  // Fill the ticket design with the ticket that is currently selected.
+  
   function showTicket() {
     const t = ticketList[ticketPos];
     byId("tkType").textContent = t.type;
@@ -340,9 +309,7 @@
   // ==================== SECTION 6: EVENTS PAGE (cards + cart popup) — START ====================
   function initEventsPage() {
     const grid = byId("eventGrid");
-    if (!grid) return;                                      // we are NOT on events.html -> skip all of this
-
-    // ----- 6a) draw the event cards. map() makes one HTML string per event, join("") glues them. -----
+    if (!grid) return;                                  
     grid.innerHTML = EVENTS.map(function (e) {
       return `
       <div class="col-12 col-md-6 col-lg-4">
@@ -377,8 +344,7 @@
       </div>`;
     }).join("");
 
-    // ----- 6b) clicks inside the cards. ONE listener on the grid handles every button in it
-    //          ("event delegation"): ev.target is what was clicked, closest() finds the button. -----
+
     grid.addEventListener("click", function (ev) {
 
       // the − / + buttons on a card: only change the number on the card, nothing is saved yet
@@ -507,7 +473,7 @@
     return `<span class="st-badge st-${esc(status)}">${label}</span>`;
   }
 
-  // The list of "2 x Event name ... Rs. 1,000" lines inside an order card.
+  
   function itemsList(order) {
     return `<ul class="ord-items">` + order.items.map(function (i) {
       return `<li><span>${i.qty} &times; ${esc(i.title)}</span><b>${money(i.price * i.qty)}</b></li>`;
@@ -519,8 +485,7 @@
     return `<div class="dash-stat"><b>${value}</b><span>${label}</span></div>`;
   }
 
-  // ----- 7a) GREETING -----
-  // Looks at the clock: before 12 = morning, before 18 (6 pm) = afternoon, otherwise evening.
+
   function greetingWord() {
     const hour = new Date().getHours();              // 0 to 23
     if (hour < 12) return "Good morning";
@@ -528,8 +493,7 @@
     return "Good evening";
   }
 
-  // Writes the greeting + the person's first name into the sidebar and the Overview heading.
-  // textContent is used (not innerHTML) so a strange name can never run as code.
+
   function setGreeting(user) {
     // user.name is "Ali Khan" -> split(" ") makes ["Ali","Khan"] -> [0] is "Ali"
     const first = user.role === "admin" ? "Admin" : user.name.split(" ")[0];
@@ -539,9 +503,7 @@
     byId("helloName").textContent = first;
   }
 
-  // ----- 7b) SIDEBAR -----
-  // The sidebar buttons switch between "panels" (Overview, Requests ...). All panels are in the
-  // HTML already; we only show one at a time by moving the class "active".
+
   function initSidebar() {
     const navButtons = document.querySelectorAll(".dash-nav [data-panel]");   // only the sidebar buttons
     const anyButtons = document.querySelectorAll("[data-panel]");             // sidebar + "View all" links
@@ -572,8 +534,8 @@
     show(location.hash.slice(1) || "overview");
   }
 
-  // ----- 7c) SEARCH + FILTER + SORT for the requests list -----
-  // Reads the three controls above the list and returns only the matching orders, in the chosen order.
+  // -----SEARCH + FILTER + SORT for the requests list -----
+ 
   function applyFilters(orders) {
     const q = byId("fSearch").value.trim().toLowerCase();    // what was typed, lower-case, no side spaces
     const status = byId("fStatus").value;                    // "all", "pending", "approved" or "rejected"
@@ -592,7 +554,7 @@
       return haystack.includes(q);                                  // ...and check it contains what was typed
     });
 
-    // SORT: sort() asks "should a come before b?" A negative number means yes.
+    // SORT
     list.sort(function (a, b) {
       if (sort === "oldest") return a.createdAt.localeCompare(b.createdAt);   // older date first
       if (sort === "high") return b.total - a.total;                          // bigger total first
@@ -686,22 +648,13 @@
     box.innerHTML = list.map(function (o) { return orderCard(o, mode, users); }).join("");
   }
 
-  // ----- 7d) THE CHART (Chart.js) -----
-  // ONE chart, used by BOTH dashboards: "how many tickets were requested for each event".
-  // The admin sees everyone's tickets, the user sees only their own: the function is the same,
-  // we just hand it a different list of orders.
-  //
-  // Chart.js draws onto a <canvas> element (<canvas id="mainChart"> in the dashboard HTML).
-  // You describe the chart with ONE object that has three parts:
-  //   type    -> what kind of chart ("bar", "line", "doughnut" ...)
-  //   data    -> WHAT to draw:  labels (the names) + datasets (the numbers)
-  //   options -> HOW it looks and behaves (axes, colours, animation ...)
-  let chartObj = null;      // the chart currently on screen (we need it to destroy the old one)
-  let chartData = null;     // the orders we drew last (so we can redraw when the theme changes)
-  let chartKey = "";        // a short "fingerprint" of what was drawn, to avoid pointless redraws
+  // -----  THE CHART (Chart.js) -----
 
-  // Read a colour from your CSS variables (e.g. "--accent"), so the chart always matches your theme.
-  // `fallback` is used only if the variable is missing (for example if style.css did not load).
+  let chartObj = null;      
+  let chartData = null;    
+  let chartKey = "";       
+
+ 
   function cssVar(name, fallback) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
   }
@@ -713,8 +666,7 @@
 
     chartData = orders;                                    // remember for the theme watcher
 
-    // 1) THE NUMBERS: one total per event, in the same order as the EVENTS list.
-    //    map() turns each event into a number: all tickets requested for that event.
+ 
     const counts = EVENTS.map(function (e) {
       let total = 0;
       orders.forEach(function (o) {
@@ -727,8 +679,7 @@
     });
     const labels = EVENTS.map(function (e) { return e.title; });   // the names shown next to the bars
 
-    // 2) DON'T REDRAW IF NOTHING CHANGED. This function runs on every keystroke in the search box.
-    //    The key = current theme + the numbers; if it is the same as last time, do nothing.
+   
     const theme = document.documentElement.getAttribute("data-theme") || "light";
     const key = theme + "|" + counts.join(",");
     if (key === chartKey && chartObj) return;
@@ -786,19 +737,15 @@
     });
   }
 
-  // When the visitor presses your theme button, script.js changes the data-theme attribute on <html>.
-  // MutationObserver is the browser's way of saying "tell me when that attribute changes",
-  // so we can redraw the chart in the new theme's colours.
+
   function watchTheme() {
     new MutationObserver(function () {
       if (chartData) drawChart(chartData);
     }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   }
 
-  // ----- 7e) "Upcoming events" picture strip (user overview) -----
-  // Three image cards linking to the events page. Only the .jpg/.webp images are used because
-  // browsers cannot show .heic files. If an image is missing, onerror removes it and the
-  // orange gradient behind it shows instead.
+  // ----- "Upcoming events" picture strip (user overview) -----
+
   function renderEventStrip() {
     const box = byId("eventStrip");
     if (!box) return;                                      // this page has no strip
@@ -893,7 +840,7 @@
     setGreeting(admin);
     initSidebar();
 
-    // Overview panel: number boxes + the 3 newest pending requests (quick approve/reject)
+
     function renderOverview(orders, users) {
       const count = function (s) { return orders.filter(function (o) { return o.status === s; }).length; };
       const approved = orders.filter(function (o) { return o.status === "approved"; });
@@ -918,7 +865,7 @@
         : `<p class="dash-empty">All caught up. No requests are waiting for approval.</p>`;
     }
 
-    // Customers panel: a table of registered users with search, filter and sort
+
     function renderCustomers(orders, users) {
       const q = byId("cSearch").value.trim().toLowerCase();
       const filter = byId("cFilter").value;                  // "all", "with", "without"
@@ -991,7 +938,7 @@
 
 
   // ==================== SECTION 10: START EVERYTHING — START ====================
-  // Each init function checks "is my page open?" first, so it is safe to call all of them everywhere.
+ 
   wireModals();
   watchTheme();                                            // redraw the chart when dark/light changes
   initEventsPage();

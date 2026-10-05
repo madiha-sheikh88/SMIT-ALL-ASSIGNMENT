@@ -1,19 +1,13 @@
-// ==================== PNCA AUTH (shared by every page) — START ====================
+// ==================== PNCA AUTH START ====================
 // Load this file on EVERY page that needs to know who is signed in.
 //
-// localStorage keys used:
-//   pnca_users    -> array of all registered accounts
-//   pnca_session  -> the person currently signed in (or missing if nobody is)
-//
-// IMPORTANT: localStorage lives in the visitor's own browser and can be edited by
-// anyone with DevTools. That is fine for learning / a demo, but it is NOT real
-// security. A real site needs a backend + database and hashed passwords.
+
 
 (function () {
   const USERS_KEY = "pnca_users";
   const SESSION_KEY = "pnca_session";
 
-  // The one built-in admin account (change these!). Normal sign-up can never create an admin.
+  // The one built-in admin account.
   const ADMIN = {
     id: "admin-1",
     name: "Admin",
@@ -23,13 +17,13 @@
     role: "admin"
   };
 
-  // ---------- tiny helpers to read/write JSON safely ----------
+
   function read(key, fallback) {
     try {
       const raw = localStorage.getItem(key);
       return raw ? JSON.parse(raw) : fallback;
     } catch (e) {
-      return fallback; // corrupted data or storage blocked
+      return fallback;
     }
   }
   function write(key, value) {
@@ -41,7 +35,7 @@
     return read(USERS_KEY, []);
   }
 
-  // make sure the admin account exists (runs on every page load, harmless if already there)
+
   function seedAdmin() {
     const users = getUsers();
     if (!users.some((u) => u.role === "admin")) {
@@ -104,14 +98,12 @@
     return u;
   }
 
-  // where each role lands (create these pages later)
+
   function dashboardFor(user) {
     return user && user.role === "admin" ? "admin-dashboard.html" : "user-dashboard.html";
   }
 
   // ---------- navbar: show "Sign In" or "<name> ▾" ----------
-  // Fills every element with data-auth-slot. The "Sign In" link you already
-  // have inside it stays as the fallback if this script doesn't run.
   function renderNavbar() {
     const user = currentUser();
     document.querySelectorAll("[data-auth-slot]").forEach((slot) => {
@@ -184,7 +176,7 @@
   seedAdmin();
   renderNavbar();
 
-  // expose a small public API: PNCA.register(...), PNCA.login(...), PNCA.currentUser() ...
+
   window.PNCA = { register, login, logout, currentUser, requireRole, dashboardFor, renderNavbar };
 })();
-// ==================== PNCA AUTH (shared by every page) — END ====================
+// ==================== PNCA AUTH END ====================

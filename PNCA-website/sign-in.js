@@ -1,6 +1,6 @@
-// sign-in.js — only for sign-in.html (needs auth.js loaded first)
+// sign-in.js — only for sign-in.html
 
-// ----- Theme toggle (same code as your script.js, so the theme stays in sync) -----
+// ----- Theme toggle  -----
 const root = document.documentElement;
 const toggleBtn = document.getElementById("themeToggle");
 const saved = localStorage.getItem("theme");
@@ -64,9 +64,7 @@ loginForm.addEventListener("submit", (e) => {
   const result = PNCA.login(data.get("email"), data.get("password"));
   if (!result.ok) return showMsg(loginMsg, result.error, false);
 
-  // For now everyone goes home (the navbar will show their name).
-  // Later, when your dashboards exist, swap this line for:
-  //   window.location.href = PNCA.dashboardFor(result.user);
+
   window.location.href = "index.html";
 });
 // ==================== SIGN-IN / SIGN-UP LOGIC — END ====================

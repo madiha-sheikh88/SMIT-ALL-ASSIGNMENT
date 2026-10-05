@@ -403,13 +403,8 @@ a {
 }
 
 
-
-
-/* bento section */
-
 /* ==================== FREEFRONTEND.COM ANIMATED SECTION — START ==================== */
-/* Everything is scoped under .ff-anim-section so the rest of your site/theme is untouched.
-   Colours and fonts come from your own variables (--surface, --heading, --accent, --muted, --font-*). */
+
 
 .ff-anim-section .wrapper {
     max-width: 1024px;
@@ -804,18 +799,6 @@ a {
 }
 
 /* ===== ART GALLERY CSS: END ===== */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

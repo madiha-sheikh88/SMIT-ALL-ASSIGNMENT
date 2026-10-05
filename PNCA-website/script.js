@@ -1,4 +1,4 @@
-// ----- Theme toggle (remembers choice, defaults to system) -----
+// ----- Theme toggle -----
 const root = document.documentElement;
 const toggleBtn = document.getElementById("themeToggle");
 const saved = localStorage.getItem("theme");
@@ -14,7 +14,7 @@ toggleBtn.addEventListener("click", () => {
   setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
 });
 
-// ----- Typewriter (spelling letter by letter) -----
+// ----- Typewriter ANIMATION (spelling letter by letter) -----
 const typer = document.querySelector(".typewriter");
 let typeTimer;
 
@@ -60,7 +60,7 @@ document.getElementById("bookNowBtn").addEventListener("click", function (e) {
 
 // ==================== FREEFRONTEND.COM ANIMATED SECTION — START ====================
 // GSAP ScrollSmoother: smooth scrolling + parallax (data-speed) on the headings and images.
-// Note: ScrollSmoother smooths the scrolling of the whole page.
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 gsap.config({ trialWarn: false });
 
