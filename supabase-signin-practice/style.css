@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at top left, #6c2bd9, transparent 35%),
+        radial-gradient(circle at bottom right, #00b4d8, transparent 35%),
+        linear-gradient(135deg, #09001f, #160044, #020617);
+
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 420px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 30px rgba(126, 87, 255, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    animation: containerGlow 3s ease-in-out infinite alternate;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-box {
+    text-align: center;
+
+    animation: formAppear 0.5s ease;
+}
+
+.form-box h1 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #60a5fa,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-box > p {
+    color: #cbd5e1;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    font-size: 16px;
+
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 8px #8b5cf6,
+        0 0 20px rgba(139, 92, 246, 0.4);
+
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   MAIN BUTTON
+========================= */
+
+form button {
+    position: relative;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #2563eb,
+        #06b6d4
+    );
+
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.4),
+        0 0 20px rgba(124, 58, 237, 0.4);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+/* Button hover */
+
+form button:hover {
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.6),
+        0 0 30px rgba(124, 58, 237, 0.8);
+}
+
+
+/* Button click */
+
+form button:active {
+    transform: scale(0.96);
+}
+
+
+/* Moving shine effect */
+
+form button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: shine 3s infinite;
+}
+
+
+/* =========================
+   SWITCH TEXT
+========================= */
+
+.switch {
+    margin-top: 25px;
+
+    color: #cbd5e1;
+}
+
+.switch button {
+    border: none;
+
+    background: none;
+
+    color: #60a5fa;
+
+    padding: 0;
+
+    margin-left: 5px;
+
+    font-size: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.switch button:hover {
+    color: #c084fc;
+
+    text-shadow:
+        0 0 8px #c084fc,
+        0 0 15px #8b5cf6;
+}
+
+
+/* =========================
+   HIDE FORM
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes shine {
+
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+
+@keyframes formAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes containerGlow {
+
+    from {
+        box-shadow:
+            0 0 25px rgba(126, 87, 255, 0.25),
+            0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    to {
+        box-shadow:
+            0 0 45px rgba(126, 87, 255, 0.45),
+            0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 90%;
+
+        padding: 30px 22px;
+    }
+
+    .form-box h1 {
+        font-size: 32px;
+    }
+}

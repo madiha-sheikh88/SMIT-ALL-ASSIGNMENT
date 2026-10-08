@@ -1,0 +1,329 @@
+/* dashboard css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #6c2bd9, transparent 35%),
+        radial-gradient(circle at bottom right, #00b4d8, transparent 35%),
+        linear-gradient(135deg, #09001f, #160044, #020617);
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 30px rgba(126, 87, 255, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    color: white;
+
+    animation: containerGlow 3s ease-in-out infinite alternate;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #60a5fa,
+        #22d3ee
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar a {
+    position: relative;
+    overflow: hidden;
+
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: linear-gradient(
+        90deg,
+        rgba(124, 58, 237, 0.55),
+        rgba(37, 99, 235, 0.55),
+        rgba(6, 182, 212, 0.55)
+    );
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    transform: translateX(4px);
+
+    box-shadow:
+        0 0 8px #8b5cf6,
+        0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.sidebar a:active {
+    transform: scale(0.96);
+}
+
+.sidebar .logout-btn {
+    margin-top: auto;
+    text-align: center;
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #ef4444,
+        #db2777,
+        #9333ea
+    );
+
+    box-shadow:
+        0 5px 15px rgba(239, 68, 68, 0.4),
+        0 0 20px rgba(147, 51, 234, 0.4);
+}
+
+/* Moving shine effect on logout button */
+.sidebar .logout-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    animation: shine 3s infinite;
+}
+
+.sidebar .logout-btn:hover {
+    background: linear-gradient(
+        90deg,
+        #f87171,
+        #ec4899,
+        #a855f7
+    );
+
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow:
+        0 8px 25px rgba(239, 68, 68, 0.6),
+        0 0 30px rgba(147, 51, 234, 0.8);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+
+    animation: formAppear 0.5s ease;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #60a5fa,
+        #22d3ee
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.user-profile {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #cbd5e1;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 0 15px rgba(126, 87, 255, 0.3);
+
+    transition: 0.3s;
+}
+
+.user-profile:hover {
+    color: white;
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 8px #8b5cf6,
+        0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+
+/* =========================
+   STATS CARDS GRID
+========================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 30px rgba(126, 87, 255, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s;
+
+    animation:
+        formAppear 0.5s ease backwards,
+        containerGlow 3s ease-in-out infinite alternate;
+}
+
+/* Cards appear one after another */
+.card:nth-child(2) { animation-delay: 0.1s, 0s; }
+.card:nth-child(3) { animation-delay: 0.2s, 0s; }
+.card:nth-child(4) { animation-delay: 0.3s, 0s; }
+.card:nth-child(5) { animation-delay: 0.4s, 0s; }
+.card:nth-child(6) { animation-delay: 0.5s, 0s; }
+
+.card:hover {
+    transform: translateY(-3px) scale(1.02);
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.6),
+        0 0 30px rgba(124, 58, 237, 0.8);
+}
+
+.card h3 {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card .stat-number {
+    font-size: 28px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #60a5fa,
+        #22d3ee
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes shine {
+
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+
+@keyframes formAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes containerGlow {
+
+    from {
+        box-shadow:
+            0 0 25px rgba(126, 87, 255, 0.25),
+            0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    to {
+        box-shadow:
+            0 0 45px rgba(126, 87, 255, 0.45),
+            0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+}

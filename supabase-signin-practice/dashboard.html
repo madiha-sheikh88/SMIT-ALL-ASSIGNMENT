@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dashboard-css.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>My App</h2>
+        <a href="#" class="active">🏠 Dashboard</a>
+        <a href="#">📊 Analytics</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#" id="logout-btn">🚪 Logout</a>
+        <a href="#" id="delete-btn">🗑️ Delete Profile</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Welcome Back!</h1>
+            <div class="user-profile">👤 <span id="userName">User</span></div>
+        </div>
+
+        <!-- Dashboard Stats Grid -->
+        <div class="stats-grid">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p class="stat-number">1,248</p>
+            </div>
+            <div class="card">
+                <h3>Revenue</h3>
+                <p class="stat-number">$5,620</p>
+            </div>
+            <div class="card">
+                <h3>Active Tasks</h3>
+                <p class="stat-number">12</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
