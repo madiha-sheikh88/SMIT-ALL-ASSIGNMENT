@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Database Control Terminal</title>
+        <link rel="preconnect" href="https://googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        <div class="terminal-container">
+            <header class="terminal-header">
+                <h1>Portal / Student Database</h1>
+                <p>Database Management Panel</p>
+            </header>
+    
+            <main class="glass-console">
+                <h2 class="console-title">Database Action Console</h2>
+                
+                <form id="database-form" autocomplete="off">
+                    <!-- 1. Roll Number Input Field -->
+                    <div class="input-group">
+                        <label for="student-roll">Roll Number</label>
+                        <input type="text" id="student-roll" placeholder="e.g. CS-2026-09" required>
+                    </div>
+    
+                    <!-- 2. Full Name Input Field -->
+                    <div class="input-group">
+                        <label for="student-name">Full Name</label>
+                        <input type="text" id="student-name" placeholder="e.g. Adrienne Vance" required>
+                    </div>
+    
+                    <!-- 3. Email Input Field -->
+                    <div class="input-group">
+                        <label for="student-email">Email Address</label>
+                        <input type="email" id="student-email" placeholder="e.g. adrienne@uni.edu" required>
+                    </div>
+    
+                    <!-- 4. Course Input Field -->
+                    <div class="input-group">
+                        <label for="student-course">Course / Major</label>
+                        <input type="text" id="student-course" placeholder="e.g. Computer Science" required>
+                    </div>
+    
+                    <!-- Control Execution Cluster -->
+                    <div class="action-grid">
+                        <button type="submit" id="submit-btn" class="btn btn-submit">Add Student Record</button>
+                        <button type="button" id="delete-btn" class="btn btn-delete">Delete</button>
+                        <button type="button" id="sync-btn" class="btn btn-sync">Sync Data</button>
+                    </div>
+                </form>
+            </main>
+        </div>   
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="./script.js"></script>
+</body>
+</html>
