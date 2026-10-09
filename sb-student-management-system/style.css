@@ -176,3 +176,14 @@ body {
     box-shadow: 0 0 20px 2px var(--accent-glow);
     filter: brightness(1.1);
 }
+.btn-update {
+    background: rgba(129, 140, 248, 0.1);
+    border: 1px solid var(--accent-indigo);
+    color: var(--accent-indigo);
+}
+.btn-update:hover {
+    background: var(--accent-indigo);
+    color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
