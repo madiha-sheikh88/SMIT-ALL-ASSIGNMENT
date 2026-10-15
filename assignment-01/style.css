@@ -1,0 +1,161 @@
+/* Reset default margins and set up a modern box-model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page body styling with a soft, professional color palette */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f6f9;
+    padding: 40px 20px;
+}
+
+/* Central layout container for the resume */
+main, header, footer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px 40px;
+}
+
+/* Smooth out top and bottom card connections */
+header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-bottom: 40px;
+    padding-top: 0;
+}
+
+/* Header / Name Typography */
+header h1 {
+    font-size: 2.5rem;
+    color: #1a365d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+header hr {
+    border: 0;
+    height: 2px;
+    background: #3182ce;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 1.25rem;
+    color: #2b6cb0;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Regular text & Paragraph paragraphs */
+p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Job & Role subheaders inside profile sections */
+ul h3, ol h3 {
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Work Profile lists */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #4a5568;
+    padding-left: 5px;
+}
+
+/* Academic Profile adjustments */
+h2 + ul strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Blockquote & Motivational Quote styling */
+q {
+    display: block;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #4a5568;
+    background: #ebf8ff;
+    border-left: 4px solid #3182ce;
+    padding: 15px 20px;
+    margin: 15px 0;
+}
+
+/* Personal Profile Address block styling */
+address {
+    font-style: normal;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+address h2 {
+    margin-top: 0;
+}
+
+address p {
+    margin-bottom: 8px;
+}
+
+address p:last-child {
+    margin-bottom: 0;
+}
+
+/* Abbreviations and Acronyms dot underline hint */
+abbr, acronym {
+    text-decoration: underline dotted;
+    cursor: help;
+    color: #2c5282;
+}
+
+/* Print optimizations so it outputs cleanly to PDF */
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+    main, header, footer {
+        max-width: 100%;
+        padding: 0;
+    }
+}
